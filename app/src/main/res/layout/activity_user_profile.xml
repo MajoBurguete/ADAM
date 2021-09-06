@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_width="330dp"
+        android:layout_height="148dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         app:cardBackgroundColor="#5AA0EA"
@@ -19,14 +19,40 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameTxt"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintVertical_bias="0.114">
+
+        <TextView
+            android:id="@+id/gameInCardViewTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arcoiris"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:translationX="30dp"
+            android:translationY="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1325"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:translationX="30dp"
+            android:translationY="60dp" />
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/teCuentoUnCuentoImage"
         android:layout_width="75dp"
         android:layout_height="78dp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="602dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enFormitasImage"
+        app:layout_constraintVertical_bias="0.453"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -41,7 +67,7 @@
         app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toEndOf="@+id/enFormitasImage"
         app:layout_constraintTop_toBottomOf="@+id/adamDiceImage"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <ImageView
         android:id="@+id/enFormitasImage"
@@ -66,7 +92,7 @@
         app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toEndOf="@+id/enFormitasImage"
         app:layout_constraintTop_toBottomOf="@+id/enFormitasTxt"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/teCuentoUnCuentoScoreTxt"
@@ -74,8 +100,12 @@
         android:layout_height="wrap_content"
         android:text="1260"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="650dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toEndOf="@+id/teCuentoUnCuentoImage"
+        app:layout_constraintTop_toBottomOf="@+id/teCuentoUnCuentoTxt"
+        app:layout_constraintVertical_bias="0.144" />
 
     <TextView
         android:id="@+id/adamDiceTxt"
@@ -123,8 +153,12 @@
         android:text="Te cuento un cuento"
         android:textColor="#1C3B8E"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toEndOf="@+id/teCuentoUnCuentoImage"
+        app:layout_constraintTop_toBottomOf="@+id/enFormitasImage"
+        app:layout_constraintVertical_bias="0.351" />
 
     <ImageView
         android:id="@+id/userImage"
@@ -135,7 +169,7 @@
         app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.1"
         app:srcCompat="@drawable/placeholder" />
 
     <TextView
@@ -150,6 +184,6 @@
         app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toEndOf="@+id/userImage"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintVertical_bias="0.123" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
