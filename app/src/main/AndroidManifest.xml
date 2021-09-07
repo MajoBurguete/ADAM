@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADAM">
         <activity
-            android:name=".shapesActivityLayout"
+            android:name=".shapesActivityLayoutNVL3"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class shapesActivityLayout extends AppCompatActivity {
+public class shapesActivityLayoutNVL3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shapes_layout);
+        setContentView(R.layout.activity_shapes_layout_nvl_3);
     }
 }
