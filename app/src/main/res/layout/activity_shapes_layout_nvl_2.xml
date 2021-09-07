@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#82C595"
+    android:background="#79C38E"
     tools:context=".shapesActivityLayoutNVL2">
 
     <ImageButton
