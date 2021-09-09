@@ -11,6 +11,10 @@
         android:theme="@style/Theme.ADAM">
         <activity
             android:name=".UserProfileActivity"
+            android:name=".SettingsActivity"
+            android:name=".profilePictureActivityLayout"
+            android:name=".LoginActivity"
+            android:name=".InstructionsActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
