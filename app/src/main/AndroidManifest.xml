@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADAM">
         <activity
+            android:name=".StoryActivity"
             android:name=".shapesActivityLayoutNVL3"
             android:name=".shapesActivityLayoutNVL2"
             android:name=".UserProfileActivity"

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_story.xml" value="0.3127035830618892" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/borde.xml" value="0.2703125" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.264" />

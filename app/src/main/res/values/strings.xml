@@ -1,5 +1,21 @@
 <resources>
     <string name="app_name">ADAM</string>
+    <string name="seguir">Seguir</string>
+    <string name="te_contar_un_cuento">Te contaré un cuento:</string>
+    <string name="hab_a_una_vez_un_pr_ncipe_que_amaba_su_jard_n_tenia_mucas_rosas_azules_y_tulipanes_naranjas">Había una vez un príncipe que amaba su jardín, tenia mucas rosas azules y tulipanes naranjas</string>
+    <string name="de_qu_color_son_las_rosas_del_pr_ncipe">¿De qué color son las rosas del príncipe?</string>
+    <string name="verde">Verde</string>
+    <string name="azul">Azul</string>
+    <string name="naranja">Naranja</string>
+    <string name="bien">¡Bien!</string>
+    <string name="i_i">I I</string>
+    <string name="te_contar_un_cuento">Te contaré un cuento:</string>
+    <string name="hab_a_una_vez_un_principe_que_amaba_su_jard_n_tenia_muchas_rosas_azules_y_algunos_tulipanes_naranjas">Había una vez un principe que amaba su jardín, tenia muchas rosas azules y algunos tulipanes naranjas.</string>
+    <string name="seguir">Seguir</string>
+    <string name="de_qu_color_eran_las_rosas_del_pr_ncipe">¿De qué color eran las rosas del príncipe?</string>
+    <string name="verde">Verde</string>
+    <string name="azul">Azul</string>
+    <string name="rojo">Rojo</string>
     <string name="elige_tu_perfil">Elige tu perfil</string>
     <string name="agrega_otro_perfil">Agrega otro perfil</string>
     <string name="oprime_el_boton">OPRIME EL BOTÓN</string>
