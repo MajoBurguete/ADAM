@@ -16,4 +16,9 @@
     <string name="verde">Verde</string>
     <string name="azul">Azul</string>
     <string name="rojo">Rojo</string>
+    <string name="elige_tu_perfil">Elige tu perfil</string>
+    <string name="agrega_otro_perfil">Agrega otro perfil</string>
+    <string name="oprime_el_boton">OPRIME EL BOTÓN</string>
+    <string name="verde">VERDE</string>
+    <string name="tu_puedes">¡Tú puedes!</string>
 </resources>
