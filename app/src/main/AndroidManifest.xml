@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADAM">
         <activity
+            android:name=".SettingsActivity"
             android:name=".profilePictureActivityLayout"
             android:name=".LoginActivity"
             android:name=".InstructionsActivity"
