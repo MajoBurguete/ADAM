@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/borde.xml" value="0.2703125" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.264" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.264" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout_NVL_2.xml" value="0.128125" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_2.xml" value="0.264" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.264" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_user_profile.xml" value="0.536" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.264" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_user_profile.xml" value="0.536" />
         <entry key="app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.21729773692406448" />
