@@ -10,14 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADAM">
         <activity
-            android:name=".StoryActivity"
-            android:name=".shapesActivityLayoutNVL3"
-            android:name=".shapesActivityLayoutNVL2"
-            android:name=".UserProfileActivity"
-            android:name=".SettingsActivity"
-            android:name=".profilePictureActivityLayout"
-            android:name=".LoginActivity"
+            android:name=".RainbowActivityNVL2"
+            android:exported="true" />
+        <activity
+            android:name=".RainbowActivityNVL1"
+            android:exported="true" />
+        <activity
             android:name=".InstructionsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".profilePictureActivityLayout"
+            android:exported="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".shapesActivityLayoutNVL2"
+            android:exported="true" />
+        <activity
+            android:name=".StoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".shapesActivityLayoutNVL3"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
