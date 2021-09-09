@@ -12,6 +12,11 @@
         <activity
             android:name=".shapesActivityLayoutNVL3"
             android:name=".shapesActivityLayoutNVL2"
+            android:name=".UserProfileActivity"
+            android:name=".SettingsActivity"
+            android:name=".profilePictureActivityLayout"
+            android:name=".LoginActivity"
+            android:name=".InstructionsActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

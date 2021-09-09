@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ADAM</string>
+    <string name="elige_tu_perfil">Elige tu perfil</string>
+    <string name="agrega_otro_perfil">Agrega otro perfil</string>
+    <string name="oprime_el_boton">OPRIME EL BOTÓN</string>
+    <string name="verde">VERDE</string>
+    <string name="tu_puedes">¡Tú puedes!</string>
 </resources>
