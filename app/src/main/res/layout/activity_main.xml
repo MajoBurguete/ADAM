@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/placeholder"
+        app:srcCompat="@drawable/ic_pp_hex"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3"
         app:layout_constraintVertical_bias="0.111"
-        app:srcCompat="@drawable/placeholder"
+        app:srcCompat="@drawable/ic_config"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/placeholder"
+        app:srcCompat="@drawable/ic_pp_cuadradito"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:fontFamily="@font/silka_bold_webfont"
         android:text="@string/agrega_otro_perfil"
         android:textAlignment="center"
-        android:textColor="#4CAF68"
+        android:textColor="@color/verde"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
         android:text="@string/elige_tu_perfil"
-        android:textColor="#4CAF68"
+        android:textColor="@color/verde"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
