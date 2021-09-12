@@ -8,7 +8,7 @@
     tools:context=".shapesActivityLayout">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/option4Btn"
         android:layout_width="82dp"
         android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/option4Btn"
         app:layout_constraintVertical_bias="0.107"
         app:srcCompat="@android:drawable/bottom_bar" />
 
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView13"
         app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/instructionTxt"
         app:layout_constraintVertical_bias="0.49"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -95,7 +95,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/instructionTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"

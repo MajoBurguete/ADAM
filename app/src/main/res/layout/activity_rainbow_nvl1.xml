@@ -9,7 +9,7 @@
     app:circularflow_defaultRadius="20dp">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/pauseBtn"
         android:layout_width="70dp"
         android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,36 +53,36 @@
             android:paddingEnd="30dp">
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/option2Btn"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:tint="#3F51B5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.695"
-                app:layout_constraintStart_toEndOf="@+id/imageButton4"
-                app:layout_constraintTop_toTopOf="@+id/imageButton4"
+                app:layout_constraintStart_toEndOf="@+id/option1Btn"
+                app:layout_constraintTop_toTopOf="@+id/option1Btn"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/placeholder"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/option3Btn"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="68dp"
                 android:tint="#4CAF50"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+                app:layout_constraintEnd_toEndOf="@+id/option2Btn"
                 app:layout_constraintHorizontal_bias="0.03"
-                app:layout_constraintStart_toStartOf="@+id/imageButton4"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                app:layout_constraintStart_toStartOf="@+id/option1Btn"
+                app:layout_constraintTop_toBottomOf="@+id/option1Btn"
                 app:layout_constraintVertical_bias="0.449"
                 app:srcCompat="@drawable/placeholder"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/option1Btn"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:backgroundTint="#E91E63"
@@ -117,7 +117,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/instructionTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
@@ -127,7 +127,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/colorTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"

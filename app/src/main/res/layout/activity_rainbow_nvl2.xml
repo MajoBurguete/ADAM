@@ -9,9 +9,10 @@
     app:circularflow_defaultRadius="20dp">
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="70dp"
-        android:layout_height="55dp"
+        android:id="@+id/pauseBtn"
+        android:layout_width="112dp"
+        android:layout_height="96dp"
+        android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.953"
@@ -19,35 +20,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         tools:ignore="SpeakableTextPresentCheck"
-        tools:srcCompat="@android:drawable/ic_media_pause" />
+        tools:srcCompat="@drawable/ic_pausa" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="313dp"
+        android:layout_height="276dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/placeholder" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:text="@string/tu_puedes"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TextContrastCheck" />
+        app:srcCompat="@drawable/tu_puedes" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -69,58 +54,57 @@
             android:paddingEnd="30dp">
 
             <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:tint="#3F51B5"
+                android:id="@+id/option2Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.695"
-                app:layout_constraintStart_toEndOf="@+id/imageButton4"
-                app:layout_constraintTop_toTopOf="@+id/imageButton4"
+                app:layout_constraintStart_toEndOf="@+id/option1Btn"
+                app:layout_constraintTop_toTopOf="@+id/option1Btn"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/placeholder"
+                app:srcCompat="@drawable/ic_boton_fucsia"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:tint="#4CAF50"
+                android:id="@+id/option3Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-                app:layout_constraintStart_toStartOf="@+id/imageButton4"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
-                app:srcCompat="@drawable/placeholder"
+                app:layout_constraintEnd_toEndOf="@+id/option1Btn"
+                app:layout_constraintStart_toStartOf="@+id/option1Btn"
+                app:layout_constraintTop_toBottomOf="@+id/option1Btn"
+                app:srcCompat="@drawable/ic_boton_menta"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:tint="#9C27B0"
+                android:id="@+id/option4Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+                app:layout_constraintEnd_toEndOf="@+id/option2Btn"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/imageButton5"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+                app:layout_constraintStart_toStartOf="@+id/option2Btn"
+                app:layout_constraintTop_toBottomOf="@+id/option2Btn"
                 app:layout_constraintVertical_bias="0.505"
-                app:srcCompat="@drawable/placeholder"
+                app:srcCompat="@drawable/ic_boton_morado"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:backgroundTint="#E91E63"
-                android:tint="#E91E63"
+                android:id="@+id/option1Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.071"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.2"
-                app:srcCompat="@drawable/placeholder"
+                app:srcCompat="@drawable/ic_boton_azul_osc"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -144,7 +128,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/instructionTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"
@@ -154,7 +138,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/colorTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"
