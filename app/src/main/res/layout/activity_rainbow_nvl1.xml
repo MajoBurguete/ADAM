@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFC107"
-    android:backgroundTint="#FFC107"
+    android:background="@color/amarillo"
     app:circularflow_defaultRadius="20dp">
 
     <ImageButton
@@ -136,7 +135,7 @@
                 android:fontFamily="@font/silka_bold_webfont"
                 android:text="@string/verde"
                 android:textAlignment="center"
-                android:textColor="#3F51B5"
+                android:textColor="@color/azul_oceano"
                 android:textSize="24sp" />
 
         </LinearLayout>
