@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <Button
-        android:id="@+id/btnEnter"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/rosa"
@@ -17,11 +17,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+        app:layout_constraintTop_toBottomOf="@+id/etUsernameLogin"
         app:layout_constraintVertical_bias="0.197" />
 
     <TextView
-        android:id="@+id/tvUsername"
+        android:id="@+id/etUsernameLogin"
         android:layout_width="265dp"
         android:layout_height="52dp"
         android:fontFamily="@font/silka_bold_webfont"
@@ -32,39 +32,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImageLogin"
         app:layout_constraintVertical_bias="0.124" />
 
     <ImageView
-        android:id="@+id/ivProfilePic"
+        android:id="@+id/ivProfileImageLogin"
+
         android:layout_width="201dp"
         android:layout_height="194dp"
         android:backgroundTint="@color/verde"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48"
-        app:srcCompat="@drawable/ic_pp_triangulito" />
+        app:layout_constraintTop_toBottomOf="@+id/ivHola"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/placeholder" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnEditProfilePic"
+        android:id="@+id/fabEditImageLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         app:backgroundTint="@color/naranja"
         app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/ivProfilePic"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfileImageLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.704"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivProfilePic"
+        app:layout_constraintTop_toTopOf="@+id/ivProfileImageLogin"
         app:layout_constraintVertical_bias="0.789"
         app:srcCompat="@drawable/ic_edit_transp"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivHola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164"
+        app:layout_constraintVertical_bias="0.068"
         app:srcCompat="@drawable/hola" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

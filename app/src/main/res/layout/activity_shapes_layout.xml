@@ -4,95 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#79C38E"
+    android:background="@color/verde_palido_dos"
     tools:context=".shapesActivityLayout">
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="82dp"
-        android:layout_height="63dp"
+        android:id="@+id/ibPauseShapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@android:drawable/ic_media_pause" />
+        app:srcCompat="@drawable/ic_pausa"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
+        android:id="@+id/ivShelf3Shapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/ibPauseShapes1"
         app:layout_constraintVertical_bias="0.107"
-        app:srcCompat="@android:drawable/bottom_bar" />
+        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
+        android:id="@+id/ivShelf2Shapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf3Shapes1"
         app:layout_constraintVertical_bias="0.166"
-        app:srcCompat="@android:drawable/bottom_bar" />
+        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
+        android:id="@+id/ivShelf1Shapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf2Shapes1"
         app:layout_constraintVertical_bias="0.21"
-        app:srcCompat="@android:drawable/bottom_bar" />
+        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="76dp"
-        android:layout_height="73dp"
+        android:id="@+id/ivForm2Shapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintEnd_toStartOf="@+id/ivForm3Shapes1"
         app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.49"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/ic_cuadrado_amarillo" />
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="76dp"
-        android:layout_height="73dp"
+        android:id="@+id/ivForm1Shapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/ivForm2Shapes1"
         app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/ivForm2Shapes1"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/ic_estrellla_celeste" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="76dp"
-        android:layout_height="73dp"
+        android:id="@+id/ivForm3Shapes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/ivForm2Shapes1"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/ic_hex_rosa" />
 
     <TextView
         android:id="@+id/textView"
@@ -100,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="¡Ponlas en su lugar!"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -109,7 +118,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf1Shapes1"
         app:layout_constraintVertical_bias="0.27" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingEnd="40dp"
     tools:context=".UserProfileActivity">
 
     <androidx.cardview.widget.CardView
@@ -11,15 +12,16 @@
         android:layout_width="330dp"
         android:layout_height="148dp"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        app:cardBackgroundColor="#5AA0EA"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/azul_iceberg"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvUsernameProf"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userImage"
-        app:layout_constraintVertical_bias="0.021">
+        app:layout_constraintStart_toStartOf="@id/ivUsernameProf"
+        app:layout_constraintTop_toBottomOf="@+id/ivUsernameProf"
+        app:layout_constraintVertical_bias="0.021"
+        tools:layout_constraintStart_toStartOf="@id/userImage">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,9 +31,10 @@
             android:paddingStart="25dp">
 
             <TextView
-                android:id="@+id/gameInCardViewTxt"
+                android:id="@+id/tvArcoirisProf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
                 android:text="Arcoiris"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
@@ -44,160 +47,133 @@
                 app:layout_constraintVertical_bias="0.137" />
 
             <TextView
-                android:id="@+id/tvUsername"
+                android:id="@+id/tvArcoirisScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:fontFamily="@font/silka_bold_webfont"
                 android:text="1325"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp"
-                app:layout_constraintStart_toStartOf="@+id/gameInCardViewTxt"
-                app:layout_constraintTop_toBottomOf="@+id/gameInCardViewTxt" />
+                app:layout_constraintStart_toStartOf="@+id/tvArcoirisProf"
+                app:layout_constraintTop_toBottomOf="@+id/tvArcoirisProf" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/teCuentoUnCuentoImage"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enFormitasImage"
-        app:layout_constraintVertical_bias="0.453"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
-        android:id="@+id/enFormitasTxt"
+        android:id="@+id/tvTeCuentoUnCuentoProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="En formitas"
-        android:textColor="#D86925"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:text="Te cuento un cuento"
+        android:textColor="@color/azul"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toEndOf="@+id/enFormitasImage"
-        app:layout_constraintTop_toBottomOf="@+id/adamDiceImage"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvEnFormitasProf"
+        app:layout_constraintTop_toTopOf="@+id/ivTeCuentoUnCuentoProf"
+        app:layout_constraintVertical_bias="0.035" />
 
     <ImageView
-        android:id="@+id/enFormitasImage"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adamDiceImage"
-        app:layout_constraintVertical_bias="0.184"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/enFormitasScoreTxt"
+        android:id="@+id/ivTeCuentoUnCuentoProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivEnFormitasProf"
+        app:layout_constraintTop_toBottomOf="@+id/ivEnFormitasProf"
+        app:layout_constraintVertical_bias="0.198"
+        tools:srcCompat="@drawable/ic_cuentos_perfil" />
+
+    <TextView
+        android:id="@+id/tvTeCuentoUnCuentoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="915"
+        android:textColor="@color/azul"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintStart_toEndOf="@+id/enFormitasImage"
-        app:layout_constraintTop_toBottomOf="@+id/enFormitasTxt"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvTeCuentoUnCuentoProf"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeCuentoUnCuentoProf"
+        app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/teCuentoUnCuentoScoreTxt"
+        android:id="@+id/tvEnFormitasProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1260"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toEndOf="@+id/teCuentoUnCuentoImage"
-        app:layout_constraintTop_toBottomOf="@+id/teCuentoUnCuentoTxt"
-        app:layout_constraintVertical_bias="0.144" />
-
-    <TextView
-        android:id="@+id/adamDiceTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adam dice"
-        android:textColor="#19701D"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:text="En formitas"
+        android:textColor="@color/naranja"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/adamDiceImage"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toEndOf="@+id/ivEnFormitasProf"
+        app:layout_constraintTop_toTopOf="@+id/ivEnFormitasProf"
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
-        android:id="@+id/adamDiceScoreTxt"
+        android:id="@+id/tvEnFormitasScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="1500"
+        android:textColor="@color/naranja"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toEndOf="@+id/adamDiceImage"
-        app:layout_constraintTop_toBottomOf="@+id/adamDiceTxt"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvEnFormitasProf"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnFormitasProf"
+        app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
-        android:id="@+id/adamDiceImage"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
+        android:id="@+id/ivEnFormitasProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.118"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/teCuentoUnCuentoTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Te cuento un cuento"
-        android:textColor="#1C3B8E"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toEndOf="@+id/teCuentoUnCuentoImage"
-        app:layout_constraintTop_toBottomOf="@+id/enFormitasImage"
-        app:layout_constraintVertical_bias="0.351" />
+        tools:srcCompat="@drawable/ic_formitas_perfil" />
 
     <ImageView
-        android:id="@+id/userImage"
-        android:layout_width="71dp"
-        android:layout_height="71dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:srcCompat="@drawable/placeholder" />
-
-    <TextView
-        android:id="@+id/usernameTxt"
+        android:id="@+id/ivUsernameProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        app:srcCompat="@drawable/ic_pp_triangulito" />
+
+    <TextView
+        android:id="@+id/tvUsernameProf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="Flamenco"
-        android:textColor="#1C3B8E"
+        android:textColor="@color/azul"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toEndOf="@+id/userImage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivUsernameProf"
+        app:layout_constraintTop_toTopOf="@+id/ivUsernameProf"
+        app:layout_constraintVertical_bias="0.017" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
