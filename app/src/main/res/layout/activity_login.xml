@@ -10,6 +10,8 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/rosa"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="¡Entrar!"
         app:cornerRadius="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,6 +24,7 @@
         android:id="@+id/etUsernameLogin"
         android:layout_width="265dp"
         android:layout_height="52dp"
+        android:fontFamily="@font/silka_bold_webfont"
         android:paddingTop="9sp"
         android:text="Escribe tu nombre"
         android:textAlignment="center"
@@ -34,8 +37,10 @@
 
     <ImageView
         android:id="@+id/ivProfileImageLogin"
+
         android:layout_width="201dp"
         android:layout_height="194dp"
+        android:backgroundTint="@color/verde"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        app:backgroundTint="@color/naranja"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="@+id/ivProfileImageLogin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ivProfileImageLogin"
         app:layout_constraintVertical_bias="0.789"
-        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:srcCompat="@drawable/ic_edit_transp"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
