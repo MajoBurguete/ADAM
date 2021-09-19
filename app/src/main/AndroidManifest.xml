@@ -13,7 +13,7 @@
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".shapesActivityLayout"
+            android:name=".ShapesActivity"
             android:exported="true" />
         <activity
             android:name=".RainbowActivityNVL2"
@@ -28,7 +28,7 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".profilePictureActivityLayout"
+            android:name=".ProfilePictureActivity"
             android:exported="true" />
         <activity
             android:name=".SettingsActivity"
@@ -37,13 +37,13 @@
             android:name=".UserProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".shapesActivityLayoutNVL2"
+            android:name=".ShapesActivityNVL2"
             android:exported="true" />
         <activity
             android:name=".StoryActivity"
             android:exported="true" />
         <activity
-            android:name=".shapesActivityLayoutNVL3"
+            android:name=".ShapesActivityNVL3"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

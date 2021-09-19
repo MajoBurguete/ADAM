@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class profilePictureActivityLayout extends AppCompatActivity {
+public class ShapesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_picture_layout);
+        setContentView(R.layout.activity_shapes_layout);
     }
 }
