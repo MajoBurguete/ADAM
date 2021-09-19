@@ -16,10 +16,10 @@
         app:cardBackgroundColor="@color/azul_iceberg"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/usernameTxt"
+        app:layout_constraintEnd_toEndOf="@+id/tvUsernameProf"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/userImage"
-        app:layout_constraintTop_toBottomOf="@+id/userImage"
+        app:layout_constraintStart_toStartOf="@id/ivUsernameProf"
+        app:layout_constraintTop_toBottomOf="@+id/ivUsernameProf"
         app:layout_constraintVertical_bias="0.021"
         tools:layout_constraintStart_toStartOf="@id/userImage">
 
@@ -47,7 +47,7 @@
                 app:layout_constraintVertical_bias="0.137" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tvArcoirisScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -90,7 +90,7 @@
         tools:srcCompat="@drawable/ic_cuentos_perfil" />
 
     <TextView
-        android:id="@+id/enFormitasScoreTxt"
+        android:id="@+id/tvTeCuentoUnCuentoScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
@@ -120,7 +120,7 @@
         app:layout_constraintVertical_bias="0.028" />
 
     <TextView
-        android:id="@+id/adamDiceScoreTxt"
+        android:id="@+id/tvEnFormitasScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
@@ -148,7 +148,7 @@
         tools:srcCompat="@drawable/ic_formitas_perfil" />
 
     <ImageView
-        android:id="@+id/userImage"
+        android:id="@+id/ivUsernameProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
@@ -161,7 +161,7 @@
         app:srcCompat="@drawable/ic_pp_triangulito" />
 
     <TextView
-        android:id="@+id/usernameTxt"
+        android:id="@+id/tvUsernameProf"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -172,8 +172,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/userImage"
-        app:layout_constraintTop_toTopOf="@+id/userImage"
+        app:layout_constraintStart_toEndOf="@+id/ivUsernameProf"
+        app:layout_constraintTop_toTopOf="@+id/ivUsernameProf"
         app:layout_constraintVertical_bias="0.017" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
