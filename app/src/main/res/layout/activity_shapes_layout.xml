@@ -8,9 +8,6 @@
     tools:context=".shapesActivityLayout">
 
     <ImageButton
-        android:id="@+id/ibOption4"
-        android:layout_width="82dp"
-        android:layout_height="63dp"
         android:id="@+id/ibPauseShapes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/ic_pausa" />
+        app:srcCompat="@drawable/ic_pausa"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivShelf3Shapes1"
@@ -74,7 +72,7 @@
         app:layout_constraintEnd_toStartOf="@+id/ivForm3Shapes1"
         app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.49"
         tools:srcCompat="@drawable/ic_cuadrado_amarillo" />
 
@@ -105,7 +103,7 @@
         tools:srcCompat="@drawable/ic_hex_rosa" />
 
     <TextView
-        android:id="@+id/tvInstruction"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"

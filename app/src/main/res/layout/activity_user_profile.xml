@@ -31,7 +31,7 @@
             android:paddingStart="25dp">
 
             <TextView
-                android:id="@+id/gameInCardViewTxt"
+                android:id="@+id/tvArcoirisProf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"
@@ -55,14 +55,14 @@
                 android:text="1325"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp"
-                app:layout_constraintStart_toStartOf="@+id/gameInCardViewTxt"
-                app:layout_constraintTop_toBottomOf="@+id/gameInCardViewTxt" />
+                app:layout_constraintStart_toStartOf="@+id/tvArcoirisProf"
+                app:layout_constraintTop_toBottomOf="@+id/tvArcoirisProf" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/enFormitasTxt"
+        android:id="@+id/tvTeCuentoUnCuentoProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
@@ -72,20 +72,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/adamDiceTxt"
-        app:layout_constraintTop_toTopOf="@+id/enFormitasImage"
+        app:layout_constraintStart_toStartOf="@+id/tvEnFormitasProf"
+        app:layout_constraintTop_toTopOf="@+id/ivTeCuentoUnCuentoProf"
         app:layout_constraintVertical_bias="0.035" />
 
     <ImageView
-        android:id="@+id/enFormitasImage"
+        android:id="@+id/ivTeCuentoUnCuentoProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/adamDiceImage"
-        app:layout_constraintTop_toBottomOf="@+id/adamDiceImage"
+        app:layout_constraintStart_toStartOf="@+id/ivEnFormitasProf"
+        app:layout_constraintTop_toBottomOf="@+id/ivEnFormitasProf"
         app:layout_constraintVertical_bias="0.198"
         tools:srcCompat="@drawable/ic_cuentos_perfil" />
 
@@ -100,12 +100,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/enFormitasTxt"
-        app:layout_constraintTop_toBottomOf="@+id/enFormitasTxt"
+        app:layout_constraintStart_toStartOf="@+id/tvTeCuentoUnCuentoProf"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeCuentoUnCuentoProf"
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/adamDiceTxt"
+        android:id="@+id/tvEnFormitasProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
@@ -115,8 +115,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintStart_toEndOf="@+id/adamDiceImage"
-        app:layout_constraintTop_toTopOf="@+id/adamDiceImage"
+        app:layout_constraintStart_toEndOf="@+id/ivEnFormitasProf"
+        app:layout_constraintTop_toTopOf="@+id/ivEnFormitasProf"
         app:layout_constraintVertical_bias="0.028" />
 
     <TextView
@@ -130,12 +130,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/adamDiceTxt"
-        app:layout_constraintTop_toBottomOf="@+id/adamDiceTxt"
+        app:layout_constraintStart_toStartOf="@+id/tvEnFormitasProf"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnFormitasProf"
         app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
-        android:id="@+id/adamDiceImage"
+        android:id="@+id/ivEnFormitasProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"

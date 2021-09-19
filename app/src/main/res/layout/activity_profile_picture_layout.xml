@@ -18,10 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/ic_back" />
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/tvInstruction"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -31,7 +32,7 @@
         android:text="Elige tu ícono favorito"
         android:textAlignment="textStart"
         android:textColor="@color/naranja"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,10 +49,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ibIcon2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvInstruction"
-        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.08"
-        app:srcCompat="@drawable/ic_pp_hex" />
+        app:srcCompat="@drawable/ic_pp_hex"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/ibIcon2"
@@ -62,9 +64,10 @@
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
-        app:layout_constraintVertical_bias="0.081"
-        app:srcCompat="@android:drawable/btn_radio" />
+        app:layout_constraintTop_toTopOf="@+id/ibIcon1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_pp_cuadradito"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/ibIcon6"
@@ -77,7 +80,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ibIcon5"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_config" />
+        app:srcCompat="@drawable/ic_config"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/ibIcon5"
@@ -88,10 +92,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ibIcon6"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvInstruction"
-        app:layout_constraintTop_toBottomOf="@+id/icon3Btn"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ibIcon3"
         app:layout_constraintVertical_bias="0.49"
-        app:srcCompat="@drawable/ic_config" />
+        app:srcCompat="@drawable/ic_config"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/ibIcon4"
@@ -104,7 +109,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ibIcon3"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_config" />
+        app:srcCompat="@drawable/ic_config"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/ibIcon3"
@@ -115,9 +121,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ibIcon4"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvInstruction"
-        app:layout_constraintTop_toBottomOf="@+id/icon1Btn"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/btn_radio" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ibIcon1"
+        app:layout_constraintVertical_bias="0.099"
+        app:srcCompat="@drawable/ic_pp_triangulito"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

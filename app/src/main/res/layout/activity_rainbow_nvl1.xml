@@ -54,9 +54,9 @@
 
             <ImageButton
                 android:id="@+id/ibOption2"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:tint="#3F51B5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.695"
@@ -68,11 +68,10 @@
 
             <ImageButton
                 android:id="@+id/ibOption3"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:backgroundTint="@android:color/transparent"
-                android:tint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/ibOption2"
                 app:layout_constraintHorizontal_bias="0.03"
@@ -84,10 +83,9 @@
 
             <ImageButton
                 android:id="@+id/ibOption1"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:backgroundTint="#E91E63"
-                android:tint="#E91E63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.071"
