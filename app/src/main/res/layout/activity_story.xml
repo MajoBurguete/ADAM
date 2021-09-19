@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -28,7 +28,7 @@
             app:layout_constraintVertical_bias="1.0">
 
             <Button
-                android:id="@+id/bOptionS3"
+                android:id="@+id/btnOptionS3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="62dp"
@@ -39,11 +39,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.609"
                 app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
-                app:layout_constraintTop_toBottomOf="@+id/bOptionS2"
+                app:layout_constraintTop_toBottomOf="@+id/btnOptionS2"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/bOptionS2"
+                android:id="@+id/btnOptionS2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/azul_oceano"
@@ -53,11 +53,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.609"
                 app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
-                app:layout_constraintTop_toBottomOf="@+id/bOptionS1"
+                app:layout_constraintTop_toBottomOf="@+id/btnOptionS1"
                 app:layout_constraintVertical_bias="0.168" />
 
             <Button
-                android:id="@+id/bOptionS1"
+                android:id="@+id/btnOptionS1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde"
@@ -110,7 +110,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="409dp"
             android:layout_height="569dp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +118,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <Button
-                android:id="@+id/bContinue"
+                android:id="@+id/btnContinue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/naranja_claro"
