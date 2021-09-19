@@ -21,7 +21,7 @@
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_config.xml" value="0.12533783783783783" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuentos_perfil.xml" value="0.12533783783783783" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_azul.xml" value="0.1287162162162162" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pausa.xml" value="0.176" />
+        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pausa.xml" value="0.12533783783783783" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp__estrellita.xml" value="0.1885135135135135" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_circulito.xml" value="0.1885135135135135" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_cuadradito.xml" value="0.1885135135135135" />
@@ -37,16 +37,17 @@
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.128" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_rainbow_nvl2.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_settings.xml" value="0.2" />
+        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_settings.xml" value="0.264" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_2.xml" value="0.1287568306010929" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.1287568306010929" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_story.xml" value="0.1266891891891892" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_user_profile.xml" value="0.1287568306010929" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl2.xml" value="0.12635869565217392" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_story.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
