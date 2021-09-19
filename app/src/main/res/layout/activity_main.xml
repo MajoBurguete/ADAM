@@ -45,8 +45,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toEndOf="@+id/ibProfileIcon1"
-        app:layout_constraintTop_toBottomOf="@+id/tvEligeTuPerfil"
+        app:layout_constraintStart_toEndOf="@+id/ibOption4"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_pp_cuadradito"
         tools:ignore="SpeakableTextPresentCheck" />
