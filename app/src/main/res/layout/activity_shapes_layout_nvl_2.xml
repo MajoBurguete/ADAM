@@ -8,7 +8,7 @@
     tools:context=".shapesActivityLayoutNVL2">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ibPauseShapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/ic_pausa" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ivShelf4Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -30,12 +30,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/ibPauseShapes2"
         app:layout_constraintVertical_bias="0.146"
         app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/ivShelf3Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -44,26 +44,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf4Shapes2"
         app:layout_constraintVertical_bias="0.112"
         app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivShelf1Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="@+id/ivShelf3Shapes2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf2Shapes2"
         app:layout_constraintVertical_bias="0.17"
         app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/ivShelf2Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -71,18 +71,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf4Shapes2"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf3Shapes2"
         app:layout_constraintVertical_bias="0.147"
         app:srcCompat="@android:drawable/dialog_holo_light_frame" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/ivForm2Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintEnd_toStartOf="@+id/ivForm3Shapes2"
         app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -90,12 +90,12 @@
         tools:srcCompat="@drawable/ic_circulo_verde" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/ivForm1Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/ivForm2Shapes2"
         app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -103,20 +103,20 @@
         tools:srcCompat="@drawable/ic_boton_azul" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/ivForm3Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/ivForm4Shapes2"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/ivForm2Shapes2"
         app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@drawable/ic_hex_rosa" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivForm4Shapes2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
@@ -124,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.928"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/ivForm1Shapes2"
         app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@drawable/ic_estrellla_celeste" />
 
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/ivShelf1Shapes2"
         app:layout_constraintVertical_bias="0.132" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
