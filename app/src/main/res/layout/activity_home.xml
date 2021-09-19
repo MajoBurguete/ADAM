@@ -32,4 +32,42 @@
         app:layout_constraintTop_toTopOf="@+id/ivProfPictHome"
         app:layout_constraintVertical_bias="0.52"
         tools:text="Flamenco" />
+
+    <ImageButton
+        android:id="@+id/ibBackFragment"
+        android:layout_width="49dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@android:color/transparent"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flGames"
+        app:srcCompat="@drawable/ic_back" />
+
+    <ImageButton
+        android:id="@+id/ibForwardFragment"
+        android:layout_width="49dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@android:color/transparent"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/flGames"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flGames"
+        app:srcCompat="@drawable/ic_back" />
+
+    <FrameLayout
+        android:id="@+id/flGames"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibForwardFragment"
+        app:layout_constraintStart_toEndOf="@+id/ibBackFragment"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfPictHome">
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
