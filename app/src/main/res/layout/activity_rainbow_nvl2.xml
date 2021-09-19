@@ -9,7 +9,7 @@
     app:circularflow_defaultRadius="20dp">
 
     <ImageButton
-        android:id="@+id/pauseBtn"
+        android:id="@+id/btnPause"
         android:layout_width="112dp"
         android:layout_height="96dp"
         android:backgroundTint="#00FFFFFF"
@@ -54,47 +54,47 @@
             android:paddingEnd="30dp">
 
             <ImageButton
-                android:id="@+id/option2Btn"
+                android:id="@+id/ibOption2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.695"
-                app:layout_constraintStart_toEndOf="@+id/option1Btn"
-                app:layout_constraintTop_toTopOf="@+id/option1Btn"
+                app:layout_constraintStart_toEndOf="@+id/ibOption1"
+                app:layout_constraintTop_toTopOf="@+id/ibOption1"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_boton_fucsia"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
             <ImageButton
-                android:id="@+id/option3Btn"
+                android:id="@+id/ibOption3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/option1Btn"
-                app:layout_constraintStart_toStartOf="@+id/option1Btn"
-                app:layout_constraintTop_toBottomOf="@+id/option1Btn"
+                app:layout_constraintEnd_toEndOf="@+id/ibOption1"
+                app:layout_constraintStart_toStartOf="@+id/ibOption1"
+                app:layout_constraintTop_toBottomOf="@+id/ibOption1"
                 app:srcCompat="@drawable/ic_boton_menta"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/option4Btn"
+                android:id="@+id/ibOption4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/option2Btn"
+                app:layout_constraintEnd_toEndOf="@+id/ibOption2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/option2Btn"
-                app:layout_constraintTop_toBottomOf="@+id/option2Btn"
+                app:layout_constraintStart_toStartOf="@+id/ibOption2"
+                app:layout_constraintTop_toBottomOf="@+id/ibOption2"
                 app:layout_constraintVertical_bias="0.505"
                 app:srcCompat="@drawable/ic_boton_morado"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/option1Btn"
+                android:id="@+id/ibOption1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
@@ -128,7 +128,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/instructionTxt"
+                android:id="@+id/tvInstruction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"
@@ -138,7 +138,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/colorTxt"
+                android:id="@+id/tvColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"

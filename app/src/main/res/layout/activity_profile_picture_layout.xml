@@ -19,7 +19,7 @@
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <TextView
-        android:id="@+id/instructionTxt"
+        android:id="@+id/tvInstruction"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -43,8 +43,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/icon2Btn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/instructionTxt"
-        app:layout_constraintTop_toBottomOf="@+id/instructionTxt"
+        app:layout_constraintStart_toStartOf="@+id/tvInstruction"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
         app:layout_constraintVertical_bias="0.08"
         app:srcCompat="@android:drawable/btn_radio" />
 
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionTxt"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
         app:layout_constraintVertical_bias="0.081"
         app:srcCompat="@android:drawable/btn_radio" />
 
@@ -79,7 +79,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/icon6Btn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/instructionTxt"
+        app:layout_constraintStart_toStartOf="@+id/tvInstruction"
         app:layout_constraintTop_toBottomOf="@+id/icon3Btn"
         app:layout_constraintVertical_bias="0.49"
         app:srcCompat="@android:drawable/btn_radio" />
@@ -104,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/icon4Btn"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/instructionTxt"
+        app:layout_constraintStart_toStartOf="@+id/tvInstruction"
         app:layout_constraintTop_toBottomOf="@+id/icon1Btn"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/btn_radio" />

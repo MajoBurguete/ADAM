@@ -7,16 +7,16 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/option4Btn"
+        android:id="@+id/ibOption4"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/pauseBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPause"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionTxt"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/placeholder"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -30,13 +30,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pauseBtn"
+        app:layout_constraintTop_toBottomOf="@+id/btnPause"
         app:layout_constraintVertical_bias="0.111"
         app:srcCompat="@drawable/placeholder"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/pauseBtn"
+        android:id="@+id/btnPause"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="36dp"
@@ -45,14 +45,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toEndOf="@+id/option4Btn"
-        app:layout_constraintTop_toBottomOf="@+id/instructionTxt"
+        app:layout_constraintStart_toEndOf="@+id/ibOption4"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/placeholder"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/colorTxt"
+        android:id="@+id/tvColor"
         android:layout_width="115dp"
         android:layout_height="49dp"
         android:layout_marginBottom="148dp"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.437" />
 
     <TextView
-        android:id="@+id/instructionTxt"
+        android:id="@+id/tvInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
