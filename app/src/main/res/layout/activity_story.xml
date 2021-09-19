@@ -9,7 +9,7 @@
     tools:context=".StoryActivity">
 
     <Button
-        android:id="@+id/enterBtn"
+        android:id="@+id/btnEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#F44336"
@@ -171,7 +171,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/profilePicIV"
+                        android:id="@+id/ivProfilePic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -193,7 +193,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/profilePicIV"
+                        app:layout_constraintStart_toEndOf="@+id/ivProfilePic"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

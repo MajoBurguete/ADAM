@@ -52,7 +52,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/usernameTV"
+        android:id="@+id/tvUsername"
         android:layout_width="115dp"
         android:layout_height="49dp"
         android:layout_marginBottom="148dp"
