@@ -7,7 +7,7 @@
     tools:context=".SettingsActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivProfilePictSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -15,28 +15,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruction"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/placeholder" />
+        app:srcCompat="@drawable/ic_pp_estrellita" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/fabEditPictSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="3dp"
-        android:backgroundTint="#FF5722"
+        android:backgroundTint="@color/naranja_claro"
         android:clickable="true"
         app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfilePictSett"
+        app:layout_constraintEnd_toEndOf="@id/ivProfilePictSett"
+        app:srcCompat="@drawable/ic_edit_transp"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="Editar perfil"
         android:textColor="#FF5722"
         android:textSize="25sp"
@@ -48,66 +48,68 @@
         app:layout_constraintVertical_bias="0.101" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etUsernameSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/silka_bold_webfont"
         android:inputType="textPersonName"
         android:text="Flamenco"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@id/ivProfilePictSett"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@id/ivProfilePictSett"
+        app:layout_constraintTop_toBottomOf="@id/ivProfilePictSett"
         app:layout_constraintVertical_bias="0.035"
         tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/fabEditUserSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF5722"
+        android:backgroundTint="@color/naranja_claro"
         android:clickable="true"
         app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="@id/etUsernameSett"
+        app:layout_constraintEnd_toEndOf="@id/etUsernameSett"
+        app:srcCompat="@drawable/ic_edit_transp"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSaveSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="54dp"
         android:backgroundTint="#EF75B4"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="Guardar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@id/etUsernameSett"
+        app:layout_constraintStart_toStartOf="@id/etUsernameSett"
+        app:layout_constraintTop_toBottomOf="@id/etUsernameSett"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnDeleteSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="#C3082E"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/silka_bold_webfont"
         android:text="Eliminar perfil"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@id/btnSaveSett"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@id/btnSaveSett"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveSett"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
