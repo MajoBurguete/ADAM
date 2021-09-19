@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADAM">
         <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".shapesActivityLayout"
             android:exported="true" />
         <activity
