@@ -53,42 +53,41 @@
             android:paddingEnd="30dp">
 
             <ImageButton
-                android:id="@+id/ibOption1.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:tint="@android:color/transparent"
+                android:id="@+id/ibOption2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:tint="#3F51B5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.695"
-                app:layout_constraintStart_toEndOf="@+id/ibOption1.1"
-                app:layout_constraintTop_toTopOf="@+id/ibOption1.1"
+                app:layout_constraintStart_toEndOf="@+id/ibOption1"
+                app:layout_constraintTop_toTopOf="@+id/ibOption1"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_boton_verde"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
             <ImageButton
-                android:id="@+id/ibOption1.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/ibOption3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:layout_marginStart="68dp"
                 android:backgroundTint="@android:color/transparent"
                 android:tint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/ibOption1.2"
+                app:layout_constraintEnd_toEndOf="@+id/ibOption2"
                 app:layout_constraintHorizontal_bias="0.03"
-                app:layout_constraintStart_toStartOf="@+id/ibOption1.1"
-                app:layout_constraintTop_toBottomOf="@+id/ibOption1.1"
+                app:layout_constraintStart_toStartOf="@+id/ibOption1"
+                app:layout_constraintTop_toBottomOf="@+id/ibOption1"
                 app:layout_constraintVertical_bias="0.449"
                 app:srcCompat="@drawable/ic_boton_rosa"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/ibOption1.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:tint="@android:color/transparent"
+                android:id="@+id/ibOption1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:backgroundTint="#E91E63"
+                android:tint="#E91E63"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.071"
@@ -119,7 +118,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvInstruction1"
+                android:id="@+id/tvInstruction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"
@@ -129,7 +128,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvAnswer1"
+                android:id="@+id/tvColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/silka_bold_webfont"

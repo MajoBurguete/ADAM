@@ -4,25 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9FBA"
-    android:backgroundTint="#FF9FB3"
+    android:background="@color/white"
+    android:backgroundTint="@color/rosa"
     tools:context=".StoryActivity">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#F44336"
-        android:text="@string/i_i"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        tools:ignore="TextContrastCheck" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="407dp"
@@ -35,6 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -43,57 +28,60 @@
             app:layout_constraintVertical_bias="1.0">
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnOptionS3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="62dp"
-                android:backgroundTint="#FF0000"
-                android:text="@string/rojo"
+                android:backgroundTint="@color/naranja_claro"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="@string/naranja"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.609"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/button5"
+                app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
+                app:layout_constraintTop_toBottomOf="@+id/btnOptionS2"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btnOptionS2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#3F51B5"
+                android:backgroundTint="@color/azul_oceano"
+                android:fontFamily="@font/silka_bold_webfont"
                 android:text="@string/azul"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.609"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/button3"
+                app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
+                app:layout_constraintTop_toBottomOf="@+id/btnOptionS1"
                 app:layout_constraintVertical_bias="0.168" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnOptionS1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="@color/verde"
+                android:fontFamily="@font/silka_bold_webfont"
                 android:text="@string/verde"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.609"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
                 app:layout_constraintTop_toBottomOf="@+id/cardView4"
                 app:layout_constraintVertical_bias="0.133"
                 tools:ignore="TextContrastCheck" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/ivStoryIcon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView4"
                 app:layout_constraintVertical_bias="0.229"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/ic_triangulo_cuentos_b" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
@@ -107,20 +95,22 @@
                 app:layout_constraintVertical_bias="0.069">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/tvQuestionS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/silka_bold_webfont"
                     android:text="@string/de_qu_color_eran_las_rosas_del_pr_ncipe"
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="409dp"
             android:layout_height="569dp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,10 +118,10 @@
             app:layout_constraintVertical_bias="0.0">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnContinue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#F44336"
+                android:backgroundTint="@color/naranja_claro"
                 android:text="@string/seguir"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -141,9 +131,10 @@
                 app:layout_constraintVertical_bias="0.673" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tvTeContareUnCuento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
                 android:text="@string/te_contar_un_cuento"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
@@ -163,7 +154,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/tvTeContareUnCuento"
                 app:layout_constraintVertical_bias="0.285">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -171,21 +162,23 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/ivStoryIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.082"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:srcCompat="@drawable/ic_triangulo_cuentos_r" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/tvStory"
                         android:layout_width="172dp"
                         android:layout_height="183dp"
                         android:layout_marginStart="144dp"
+                        android:fontFamily="@font/silka_bold_webfont"
                         android:text="@string/hab_a_una_vez_un_principe_que_amaba_su_jard_n_tenia_muchas_rosas_azules_y_algunos_tulipanes_naranjas"
                         android:textAlignment="textEnd"
                         android:textSize="20sp"
@@ -193,11 +186,26 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintStart_toEndOf="@+id/ivStoryIcon"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/ibPauseS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_pausa"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
