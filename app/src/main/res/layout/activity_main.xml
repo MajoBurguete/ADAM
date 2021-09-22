@@ -31,7 +31,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
-        app:layout_constraintVertical_bias="0.111"
+        app:layout_constraintVertical_bias="0.07"
         app:srcCompat="@drawable/ic_config"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -51,22 +51,21 @@
         app:srcCompat="@drawable/ic_pp_cuadradito"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/tvAgregaOtroPerfil"
-        android:layout_width="115dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="148dp"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:text="@string/agrega_otro_perfil"
-        android:textAlignment="center"
-        android:textColor="@color/verde"
-        android:textSize="20sp"
+    <ImageButton
+        android:id="@+id/ibProfileIcon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@android:color/transparent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibAddProfile"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_pp_estrellita"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvEligeTuPerfil"
@@ -82,5 +81,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/tvAgregaOtroPerfil"
+        android:layout_width="115dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:text="@string/agrega_otro_perfil"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon3"
+        app:layout_constraintVertical_bias="0.437" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
