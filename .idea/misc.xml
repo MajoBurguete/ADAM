@@ -4,8 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_en_formitas_card.xml" value="0.2703125" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_home.xml" value="0.20878623188405798" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.20878623188405798" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_formitas.xml" value="0.264" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/border.xml" value="0.1890625" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic__.xml" value="0.20052083333333334" />
@@ -103,6 +101,7 @@
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.2" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_story.xml" value="0.2" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_user_profile.xml" value="0.176" />
+        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_arcoiris.xml" value="0.152" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_main.xml" value="0.17804054054054055" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_profile.xml" value="0.17804054054054055" />
       </map>
