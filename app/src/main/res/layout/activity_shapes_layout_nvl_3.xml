@@ -118,7 +118,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@drawable/ic_estrellla_celeste" />
+        tools:srcCompat="@drawable/ic_estrella_celeste" />
 
     <ImageView
         android:id="@+id/ivForm4Shapes3"

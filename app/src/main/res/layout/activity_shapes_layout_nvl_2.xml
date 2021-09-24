@@ -131,7 +131,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@drawable/ic_estrellla_celeste" />
+        tools:srcCompat="@drawable/ic_estrella_celeste" />
 
     <TextView
         android:id="@+id/tvInstruction"
