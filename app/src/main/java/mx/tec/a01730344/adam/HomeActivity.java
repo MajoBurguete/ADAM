@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
 
     ConstraintLayout clToProfile;
     Toolbar toolbar;
+    final FragmentManager fragmentManager = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(toProfile);
             }
         });
+
+        displayGames();
+    }
+
+    private void displayGames() {
+        Fragment fragment = new ArcoirisFragment();
+        FragmentTransaction fts = fragmentManager.beginTransaction();
+        fts.replace(R.id.flGames, fragment).commit();
     }
 
     private void toolbarActions(){

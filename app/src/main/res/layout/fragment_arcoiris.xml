@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ArcoirisFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:paddingTop="40dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCardArcoiris"
@@ -17,11 +18,9 @@
             android:paddingStart="15dp"
             app:cardBackgroundColor="@color/azul_iceberg"
             app:cardCornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivArcoirisTitle"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@+id/ivArcoirisTitle">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -29,7 +28,7 @@
                 android:paddingStart="15dp"
                 android:paddingTop="20dp"
                 android:paddingEnd="15dp"
-                android:paddingBottom="40dp">
+                android:paddingBottom="20dp">
 
                 <TextView
                     android:id="@+id/tvArcoirisBody"
@@ -38,7 +37,7 @@
                     android:fontFamily="@font/silka_bold_webfont"
                     android:text="Ayuda a las formitas a estar en orden, ¡recuerda la secuencia!"
                     android:textColor="@color/white"
-                    android:textSize="35sp"
+                    android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +53,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arcoiris_card"
             app:layout_constraintEnd_toEndOf="@+id/cvCardArcoiris"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/cvCardArcoiris"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,7 +61,7 @@
             android:id="@+id/btnJugarArcoiris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="35dp"
             android:backgroundTint="@color/salmon"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingStart="35dp"
