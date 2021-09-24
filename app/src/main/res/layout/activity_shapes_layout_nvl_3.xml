@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/ic_pausa"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivShelf4Shapes3"
@@ -32,8 +32,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivShelf5Shapes3"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf5Shapes3"
-        app:layout_constraintVertical_bias="0.081"
-        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@drawable/ic_escalon"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivShelf5Shapes3"
@@ -43,11 +44,12 @@
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibPauseShapes3"
-        app:layout_constraintVertical_bias="0.103"
-        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_escalon"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivShelf3Shapes3"
@@ -60,8 +62,9 @@
         app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf4Shapes3"
-        app:layout_constraintVertical_bias="0.206"
-        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
+        app:layout_constraintVertical_bias="0.186"
+        app:srcCompat="@drawable/ic_escalon"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivShelf1Shapes3"
@@ -74,8 +77,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf2Shapes3"
-        app:layout_constraintVertical_bias="0.204"
-        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
+        app:layout_constraintVertical_bias="0.07"
+        app:srcCompat="@drawable/ic_escalon"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivShelf2Shapes3"
@@ -88,8 +92,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ivShelf5Shapes3"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf3Shapes3"
-        app:layout_constraintVertical_bias="0.059"
-        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_escalon"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivForm2Shapes3"
@@ -97,66 +102,59 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivForm3Shapes3"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivForm1Shapes3"
-        app:layout_constraintVertical_bias="0.567"
+        tools:ignore="ImageContrastCheck"
         tools:srcCompat="@drawable/ic_boton_azul" />
 
     <ImageView
         android:id="@+id/ivForm3Shapes3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivForm4Shapes3"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivForm2Shapes3"
-        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck"
         tools:srcCompat="@drawable/ic_estrellla_celeste" />
 
     <ImageView
         android:id="@+id/ivForm4Shapes3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivForm2Shapes3"
-        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck"
         tools:srcCompat="@drawable/ic_hex_rosa" />
 
     <ImageView
         android:id="@+id/ivForm1Shapes3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="128dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.565"
         tools:srcCompat="@drawable/ic_cuadrado_amarillo" />
 
     <ImageView
         android:id="@+id/ivForm5Shapes3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/ivForm1Shapes3"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@drawable/ic_triangulo_naranja" />
 
     <TextView
@@ -166,15 +164,17 @@
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="¡Ponlas en su lugar!"
+        android:text="@string/ponlas_en_su_lugar"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf1Shapes3"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

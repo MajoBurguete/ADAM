@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -13,6 +14,7 @@ public class LoginActivity extends AppCompatActivity {
 
     FloatingActionButton fabPickPict;
     Button btnEnter;
+    ImageButton ibBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
         fabPickPict = findViewById(R.id.fabEditImageLogin);
         btnEnter = findViewById(R.id.btnLogin);
+        ibBack = findViewById(R.id.ibBackFromLogin);
 
         fabPickPict.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,5 +40,14 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(toHomeAct);
             }
         });
-        }
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toMainAct = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(toMainAct);
+            }
+        });
+
     }
+}
