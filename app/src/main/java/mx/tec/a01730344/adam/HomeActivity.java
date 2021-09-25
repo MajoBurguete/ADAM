@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void displayGames() {
-        Fragment fragment = new ArcoirisFragment();
+        Fragment fragment = new TeCuentoFragment();
         FragmentTransaction fts = fragmentManager.beginTransaction();
         fts.replace(R.id.flGames, fragment).commit();
     }
