@@ -35,14 +35,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/silka_bold_webfont"
-                    android:text="Ayuda a las formitas a estar en orden, ¡recuerda la secuencia!"
+                    android:text="@string/ayuda_a_las_formitas_a_estar_en_orden_recuerda_la_secuencia"
                     android:textColor="@color/white"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.266" />
+                    app:layout_constraintVertical_bias="0.266"
+                    tools:ignore="TextContrastCheck" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -55,7 +56,8 @@
             app:layout_constraintEnd_toEndOf="@+id/cvCardArcoiris"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/cvCardArcoiris"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
         <Button
             android:id="@+id/btnJugarArcoiris"
@@ -68,7 +70,7 @@
             android:paddingTop="9dp"
             android:paddingEnd="35dp"
             android:paddingBottom="10dp"
-            android:text="Jugar"
+            android:text="@string/jugar"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="35sp"
             app:cornerRadius="10dp"
@@ -76,7 +78,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvCardArcoiris"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
