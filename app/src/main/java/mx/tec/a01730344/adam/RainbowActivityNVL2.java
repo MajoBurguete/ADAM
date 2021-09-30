@@ -89,10 +89,12 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
                 startActivity(toHome);
             }
             public void onTick(long millisUntilFinished) {
-                if (globalLives <= 0) {
+                if (globalLives == 0) {
                     //Se extrae el highScoreRainbow del usuario y se compara con el score, se guarda solo si este último es mayor
                     Intent toHome = new Intent(RainbowActivityNVL2.this, HomeActivity.class);
                     startActivity(toHome);
+                    globalLives --;
+                    cancel();
                 }
             }
         }.start();
