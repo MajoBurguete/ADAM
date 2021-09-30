@@ -80,9 +80,11 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
                 startActivity(toHome);
             }
             public void onTick(long millisUntilFinished) {
-                if (globalLives <= 0) {
+                if (globalLives == 0) {
                     Intent toHome = new Intent(RainbowActivityNVL1.this, HomeActivity.class);
                     startActivity(toHome);
+                    globalLives --;
+                    cancel();
                 }
             }
         }.start();
