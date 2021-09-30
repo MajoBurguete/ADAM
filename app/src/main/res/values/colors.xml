@@ -24,5 +24,21 @@
     <color name="rosa_claro">#FFB7C2</color>
     <color name="naranja_crayola">#FB6C36</color>
     <color name="naranja_claro">#FE7843</color>
+    <color name="r_amarillo">#FEC749</color>
+    <color name="r_amarillo_claro">#E7FF92</color>
+    <color name="r_amarillo_fuerte">#FFFF24</color>
+    <color name="r_rojo">#EF1452</color>
+    <color name="r_azul">#0778C7</color>
+    <color name="r_azul_osc">#134BEA</color>
+    <color name="r_beige">#C7B299</color>
+    <color name="r_cafe">#8C6239</color>
+    <color name="r_celeste">#7FCAF4</color>
+    <color name="r_fucsia">#9E005D</color>
+    <color name="r_menta">#92FFC1</color>
+    <color name="r_morado">#751DFF</color>
+    <color name="r_naranja">#FF693B</color>
+    <color name="r_rosa2">#FF8F9D</color>
+    <color name="r_rosa">#F492FF</color>
+    <color name="r_verde">#019A56</color>
     
 </resources>
