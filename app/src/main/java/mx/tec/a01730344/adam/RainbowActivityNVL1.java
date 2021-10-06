@@ -17,6 +17,7 @@ import java.util.Random;
 
 public class RainbowActivityNVL1 extends AppCompatActivity {
 
+    RainbowModelNVL1 model;
     TextView tvInstruction;
     TextView tvColor;
     TextView tvScoreR;
@@ -26,12 +27,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
     ImageView ivLife1;
     ImageView ivLife2;
     ImageView ivLife3;
-    int score = 0;
-    int globalAnswer = -1;
-    int globalLives = 3;
-    List<String> colors = Arrays.asList("Amarillo", "Azul", "Café", "Morado", "Naranja", "Rojo", "Rosa", "Verde");
-    List<Integer> colorValues = Arrays.asList(R.color.r_amarillo, R.color.r_azul_osc, R.color.r_cafe, R.color.r_morado, R.color.r_naranja, R.color.r_rojo, R.color.r_rosa, R.color.r_verde);
-    List<Integer> figures = Arrays.asList(R.drawable.ic_boton_amarillo, R.drawable.ic_boton_azul_osc, R.drawable.ic_boton_cafe, R.drawable.ic_boton_morado, R.drawable.ic_boton_naranja, R.drawable.ic_boton_rojo, R.drawable.ic_boton_rosa, R.drawable.ic_boton_verde);
+    String scoreString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,25 +43,38 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
         ivLife1 = findViewById(R.id.ivLife1);
         ivLife2 = findViewById(R.id.ivLife2);
         ivLife3 = findViewById(R.id.ivLife3);
+        model = new RainbowModelNVL1();
 
         ibOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkAnswer(0);
+                model.checkAnswer(0);
+                scoreString = "Puntuación: " + model.score;
+                tvScoreR.setText(scoreString);
+                checkLives();
+                setLayoutAttributes();
             }
         });
 
         ibOption2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkAnswer(1);
+                model.checkAnswer(1);
+                scoreString = "Puntuación: " + model.score;
+                tvScoreR.setText(scoreString);
+                checkLives();
+                setLayoutAttributes();
             }
         });
 
         ibOption3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkAnswer(2);
+                model.checkAnswer(2);
+                scoreString = "Puntuación: " + model.score;
+                tvScoreR.setText(scoreString);
+                checkLives();
+                setLayoutAttributes();
             }
         });
 
@@ -73,91 +82,42 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
     }
 
     private void startGame() {
-        gameRound();
+        setLayoutAttributes();
         new CountDownTimer(900000000, 1000) {
             public void onFinish() {
                 Intent toHome = new Intent(RainbowActivityNVL1.this, HomeActivity.class);
                 startActivity(toHome);
             }
             public void onTick(long millisUntilFinished) {
-                if (globalLives == 0) {
+                if (model.globalLives == 0) {
                     Intent toHome = new Intent(RainbowActivityNVL1.this, HomeActivity.class);
                     startActivity(toHome);
-                    globalLives --;
+                    model.globalLives --;
                     cancel();
                 }
             }
         }.start();
     }
 
-    private void gameRound() {
-        int randomColor = new Random().nextInt(8);
-        tvColor.setText(colors.get(randomColor));
-        int randomValue = new Random().nextInt(8);
-        while (randomValue == randomColor) {
-            randomValue = new Random().nextInt(8);
-        }
-        tvColor.setTextColor(getResources().getColor(colorValues.get(randomValue)));
-        int randomAnswerA = new Random().nextInt(3);
-        globalAnswer = randomAnswerA;
-        if (randomAnswerA == 0) {
-            ibOption1.setImageResource(figures.get(randomColor));
-        }
-        if (randomAnswerA == 1) {
-            ibOption2.setImageResource(figures.get(randomColor));
-        }
-        if (randomAnswerA == 2) {
-            ibOption3.setImageResource(figures.get(randomColor));
-        }
-        int randomAnswerB = new Random().nextInt(3);
-        while (randomAnswerB == randomAnswerA) {
-            randomAnswerB = new Random().nextInt(3);
-        }
-        if (randomAnswerB == 0) {
-            ibOption1.setImageResource(figures.get(randomValue));
-        }
-        if (randomAnswerB == 1) {
-            ibOption2.setImageResource(figures.get(randomValue));
-        }
-        if (randomAnswerB == 2) {
-            ibOption3.setImageResource(figures.get(randomValue));
-        }
-        int randomAnswerC = randomAnswerA + randomAnswerB;
-        int randomOption = new Random().nextInt(3);
-        while (randomOption == randomValue || randomOption == randomColor) {
-            randomOption = new Random().nextInt(8);
-        }
-        if (randomAnswerC == 1) {
-            ibOption3.setImageResource(figures.get(randomOption));
-        }
-        if (randomAnswerC == 2) {
-            ibOption2.setImageResource(figures.get(randomOption));
-        }
-        if (randomAnswerC == 3) {
-            ibOption1.setImageResource(figures.get(randomOption));
-        }
+    private void setLayoutAttributes() {
+        model.gameRound();
+        tvColor.setText(model.colorText);
+        tvColor.setTextColor(getResources().getColor(model.colorValue));
+        ibOption1.setImageResource(model.imageView1);
+        ibOption2.setImageResource(model.imageView2);
+        ibOption3.setImageResource(model.imageView3);
     }
 
-    private void checkAnswer(int answer) {
-        if (answer == globalAnswer) {
-            score += 10 * globalLives;
-            String scoreString = "Puntuación: " + String.valueOf(score);
-            tvScoreR.setText(scoreString);
-        }
-        else {
-            globalLives --;
-        }
-        if (globalLives == 2) {
+    private void checkLives() {
+        if (model.globalLives == 2) {
             ivLife3.setImageResource(R.drawable.ic_adam_dead);
         }
-        if (globalLives == 1) {
+        if (model.globalLives == 1) {
             ivLife2.setImageResource(R.drawable.ic_adam_dead);
         }
-        if (globalLives == 0) {
+        if (model.globalLives == 0) {
             ivLife1.setImageResource(R.drawable.ic_adam_dead);
         }
-        globalAnswer = -1;
-        gameRound();
     }
 
 }
