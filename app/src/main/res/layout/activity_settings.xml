@@ -162,11 +162,26 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/tvinstlengthSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:text="Entre 1 y 10 caracteres"
+        android:textColor="@color/verde_palido"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tiUsernameSett"
+        app:layout_constraintTop_toBottomOf="@+id/tiUsernameSett"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/btnSaveSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
         android:backgroundTint="#EF75B4"
         android:fontFamily="@font/silka_bold_webfont"
         android:text="@string/guardar"
@@ -176,8 +191,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tiUsernameSett"
         app:layout_constraintStart_toStartOf="@id/tiUsernameSett"
-        app:layout_constraintTop_toBottomOf="@id/tiUsernameSett"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tvinstlengthSettings"
+        app:layout_constraintVertical_bias="0.125"
         tools:ignore="TextContrastCheck" />
 
     <Button

@@ -100,5 +100,47 @@
         app:layout_constraintStart_toStartOf="@+id/ibAddProfile"
         app:layout_constraintTop_toBottomOf="@+id/ibAddProfile"
         app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/tvprofileName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon1"
+        app:layout_constraintStart_toStartOf="@+id/ibProfileIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="0123456789" />
+
+    <TextView
+        android:id="@+id/tvprofileName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon2"
+        app:layout_constraintStart_toStartOf="@+id/ibProfileIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="0123456789" />
+
+    <TextView
+        android:id="@+id/tvprofileName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon3"
+        app:layout_constraintStart_toStartOf="@+id/ibProfileIcon3"
+        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="0123456789" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
