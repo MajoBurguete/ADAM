@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:paddingStart="10dp"
         android:paddingEnd="30dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,87 +70,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvTeContareUnCuento"
             app:layout_constraintTop_toBottomOf="@+id/tvTeContareUnCuento"
-            app:layout_constraintVertical_bias="0.060000002">
+            app:layout_constraintVertical_bias="0.16000003">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="20dp"
+                android:paddingTop="25dp"
                 android:paddingEnd="15dp"
-                android:paddingBottom="20dp">
-
-                <TextView
-                    android:id="@+id/tvStory4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/silka_bold_webfont"
-                    android:text="@string/example_cuento_3"
-                    android:textAlignment="textEnd"
-                    android:textSize="19.5sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/ivStoryIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/tvStory3" />
+                android:paddingBottom="25dp">
 
                 <ImageView
                     android:id="@+id/ivStoryIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvStory2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0"
+                    app:layout_constraintTop_toTopOf="@+id/tvStory2"
                     tools:ignore="ImageContrastCheck"
                     tools:srcCompat="@drawable/ic_triangulo_cuentos_r" />
-
-                <TextView
-                    android:id="@+id/tvStory"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/silka_bold_webfont"
-                    android:text="@string/example_cuento_2"
-                    android:textAlignment="textEnd"
-                    android:textSize="19.5sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/ivStoryIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/tvStory2" />
-
-                <TextView
-                    android:id="@+id/tvStory3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/silka_bold_webfont"
-                    android:text="@string/azules"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/verde"
-                    android:textSize="19.5sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/ivStoryIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/tvStory" />
-
-                <TextView
-                    android:id="@+id/tvStory5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/silka_bold_webfont"
-                    android:text="@string/naranjas"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/purple_500"
-                    android:textSize="19.5sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.2"
-                    app:layout_constraintStart_toEndOf="@+id/ivStoryIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/tvStory4"
-                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/tvStory2"
@@ -161,10 +100,10 @@
                     android:textAlignment="textEnd"
                     android:textSize="19.5sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/ivStoryIcon"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivStoryIcon"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -177,7 +116,7 @@
         android:id="@+id/clQuestion"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -194,12 +133,12 @@
             android:paddingTop="14dp"
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
-            android:text="@string/naranja"
             android:textSize="20sp"
             app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="@+id/btnOptionS1"
             app:layout_constraintStart_toStartOf="@+id/btnOptionS1"
-            app:layout_constraintTop_toBottomOf="@+id/btnOptionS1" />
+            app:layout_constraintTop_toBottomOf="@+id/btnOptionS1"
+            tools:text="en la mañana" />
 
         <Button
             android:id="@+id/btnOptionS3"
@@ -226,22 +165,22 @@
             android:id="@+id/btnOptionS1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="32dp"
             android:backgroundTint="@color/verde"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingStart="15dp"
             android:paddingTop="14dp"
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
-            android:text="@string/verde"
             android:textSize="20sp"
             app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/cardView4"
             app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
-            app:layout_constraintTop_toTopOf="@+id/ivStoryIcon2"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/cardView4"
+            app:layout_constraintVertical_bias="0.07999998"
+            tools:ignore="TextContrastCheck"
+            tools:text="A su madrastra " />
 
         <ImageView
             android:id="@+id/ivStoryIcon2"
@@ -270,7 +209,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingStart="20dp"
                 android:paddingTop="5dp"
                 android:paddingEnd="20dp"
@@ -278,8 +217,8 @@
 
                 <TextView
                     android:id="@+id/tvQuestionS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="302dp"
+                    android:layout_height="60dp"
                     android:fontFamily="@font/silka_bold_webfont"
                     android:text="@string/de_qu_color_eran_las_rosas_del_pr_ncipe"
                     android:textAlignment="center"
