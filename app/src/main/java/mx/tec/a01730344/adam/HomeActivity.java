@@ -13,13 +13,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class HomeActivity extends AppCompatActivity {
 
     ConstraintLayout clToProfile;
     Toolbar toolbar;
+    ImageView ivProfPictHome;
+    TextView tvUsernameHome;
     final FragmentManager fragmentManager = getSupportFragmentManager();
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,13 @@ public class HomeActivity extends AppCompatActivity {
 
         clToProfile = findViewById(R.id.clToProfile);
         toolbar = findViewById(R.id.toolbar);
+        ivProfPictHome = findViewById(R.id.ivProfPictHome);
+        tvUsernameHome = findViewById(R.id.tvUsernameHome);
+
+        user.loadProfiles();
+
+        ivProfPictHome.setImageResource(user.getCurrentUserMini());
+        tvUsernameHome.setText(user.getCurrentUser());
 
         setSupportActionBar(toolbar);
         toolbarActions();

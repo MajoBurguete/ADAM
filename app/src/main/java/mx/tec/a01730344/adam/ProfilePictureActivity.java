@@ -16,6 +16,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
     ImageButton ibIcon4;
     ImageButton ibIcon5;
     ImageButton ibIcon6;
+    int image = R.drawable.ic_pp_hex;
+    int medium = R.drawable.ic_pp_hex_medium;
+    int mini = R.drawable.ic_pp_hex_min;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                image = R.drawable.ic_pp_cuadradito;
+                medium = R.drawable.ic_pp_cuadradito_medium;
+                mini = R.drawable.ic_pp_cuadradito_mini;
                 toLogin();
             }
         });
@@ -54,6 +60,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                image = R.drawable.ic_pp_triangulito;
+                medium = R.drawable.ic_pp_triangulito_medium;
+                mini = R.drawable.ic_pp_triangulito_mini;
                 toLogin();
             }
         });
@@ -61,6 +70,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                image = R.drawable.ic_pp_circulito;
+                medium = R.drawable.ic_pp_circulito_medium;
+                mini = R.drawable.ic_pp_circulito_mini;
                 toLogin();
             }
         });
@@ -68,6 +80,10 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                image = R.drawable.ic_pp_onditas;
+                medium = R.drawable.ic_pp_onditas_medium;
+                mini = R.drawable.ic_pp_onditas_mini;
+
                 toLogin();
             }
         });
@@ -75,6 +91,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                image = R.drawable.ic_pp_estrellita;
+                medium = R.drawable.ic_pp_estrellita_medium;
+                mini = R.drawable.ic_pp_estrellita_mini;
                 toLogin();
             }
         });
@@ -82,6 +101,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
 
     private void toLogin() {
         Intent toLogin = new Intent(ProfilePictureActivity.this, LoginActivity.class);
+        toLogin.putExtra("image",image);
+        toLogin.putExtra("medium", medium);
+        toLogin.putExtra("mini", mini);
         startActivity(toLogin);
     }
 }

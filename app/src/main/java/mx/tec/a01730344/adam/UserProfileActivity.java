@@ -9,11 +9,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class UserProfileActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ImageButton ibBack;
+    ImageView ivUsernameProf;
+    TextView tvUsernameProf;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,13 @@ public class UserProfileActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar2);
         ibBack = findViewById(R.id.ibBackFromProf);
+        ivUsernameProf = findViewById(R.id.ivUsernameProf);
+        tvUsernameProf = findViewById(R.id.tvUsernameProf);
+
+        user.loadProfiles();
+
+        ivUsernameProf.setImageResource(user.getCurrentUserMini());
+        tvUsernameProf.setText(user.getCurrentUser());
 
         setSupportActionBar(toolbar);
         toolbarActions();

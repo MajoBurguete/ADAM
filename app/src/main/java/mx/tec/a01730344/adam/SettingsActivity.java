@@ -15,11 +15,14 @@ public class SettingsActivity extends AppCompatActivity {
     FloatingActionButton fabEditPictSett;
     Button btnDeleteSett;
     ImageButton ibBack;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        user.loadProfiles();
 
         fabEditPictSett = findViewById(R.id.fabEditPictSett);
         btnDeleteSett = findViewById(R.id.btnDeleteSett);
@@ -44,6 +47,8 @@ public class SettingsActivity extends AppCompatActivity {
         btnDeleteSett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                user.deleteUser(user.getCurrentUserNumber());
+                user.minusCount();
                 Intent toMain = new Intent(SettingsActivity.this, MainActivity.class);
                 startActivity(toMain);
             }
