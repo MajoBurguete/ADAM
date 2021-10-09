@@ -96,51 +96,71 @@ public class User {
         loadProfiles();
 
         String user3, user3Image, user3Mini, user2, user2Image, user2Mini;
-        switch (user){
+        switch (user) {
+            case "user1":
+                user2 = profiles.getProperty("user2");
+                user3 = profiles.getProperty("user3");
+
+                if(user2 == null) {
+                    profiles.remove("user1");
+                    profiles.remove("user1image");
+                    profiles.remove("user1mini");
+                } else if(user3 == null) {
+                    user2Image = profiles.getProperty("user2image");
+                    user2Mini = profiles.getProperty("user2mini");
+                    profiles.setProperty("user1", user2);
+                    profiles.setProperty("user1image", user2Image);
+                    profiles.setProperty("user1mini", user2Mini);
+
+                    profiles.remove("user2");
+                    profiles.remove("user2image");
+                    profiles.remove("user2mini");
+                } else {
+                    user2Image = profiles.getProperty("user2image");
+                    user2Mini = profiles.getProperty("user2mini");
+                    profiles.setProperty("user1", user2);
+                    profiles.setProperty("user1image", user2Image);
+                    profiles.setProperty("user1mini", user2Mini);
+
+                    user3Image = profiles.getProperty("user3image");
+                    user3Mini = profiles.getProperty("user3mini");
+                    profiles.setProperty("user2",user3);
+                    profiles.setProperty("user2image", user3Image);
+                    profiles.setProperty("user2mini", user3Mini);
+
+                    profiles.remove("user3");
+                    profiles.remove("user3image");
+                    profiles.remove("user3mini");
+                }
+                break;
+
             case "user2":
                 user3 = profiles.getProperty("user3");
-                user3Image = profiles.getProperty("user3image");
-                user3Mini = profiles.getProperty("user3mini");
 
-                profiles.setProperty("user2",user3);
-                profiles.setProperty("user2image", user3Image);
-                profiles.setProperty("user2mini", user3Mini);
+                if(user3 == null) {
+                    profiles.remove("user2");
+                    profiles.remove("user2image");
+                    profiles.remove("user2mini");
+                } else {
+                    user3Image = profiles.getProperty("user3image");
+                    user3Mini = profiles.getProperty("user3mini");
 
-                profiles.remove("user3");
-                profiles.remove("user3image");
-                profiles.remove("user3");
+                    profiles.setProperty("user2",user3);
+                    profiles.setProperty("user2image", user3Image);
+                    profiles.setProperty("user2mini", user3Mini);
 
+                    profiles.remove("user3");
+                    profiles.remove("user3image");
+                    profiles.remove("user3mini");
+                }
                 break;
-            case "user1":
-                user3 = profiles.getProperty("user3");
-                user3Image = profiles.getProperty("user3image");
-                user3Mini = profiles.getProperty("user3mini");
 
-                user2 = profiles.getProperty("user2");
-                user2Image = profiles.getProperty("user2image");
-                user2Mini = profiles.getProperty("user2mini");
-
-                profiles.setProperty("user1",user2);
-                profiles.setProperty("user1image", user2Image);
-                profiles.setProperty("user1mini", user2Mini);
-
-                profiles.setProperty("user2",user3);
-                profiles.setProperty("user2image", user3Image);
-                profiles.setProperty("user2mini", user3Mini);
-
-
-                profiles.remove("user3");
-                profiles.remove("user3image");
-                profiles.remove("user3mini");
-
-                break;
             default:
                 profiles.remove("user3");
                 profiles.remove("user3image");
-                profiles.remove("user3");
+                profiles.remove("user3mini");
                 break;
         }
-
         saveProfiles();
     }
 
