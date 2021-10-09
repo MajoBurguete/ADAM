@@ -6,6 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rosa_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBackFromSett"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_logo_adam_tool"
+            tools:ignore="ImageContrastCheck" />
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/ivProfilePictSett"
         android:layout_width="wrap_content"
@@ -26,73 +72,134 @@
         android:layout_marginEnd="3dp"
         android:backgroundTint="@color/naranja_claro"
         android:clickable="true"
+        app:backgroundTint="@android:color/transparent"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="@id/ivProfilePictSett"
         app:layout_constraintEnd_toEndOf="@id/ivProfilePictSett"
         app:srcCompat="@drawable/ic_edit_transp"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/tvEditarPerfilSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="Editar perfil"
+        android:text="@string/editar_perfil"
         android:textColor="#FF5722"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
-
-    <EditText
-        android:id="@+id/etUsernameSett"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:inputType="textPersonName"
-        android:text="Flamenco"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/ivProfilePictSett"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@id/ivProfilePictSett"
-        app:layout_constraintTop_toBottomOf="@id/ivProfilePictSett"
-        app:layout_constraintVertical_bias="0.035"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        app:layout_constraintVertical_bias="0.069" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabEditUserSett"
+        android:id="@+id/fabEditUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/naranja_claro"
         android:clickable="true"
+        app:backgroundTint="@android:color/transparent"
         app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@id/etUsernameSett"
-        app:layout_constraintEnd_toEndOf="@id/etUsernameSett"
+        app:layout_constraintEnd_toEndOf="@+id/tiUsernameSett"
+        app:layout_constraintTop_toTopOf="@+id/tiUsernameSett"
         app:srcCompat="@drawable/ic_edit_transp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiUsernameSett"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="70dp"
+        android:elevation="10dp"
+        android:enabled="true"
+        android:hint="@string/escribe_tu_nombre"
+        android:textColorHint="@color/verde_palido"
+        android:translationZ="-5dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="5dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/amarillo"
+        app:boxStrokeErrorColor="@color/naranja"
+        app:boxStrokeWidth="5dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/naranja"
+        app:errorTextColor="@color/naranja"
+        app:helperTextTextColor="@color/verde_palido"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/verde_palido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfilePictSett"
+        app:placeholderTextColor="@color/verde_palido"
+        app:prefixTextColor="@color/verde_palido">
+
+        <EditText
+            android:id="@+id/etUsernameSett"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/verde"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ivProfilePictSett"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@id/ivProfilePictSett"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePictSett"
+            app:layout_constraintVertical_bias="0.035"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvinstlengthSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:text="Entre 1 y 10 caracteres"
+        android:textColor="@color/verde_palido"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tiUsernameSett"
+        app:layout_constraintTop_toBottomOf="@+id/tiUsernameSett"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnSaveSett"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
         android:backgroundTint="#EF75B4"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="Guardar"
+        android:text="@string/guardar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/etUsernameSett"
-        app:layout_constraintStart_toStartOf="@id/etUsernameSett"
-        app:layout_constraintTop_toBottomOf="@id/etUsernameSett"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@id/tiUsernameSett"
+        app:layout_constraintStart_toStartOf="@id/tiUsernameSett"
+        app:layout_constraintTop_toBottomOf="@+id/tvinstlengthSettings"
+        app:layout_constraintVertical_bias="0.125"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btnDeleteSett"
@@ -101,7 +208,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="#C3082E"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="Eliminar perfil"
+        android:text="@string/eliminar_perfil"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
         app:cornerRadius="10dp"

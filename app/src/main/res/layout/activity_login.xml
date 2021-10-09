@@ -6,47 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/rosa_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBackFromLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_logo_adam_tool"
+            tools:ignore="ImageContrastCheck" />
+    </RelativeLayout>
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/rosa"
+        android:enabled="false"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="¡Entrar!"
+        android:text="@string/entrar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
         app:cornerRadius="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsernameLogin"
-        app:layout_constraintVertical_bias="0.197" />
-
-    <TextView
-        android:id="@+id/etUsernameLogin"
-        android:layout_width="265dp"
-        android:layout_height="52dp"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:paddingTop="9sp"
-        android:text="Escribe tu nombre"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProfileImageLogin"
-        app:layout_constraintVertical_bias="0.124" />
+        app:layout_constraintTop_toBottomOf="@+id/tvinstlengthlogin"
+        app:layout_constraintVertical_bias="0.136"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/ivProfileImageLogin"
 
-        android:layout_width="201dp"
-        android:layout_height="194dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/verde"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivHola"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/placeholder" />
+        app:srcCompat="@drawable/ic_pp_hex"
+        tools:ignore="ImageContrastCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabEditImageLogin"
@@ -56,13 +95,9 @@
         app:backgroundTint="@color/naranja"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="@+id/ivProfileImageLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.704"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivProfileImageLogin"
-        app:layout_constraintVertical_bias="0.789"
+        app:layout_constraintEnd_toEndOf="@+id/ivProfileImageLogin"
         app:srcCompat="@drawable/ic_edit_transp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/ivHola"
@@ -72,8 +107,81 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
         app:layout_constraintVertical_bias="0.068"
-        app:srcCompat="@drawable/hola" />
+        app:srcCompat="@drawable/ic_hola" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="45dp"
+        android:elevation="10dp"
+        android:hint="@string/escribe_tu_nombre"
+        android:textColorHint="@color/verde_palido"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="5dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/amarillo"
+        app:boxStrokeErrorColor="@color/naranja"
+        app:boxStrokeWidth="5dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:errorContentDescription="Son mas de 10 caracteres"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/naranja"
+        app:errorTextColor="@color/naranja"
+        app:helperTextTextColor="@color/verde_palido"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/verde_palido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImageLogin"
+        app:placeholderTextColor="@color/verde_palido"
+        app:prefixTextColor="@color/verde_palido">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/verde"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfileImageLogin"
+            app:layout_constraintStart_toStartOf="@+id/ivProfileImageLogin"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfileImageLogin"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvinstlengthlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/silka_bold_webfont"
+        android:text="Entre 1 y 10 caracteres"
+        android:textColor="@color/verde_palido"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tiUsername"
+        app:layout_constraintTop_toBottomOf="@+id/tiUsername"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         tools:ignore="SpeakableTextPresentCheck"
-        tools:srcCompat="@drawable/ic_pausa" />
+        tools:srcCompat="@drawable/ic_pause_azul" />
 
     <ImageView
         android:id="@+id/ivTuPuedes"
@@ -31,26 +31,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/tu_puedes" />
+        app:srcCompat="@drawable/ic_tu_puedes"
+        tools:ignore="ImageContrastCheck" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="314dp"
-        android:layout_height="315dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.17">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="314dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp">
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp">
 
             <ImageButton
                 android:id="@+id/ibOption2"
@@ -59,7 +61,6 @@
                 android:backgroundTint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.695"
                 app:layout_constraintStart_toEndOf="@+id/ibOption1"
                 app:layout_constraintTop_toTopOf="@+id/ibOption1"
                 app:layout_constraintVertical_bias="0.0"
@@ -74,10 +75,10 @@
                 android:backgroundTint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/ibOption2"
-                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintHorizontal_bias="0.21"
                 app:layout_constraintStart_toStartOf="@+id/ibOption1"
                 app:layout_constraintTop_toBottomOf="@+id/ibOption1"
-                app:layout_constraintVertical_bias="0.449"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_boton_rosa"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -88,10 +89,10 @@
                 android:backgroundTint="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.071"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintVertical_bias="0.188"
                 app:srcCompat="@drawable/ic_boton_azul_osc"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -100,20 +101,24 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="320dp"
-        android:layout_height="58dp"
-        app:cardBackgroundColor="#FFFFFF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17">
+        app:layout_constraintTop_toBottomOf="@+id/ibPauseR1"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
 
             <TextView
                 android:id="@+id/tvInstruction"
