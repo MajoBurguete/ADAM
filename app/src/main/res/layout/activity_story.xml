@@ -14,9 +14,10 @@
         android:layout_height="0dp"
         android:paddingStart="10dp"
         android:paddingEnd="30dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibPauseS"
         app:layout_constraintVertical_bias="0.0">
@@ -88,8 +89,8 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/tvStory2"
-                    tools:ignore="ImageContrastCheck"
-                    tools:srcCompat="@drawable/ic_triangulo_cuentos_r" />
+                    app:srcCompat="@drawable/ic_triangulo_cuentos_r"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/tvStory2"
@@ -116,7 +117,7 @@
         android:id="@+id/clQuestion"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +134,7 @@
             android:paddingTop="14dp"
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="@+id/btnOptionS1"
             app:layout_constraintStart_toStartOf="@+id/btnOptionS1"
@@ -153,7 +154,7 @@
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
             android:text="@string/azul"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnOptionS2"
@@ -166,13 +167,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:backgroundTint="@color/verde"
+            android:backgroundTint="@color/verde_pasto"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingStart="15dp"
             android:paddingTop="14dp"
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/cardView4"
@@ -192,6 +193,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView4"
             app:layout_constraintVertical_bias="0.229"
+            app:srcCompat="@drawable/ic_triangulo_cuentos_b"
             tools:srcCompat="@drawable/ic_triangulo_cuentos_b" />
 
         <androidx.cardview.widget.CardView
@@ -217,10 +219,9 @@
 
                 <TextView
                     android:id="@+id/tvQuestionS"
-                    android:layout_width="302dp"
-                    android:layout_height="60dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/silka_bold_webfont"
-                    android:text="@string/de_qu_color_eran_las_rosas_del_pr_ncipe"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp"
@@ -228,25 +229,60 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/de_qu_color_eran_las_rosas_del_pr_ncipe" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView3"
+        <Button
+            android:id="@+id/btnNextQ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="@color/white"
             android:fontFamily="@font/silka_bold_webfont"
+            android:paddingStart="25dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="10dp"
+            android:text="@string/seguir"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="50sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnNextQ"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextQ"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnOptionS3"
-            tools:text="¡Bien!" />
+            app:layout_constraintTop_toTopOf="@+id/btnNextQ" />
+
+        <TextView
+            android:id="@+id/tvScoreS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:text="Puntuación: 0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivStoryIcon2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ivStoryIcon2"
+            app:layout_constraintTop_toBottomOf="@+id/ivStoryIcon2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -257,11 +293,49 @@
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/ic_pausa"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/ivLife2S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLife1S"
+        app:layout_constraintEnd_toEndOf="@+id/ibPauseS"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivLife1S"
+        app:layout_constraintTop_toTopOf="@+id/ivLife1S"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_adam_alive" />
+
+    <ImageView
+        android:id="@+id/ivLife3S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLife1S"
+        app:layout_constraintEnd_toEndOf="@+id/ibPauseS"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivLife2S"
+        app:layout_constraintTop_toTopOf="@+id/ivLife1S"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_adam_alive" />
+
+    <ImageView
+        android:id="@+id/ivLife1S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ibPauseS"
+        app:layout_constraintEnd_toEndOf="@+id/ibPauseS"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ibPauseS"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_adam_alive" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
