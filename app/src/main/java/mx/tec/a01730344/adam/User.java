@@ -2,9 +2,6 @@ package mx.tec.a01730344.adam;
 
 import android.content.Context;
 import android.util.Log;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -195,7 +192,5 @@ public class User {
     public String getCurrentUserNumber(){
         return getUsername("currentUserNumber");
     }
-
-    // results.setProperty(selected, Integer.toString(count));
 
 }
