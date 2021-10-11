@@ -6,68 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/ibProfileIcon1"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/ibProfileIcon2"
+        android:layout_marginTop="45dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ibProfileIcon2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_pp_hex_medium"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEligeTuPerfil">
+
+        <ImageButton
+            android:id="@+id/ibProfileIcon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pp_hex_medium"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvprofileName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon1"
+            app:layout_constraintStart_toStartOf="@+id/ibProfileIcon1"
+            app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon1"
+            tools:text="0123456789" />
+
+        <ImageButton
+            android:id="@+id/ibProfileIcon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ibProfileIcon1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pp_cuadradito_medium"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvprofileName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon2"
+            app:layout_constraintStart_toStartOf="@+id/ibProfileIcon2"
+            app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
+            tools:text="0123456789" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/ibAddProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
         android:adjustViewBounds="false"
         android:backgroundTint="@android:color/transparent"
         android:cropToPadding="false"
         android:outlineProvider="background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/ibProfileIcon1"
-        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.055"
         app:srcCompat="@drawable/ic_add_main"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/ibProfileIcon2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ibProfileIcon1"
-        app:layout_constraintTop_toBottomOf="@+id/tvEligeTuPerfil"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_pp_cuadradito_medium"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
         android:id="@+id/ibProfileIcon3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/transparent"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_pp_estrellita"
+        app:srcCompat="@drawable/ic_pp_estrellita_medium"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -100,33 +126,6 @@
         app:layout_constraintStart_toStartOf="@+id/ibAddProfile"
         app:layout_constraintTop_toBottomOf="@+id/ibAddProfile"
         app:layout_constraintVertical_bias="0.0" />
-    <TextView
-        android:id="@+id/tvprofileName1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:textColor="@color/teal_700"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon1"
-        app:layout_constraintStart_toStartOf="@+id/ibProfileIcon1"
-        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon1"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="0123456789" />
-
-    <TextView
-        android:id="@+id/tvprofileName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:textColor="@color/teal_700"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon2"
-        app:layout_constraintStart_toStartOf="@+id/ibProfileIcon2"
-        app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="0123456789" />
 
     <TextView
         android:id="@+id/tvprofileName3"
@@ -136,11 +135,9 @@
         android:textColor="@color/teal_700"
         android:textSize="18sp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ibProfileIcon3"
         app:layout_constraintStart_toStartOf="@+id/ibProfileIcon3"
         app:layout_constraintTop_toBottomOf="@+id/ibProfileIcon3"
-        app:layout_constraintVertical_bias="0.0"
         tools:text="0123456789" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
