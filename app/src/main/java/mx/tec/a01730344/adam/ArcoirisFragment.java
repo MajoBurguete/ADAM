@@ -36,8 +36,9 @@ public class ArcoirisFragment extends Fragment {
         btnJugarArcoiris.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toRainbowActivityNVL1 = new Intent(getActivity(), RainbowActivityNVL1.class);
-                startActivity(toRainbowActivityNVL1);
+                Intent toSelectDifficulty = new Intent(getActivity(), InstructionsActivity.class);
+                toSelectDifficulty.putExtra("game", 0);
+                startActivity(toSelectDifficulty);
             }
         });
     }

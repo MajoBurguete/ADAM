@@ -36,8 +36,9 @@ public class TeCuentoFragment extends Fragment {
         btnJugarTeCuento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toStoryActivity = new Intent(getActivity(), StoryActivity.class);
-                startActivity(toStoryActivity);
+                Intent toSelectDifficulty = new Intent(getActivity(), InstructionsActivity.class);
+                toSelectDifficulty.putExtra("game", 2);
+                startActivity(toSelectDifficulty);
             }
         });
     }

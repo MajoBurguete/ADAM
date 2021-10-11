@@ -46,6 +46,9 @@
             android:name=".ShapesActivityNVL3"
             android:exported="true" />
         <activity
+            android:name=".SelectDifficultyActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
