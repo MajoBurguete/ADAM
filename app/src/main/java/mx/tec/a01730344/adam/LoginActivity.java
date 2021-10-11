@@ -75,7 +75,9 @@ public class LoginActivity extends AppCompatActivity {
         fabPickPict.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int value = 0;
                 Intent toProfilePictAct = new Intent(LoginActivity.this, ProfilePictureActivity.class);
+                toProfilePictAct.putExtra("screen",value);
                 startActivity(toProfilePictAct);
             }
         });

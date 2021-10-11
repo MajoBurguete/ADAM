@@ -16,6 +16,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
     ImageButton ibIcon4;
     ImageButton ibIcon5;
     ImageButton ibIcon6;
+    String value;
     int image = R.drawable.ic_pp_hex;
     int medium = R.drawable.ic_pp_hex_medium;
     int mini = R.drawable.ic_pp_hex_min;
@@ -33,17 +34,19 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon5 = findViewById(R.id.ibIcon5);
         ibIcon6 = findViewById(R.id.ibIcon6);
 
+        int value = getIntent().getExtras().getInt("screen");
+
         ibBackProfPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toLogin();
+                toPreviousScreen(value);
             }
         });
 
         ibIcon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toLogin();
+                toPreviousScreen(value);
             }
         });
 
@@ -53,7 +56,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
                 image = R.drawable.ic_pp_cuadradito;
                 medium = R.drawable.ic_pp_cuadradito_medium;
                 mini = R.drawable.ic_pp_cuadradito_mini;
-                toLogin();
+                toPreviousScreen(value);
             }
         });
 
@@ -63,7 +66,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
                 image = R.drawable.ic_pp_triangulito;
                 medium = R.drawable.ic_pp_triangulito_medium;
                 mini = R.drawable.ic_pp_triangulito_mini;
-                toLogin();
+                toPreviousScreen(value);
             }
         });
 
@@ -73,7 +76,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
                 image = R.drawable.ic_pp_circulito;
                 medium = R.drawable.ic_pp_circulito_medium;
                 mini = R.drawable.ic_pp_circulito_mini;
-                toLogin();
+                toPreviousScreen(value);
             }
         });
 
@@ -83,8 +86,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
                 image = R.drawable.ic_pp_onditas;
                 medium = R.drawable.ic_pp_onditas_medium;
                 mini = R.drawable.ic_pp_onditas_mini;
-
-                toLogin();
+                toPreviousScreen(value);
             }
         });
 
@@ -94,16 +96,31 @@ public class ProfilePictureActivity extends AppCompatActivity {
                 image = R.drawable.ic_pp_estrellita;
                 medium = R.drawable.ic_pp_estrellita_medium;
                 mini = R.drawable.ic_pp_estrellita_mini;
-                toLogin();
+                toPreviousScreen(value);
             }
         });
     }
 
-    private void toLogin() {
-        Intent toLogin = new Intent(ProfilePictureActivity.this, LoginActivity.class);
-        toLogin.putExtra("image",image);
-        toLogin.putExtra("medium", medium);
-        toLogin.putExtra("mini", mini);
-        startActivity(toLogin);
+
+
+    private void toPreviousScreen(int screen) {
+        // screen = 1 is settings, else is login
+        if (screen == 1){
+            int value = 0;
+            Intent toSettings = new Intent(ProfilePictureActivity.this, SettingsActivity.class);
+            toSettings.putExtra("screen",value);
+            toSettings.putExtra("image",image);
+            toSettings.putExtra("medium", medium);
+            toSettings.putExtra("mini", mini);
+            startActivity(toSettings);
+        }
+        else {
+            Intent toLogin = new Intent(ProfilePictureActivity.this, LoginActivity.class);
+            toLogin.putExtra("image",image);
+            toLogin.putExtra("medium", medium);
+            toLogin.putExtra("mini", mini);
+            startActivity(toLogin);
+        }
+
     }
 }

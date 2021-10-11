@@ -94,20 +94,6 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar3"
         app:layout_constraintVertical_bias="0.069" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabEditUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/naranja_claro"
-        android:clickable="true"
-        app:backgroundTint="@android:color/transparent"
-        app:fabSize="mini"
-        app:layout_constraintEnd_toEndOf="@+id/tiUsernameSett"
-        app:layout_constraintTop_toTopOf="@+id/tiUsernameSett"
-        app:srcCompat="@drawable/ic_edit_transp"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiUsernameSett"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

@@ -47,7 +47,9 @@ public class HomeActivity extends AppCompatActivity {
         clToProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int value = 0;
                 Intent toProfile = new Intent(HomeActivity.this, UserProfileActivity.class);
+                toProfile.putExtra("screen",value);
                 startActivity(toProfile);
             }
         });
@@ -75,8 +77,10 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.btnSettings){
-            Intent settings = new Intent(HomeActivity.this, SettingsActivity.class);
-            startActivity(settings);
+            int value = 1;
+            Intent toSettings = new Intent(HomeActivity.this, SettingsActivity.class);
+            toSettings.putExtra("screen",value);
+            startActivity(toSettings);
         }
         return super.onOptionsItemSelected(item);
     }

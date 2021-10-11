@@ -41,8 +41,8 @@ public class UserProfileActivity extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent home = new Intent(UserProfileActivity.this, HomeActivity.class);
-                startActivity(home);
+                Intent toHome = new Intent(UserProfileActivity.this, HomeActivity.class);
+                startActivity(toHome);
             }
         });
     }
@@ -61,9 +61,13 @@ public class UserProfileActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.btnSettings){
-            Intent settings = new Intent(UserProfileActivity.this, SettingsActivity.class);
-            startActivity(settings);
+            int value = 2;
+            Intent toSettings = new Intent(UserProfileActivity.this, SettingsActivity.class);
+            toSettings.putExtra("screen",value);
+            startActivity(toSettings);
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class User {
-    private static final String FILENAME = "prueba.xml";
+    private static final String FILENAME = "prueba3.xml";
     private Properties profiles = new Properties();
     Context context;
 
@@ -29,7 +29,14 @@ public class User {
         profiles.setProperty(numUser, username);
         profiles.setProperty(numUser+"image", String.valueOf(image));
         profiles.setProperty(numUser+"mini", String.valueOf(mini));
-        String aux = numUser + "image";
+        saveProfiles();
+    }
+
+    public void modifyUser(String userNumber, String username, int image, int mini) {
+        loadProfiles();
+        profiles.setProperty(userNumber, username);
+        profiles.setProperty(userNumber+"image", String.valueOf(image));
+        profiles.setProperty(userNumber+"mini", String.valueOf(mini));
         saveProfiles();
     }
 
