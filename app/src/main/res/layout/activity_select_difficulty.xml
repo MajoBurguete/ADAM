@@ -8,17 +8,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clFormitasDifficulty"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/verde_palido_dos"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btnDificilFormitas"
+            android:id="@+id/btnHardFormitas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="55dp"
@@ -31,14 +31,14 @@
             android:textSize="34sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnIntermedioFormitas"
+            app:layout_constraintEnd_toEndOf="@+id/btnMediumFormitas"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnIntermedioFormitas"
-            app:layout_constraintTop_toBottomOf="@+id/btnIntermedioFormitas"
+            app:layout_constraintStart_toStartOf="@+id/btnMediumFormitas"
+            app:layout_constraintTop_toBottomOf="@+id/btnMediumFormitas"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btnIntermedioFormitas"
+            android:id="@+id/btnMediumFormitas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="95dp"
@@ -56,11 +56,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnFacilFormitas"
+            app:layout_constraintTop_toBottomOf="@+id/btnEasyFormitas"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btnFacilFormitas"
+            android:id="@+id/btnEasyFormitas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
@@ -73,9 +73,9 @@
             android:textSize="34sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnIntermedioFormitas"
+            app:layout_constraintEnd_toEndOf="@+id/btnMediumFormitas"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnIntermedioFormitas"
+            app:layout_constraintStart_toStartOf="@+id/btnMediumFormitas"
             app:layout_constraintTop_toBottomOf="@+id/ibBackFormitas"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -87,7 +87,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnDificilFormitas"
+            app:layout_constraintTop_toBottomOf="@+id/btnHardFormitas"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_en_formitas_card" />
 
@@ -110,17 +110,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clTeCuentoUnCuentoDifficulty"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/rosa_oscuro"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btnFacilCuento"
+            android:id="@+id/btnEasyTeCuento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
@@ -133,14 +133,14 @@
             android:textSize="34sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnIntermedioCuento"
+            app:layout_constraintEnd_toEndOf="@+id/btnMediumTeCuento"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnIntermedioCuento"
+            app:layout_constraintStart_toStartOf="@+id/btnMediumTeCuento"
             app:layout_constraintTop_toBottomOf="@+id/ibBackCuento"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btnIntermedioCuento"
+            android:id="@+id/btnMediumTeCuento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="95dp"
@@ -158,11 +158,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnFacilCuento"
+            app:layout_constraintTop_toBottomOf="@+id/btnEasyTeCuento"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btnDificilCuento"
+            android:id="@+id/btnHardTeCuento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="55dp"
@@ -175,10 +175,10 @@
             android:textSize="34sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnIntermedioCuento"
+            app:layout_constraintEnd_toEndOf="@+id/btnMediumTeCuento"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnIntermedioCuento"
-            app:layout_constraintTop_toBottomOf="@+id/btnIntermedioCuento"
+            app:layout_constraintStart_toStartOf="@+id/btnMediumTeCuento"
+            app:layout_constraintTop_toBottomOf="@+id/btnMediumTeCuento"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
@@ -205,14 +205,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnDificilCuento"
+            app:layout_constraintTop_toBottomOf="@+id/btnHardTeCuento"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_te_cuento_card" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:id="@+id/clArcoirisDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/amarillo"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -239,7 +240,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/btnIntermedioArcoiris"
+            android:id="@+id/btnMediumArcoiris"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="95dp"
@@ -257,11 +258,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnFacilArcoiris"
+            app:layout_constraintTop_toBottomOf="@+id/btnEasyArcoiris"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btnFacilArcoiris"
+            android:id="@+id/btnEasyArcoiris"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="130dp"
@@ -274,9 +275,9 @@
             android:textSize="34sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnIntermedioArcoiris"
+            app:layout_constraintEnd_toEndOf="@+id/btnMediumArcoiris"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnIntermedioArcoiris"
+            app:layout_constraintStart_toStartOf="@+id/btnMediumArcoiris"
             app:layout_constraintTop_toBottomOf="@+id/ibBackArcoiris"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -288,7 +289,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnIntermedioArcoiris"
+            app:layout_constraintTop_toBottomOf="@+id/btnMediumArcoiris"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_arcoiris_forma" />
     </androidx.constraintlayout.widget.ConstraintLayout>
