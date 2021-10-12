@@ -53,7 +53,7 @@ public class StoryActivity extends AppCompatActivity {
         ivLife1S = findViewById(R.id.ivLife1S);
         ivLife2S = findViewById(R.id.ivLife2S);
         ivLife3S = findViewById(R.id.ivLife3S);
-        //difficulty = getIntent().getExtras().getInt("difficulty");
+        difficulty = getIntent().getExtras().getInt("difficulty");
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override

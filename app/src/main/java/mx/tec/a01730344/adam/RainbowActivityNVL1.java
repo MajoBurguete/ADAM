@@ -83,7 +83,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
 
     private void startGame() {
         setLayoutAttributes();
-        new CountDownTimer(900000000, 1000) {
+        new CountDownTimer(900000000, 500) {
             public void onFinish() {
                 Intent toHome = new Intent(RainbowActivityNVL1.this, HomeActivity.class);
                 startActivity(toHome);
@@ -117,6 +117,9 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
         }
         if (model.globalLives == 0) {
             ivLife1.setImageResource(R.drawable.ic_adam_dead);
+            ibOption1.setEnabled(false);
+            ibOption2.setEnabled(false);
+            ibOption3.setEnabled(false);
         }
     }
 
