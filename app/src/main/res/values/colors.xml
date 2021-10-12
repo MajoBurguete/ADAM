@@ -40,5 +40,8 @@
     <color name="r_rosa2">#FF8F9D</color>
     <color name="r_rosa">#F492FF</color>
     <color name="r_verde">#019A56</color>
+    <color name="game_over_amarillo">#FFE29E</color>
+    <color name="game_over_rosa">#FFC7CE</color>
+    <color name="game_over_azul">#C1E5FF</color>
     
 </resources>
