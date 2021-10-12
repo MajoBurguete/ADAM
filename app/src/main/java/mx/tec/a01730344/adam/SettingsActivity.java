@@ -84,7 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String username = etUsernameSett.getText().toString();
                 String currUserNumber = user.getCurrentUserNumber();
-                user.setCurrentUser(username, image, mini, currUserNumber);
+                user.setCurrentUser(username, image, mini, currUserNumber,user.getCurrentUserScoreR(),user.getCurrentUserScoreC(),user.getCurrentUserScoreF());
                 user.modifyUser(currUserNumber,username, image, mini);
                 toPreviousScreen(previousScreen);
             }

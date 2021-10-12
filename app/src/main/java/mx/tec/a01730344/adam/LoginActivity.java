@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                 String username = etUsername.getText().toString();
                 user.saveUser(username, image, mini);
                 String newUser = "user" + String.valueOf(user.getCount());
-                user.setCurrentUser(username, image, mini, newUser);
+                user.setCurrentUser(username, image, mini, newUser,0,0,0);
                 Intent toHomeAct = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(toHomeAct);
             }
