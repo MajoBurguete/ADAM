@@ -18,6 +18,10 @@ public class UserProfileActivity extends AppCompatActivity {
     ImageButton ibBack;
     ImageView ivUsernameProf;
     TextView tvUsernameProf;
+    TextView tvScoreR;
+    TextView tvScoreC;
+    TextView tvScoreF;
+
     User user = new User(this);
 
     @Override
@@ -29,11 +33,18 @@ public class UserProfileActivity extends AppCompatActivity {
         ibBack = findViewById(R.id.ibBackFromProf);
         ivUsernameProf = findViewById(R.id.ivUsernameProf);
         tvUsernameProf = findViewById(R.id.tvUsernameProf);
+        tvScoreR = findViewById(R.id.tvArcoirisScore);
+        tvScoreC = findViewById(R.id.tvTeCuentoUnCuentoScore);
+        tvScoreF = findViewById(R.id.tvEnFormitasScore);
+
 
         user.loadProfiles();
 
         ivUsernameProf.setImageResource(user.getCurrentUserMini());
         tvUsernameProf.setText(user.getCurrentUser());
+        tvScoreR.setText(String.valueOf(user.getCurrentUserScoreR()));
+        tvScoreC.setText(String.valueOf(user.getCurrentUserScoreC()));
+        tvScoreF.setText(String.valueOf(user.getCurrentUserScoreF()));
 
         setSupportActionBar(toolbar);
         toolbarActions();

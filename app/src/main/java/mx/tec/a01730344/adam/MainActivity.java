@@ -95,21 +95,21 @@ public class MainActivity extends AppCompatActivity {
         ibProfileIcon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setCurrentUser(user.getUsername("user3"), user.getImage("user3image"), user.getImage("user3mini"), "user3");
+                user.setCurrentUser(user.getUsername("user3"), user.getImage("user3image"), user.getImage("user3mini"), "user3",user.getScoreR("user3scoreR"),user.getScoreC("user3scoreC"),user.getScoreF("user3scoreF"));
                 ToHome();
             }
         });
         ibProfileIcon2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setCurrentUser(user.getUsername("user2"), user.getImage("user2image"), user.getImage("user2mini"), "user2");
+                user.setCurrentUser(user.getUsername("user2"), user.getImage("user2image"), user.getImage("user2mini"), "user2",user.getScoreR("user2scoreR"),user.getScoreC("user2scoreC"),user.getScoreF("user2scoreF"));
                 ToHome();
             }
         });
         ibProfileIcon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setCurrentUser(user.getUsername("user1"), user.getImage("user1image"), user.getImage("user1mini"), "user1");
+                user.setCurrentUser(user.getUsername("user1"), user.getImage("user1image"), user.getImage("user1mini"), "user1",user.getScoreR("user1scoreR"),user.getScoreC("user1scoreC"),user.getScoreF("user1scoreF"));
                 ToHome();
             }
         });
