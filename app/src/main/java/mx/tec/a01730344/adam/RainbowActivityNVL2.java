@@ -26,6 +26,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
     ImageButton ibOption2;
     ImageButton ibOption3;
     ImageButton ibOption4;
+    ImageButton btnPause;
     ImageView ivLife1;
     ImageView ivLife2;
     ImageView ivLife3;
@@ -45,6 +46,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
         ibOption2 = findViewById(R.id.ibOption2);
         ibOption3 = findViewById(R.id.ibOption3);
         ibOption4 = findViewById(R.id.ibOption4);
+        btnPause = findViewById(R.id.btnPause);
         ivLife1 = findViewById(R.id.ivLife1);
         ivLife2 = findViewById(R.id.ivLife2);
         ivLife3 = findViewById(R.id.ivLife3);
@@ -94,6 +96,14 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             }
         });
 
+        btnPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flGameArcoiris2, new PauseFragment()).commit();
+            }
+        });
+
         startGame();
     }
 
@@ -116,8 +126,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
                     }
                     GameOverFragment fragment = new GameOverFragment();
                     fragment.setArguments(bundle);
-                    user.updateScore(model.score,"currentUserScoreR",0);
-                    user.updateScore(model.score,user.getCurrentUser(),0);
+                    user.updateScore(model.score,user.getCurrentUserNumber(),0);
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.flGameArcoiris2, fragment).commit();
                     model.globalLives --;

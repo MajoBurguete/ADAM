@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class StoryActivity extends AppCompatActivity {
     Button btnFirstOption;
     Button btnSecondOption;
     Button btnThirdOption;
+    ImageButton ibPauseS;
+
     ImageView ivLife1S;
     ImageView ivLife2S;
     ImageView ivLife3S;
@@ -57,7 +60,16 @@ public class StoryActivity extends AppCompatActivity {
         ivLife1S = findViewById(R.id.ivLife1S);
         ivLife2S = findViewById(R.id.ivLife2S);
         ivLife3S = findViewById(R.id.ivLife3S);
+        ibPauseS = findViewById(R.id.ibPauseS);
         difficulty = getIntent().getExtras().getInt("difficulty");
+
+        ibPauseS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flGameStory, new PauseFragment()).commit();
+            }
+        });
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,8 +144,7 @@ public class StoryActivity extends AppCompatActivity {
                         }
                         GameOverFragment fragment = new GameOverFragment();
                         fragment.setArguments(bundle);
-                        user.updateScore(score,"currentUserScoreR",1);
-                        user.updateScore(score,user.getCurrentUser(),1);
+                        user.updateScore(score,user.getCurrentUserNumber(),1);
                         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.flGameStory, fragment).commit();
                     }
@@ -165,8 +176,7 @@ public class StoryActivity extends AppCompatActivity {
                         }
                         GameOverFragment fragment = new GameOverFragment();
                         fragment.setArguments(bundle);
-                        user.updateScore(score,"currentUserScoreR",1);
-                        user.updateScore(score,user.getCurrentUser(),1);
+                        user.updateScore(score,user.getCurrentUserNumber(),1);
                         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.flGameStory, fragment).commit();
                     }
