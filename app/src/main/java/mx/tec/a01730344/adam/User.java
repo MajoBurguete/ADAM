@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class User {
-    private static final String FILENAME = "prueba5.xml";
+    private static final String FILENAME = "prueba6.xml";
     private Properties profiles = new Properties();
     Context context;
 
@@ -23,6 +23,7 @@ public class User {
         users = users + 1;
         String numUser = "user" + String.valueOf(users);
         profiles.setProperty("userCount", String.valueOf(users));
+        profiles.setProperty(numUser+"num", numUser);
         profiles.setProperty(numUser, username);
         profiles.setProperty(numUser+"image", String.valueOf(image));
         profiles.setProperty(numUser+"mini", String.valueOf(mini));
@@ -62,14 +63,13 @@ public class User {
         catch (FileNotFoundException fnfe){
             profiles.setProperty("userCount","0");
             profiles.setProperty("currentUser", "");
+            profiles.setProperty("currentUserNum", "user1");
             profiles.setProperty("currentUserImage", "");
             profiles.setProperty("currentUserMini", "");
             profiles.setProperty("currentUserNumber", "");
             profiles.setProperty("currentUserScoreR", "0");
             profiles.setProperty("currentUserScoreC", "0");
             profiles.setProperty("currentUserScoreF", "0");
-
-
             saveProfiles();
         }
         catch (IOException ioe){
@@ -91,29 +91,6 @@ public class User {
         catch (NumberFormatException e){
             e.printStackTrace();
         }
-    }
-
-    public String getUsername(String user){
-        return profiles.getProperty(user);
-    }
-
-    public int getImage(String image){
-        return Integer.parseInt(profiles.getProperty(image));
-    }
-
-    public int getScoreR(String scoreR){
-        return Integer.parseInt(profiles.getProperty(scoreR));
-    }
-
-    public int getScoreC(String scoreC){
-        return Integer.parseInt(profiles.getProperty(scoreC));
-    }
-    public int getScoreF(String scoreF){
-        return Integer.parseInt(profiles.getProperty(scoreF));
-    }
-
-    public int getCount(){
-        return Integer.parseInt(profiles.getProperty("userCount"));
     }
 
     public void deleteUser(String user) {
@@ -230,7 +207,7 @@ public class User {
     }
 
     public void setCurrentUser(String user, int image, int mini, String number, int scoreR, int scoreC, int scoreF){
-        profiles.setProperty("currentUserNumber", number);
+        profiles.setProperty("currentUserNum", number);
         profiles.setProperty("currentUser", user);
         profiles.setProperty("currentUserImage", String.valueOf(image));
         profiles.setProperty("currentUserMini", String.valueOf(mini));
@@ -264,9 +241,40 @@ public class User {
         saveProfiles();
     }
 
+    public String getUsername(String user){
+        return profiles.getProperty(user);
+    }
+
+    public String getUserNumber(String userNum){
+        return profiles.getProperty(userNum);
+    }
+
+    public int getImage(String image){
+        return Integer.parseInt(profiles.getProperty(image));
+    }
+
+    public int getScoreR(String scoreR){
+        return Integer.parseInt(profiles.getProperty(scoreR));
+    }
+
+    public int getScoreC(String scoreC){
+        return Integer.parseInt(profiles.getProperty(scoreC));
+    }
+
+    public int getScoreF(String scoreF){
+        return Integer.parseInt(profiles.getProperty(scoreF));
+    }
+
+    public int getCount(){
+        return Integer.parseInt(profiles.getProperty("userCount"));
+    }
+
+
     public String getCurrentUser(){
         return getUsername("currentUser");
     }
+
+    public String getCurrentUserNumber(){ return getUserNumber("currentUserNum"); }
 
     public int getCurrentUserImage(){
         return getImage("currentUserImage");

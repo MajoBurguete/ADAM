@@ -113,8 +113,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
                     }
                     GameOverFragment fragment = new GameOverFragment();
                     fragment.setArguments(bundle);
-                    user.updateScore(model.score,"currentUserScoreR",0);
-                    user.updateScore(model.score,user.getCurrentUser(),0);
+                    user.updateScore(model.score,"user"+user.getCurrentUserNumber(),0);
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.flGameArcoiris, fragment).commit();
                     model.globalLives --;
