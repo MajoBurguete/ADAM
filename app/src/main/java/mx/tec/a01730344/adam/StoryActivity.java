@@ -2,6 +2,8 @@ package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,12 +33,14 @@ public class StoryActivity extends AppCompatActivity {
     int difficulty = 1;
     String strScore;
     int score = 0;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
 
+        user.loadProfiles();
         model1 = new StoryModelNVL1(this);
         model2And3 = new StoryModelNVL2AndNVL3(this);
         clStory = findViewById(R.id.clStory);
@@ -118,8 +122,20 @@ public class StoryActivity extends AppCompatActivity {
                         btnThirdOption.setBackgroundColor(getResources().getColor(R.color.azul_oceano));
                     }
                     else {
-                        Intent toHome = new Intent(StoryActivity.this, HomeActivity.class);
-                        startActivity(toHome);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("game", 1);
+                        bundle.putInt("score", score);
+                        if (user.getCurrentUserScoreR() < score) {
+                            bundle.putBoolean("high", true);
+                        } else {
+                            bundle.putBoolean("high", false);
+                        }
+                        GameOverFragment fragment = new GameOverFragment();
+                        fragment.setArguments(bundle);
+                        user.updateScore(score,"currentUserScoreR",1);
+                        user.updateScore(score,user.getCurrentUser(),1);
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.flGameStory, fragment).commit();
                     }
                 }
                 else {
@@ -139,8 +155,20 @@ public class StoryActivity extends AppCompatActivity {
                         btnThirdOption.setBackgroundColor(getResources().getColor(R.color.azul_oceano));
                     }
                     else {
-                        Intent toHome = new Intent(StoryActivity.this, HomeActivity.class);
-                        startActivity(toHome);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("game", 1);
+                        bundle.putInt("score", score);
+                        if (user.getCurrentUserScoreR() < score) {
+                            bundle.putBoolean("high", true);
+                        } else {
+                            bundle.putBoolean("high", false);
+                        }
+                        GameOverFragment fragment = new GameOverFragment();
+                        fragment.setArguments(bundle);
+                        user.updateScore(score,"currentUserScoreR",1);
+                        user.updateScore(score,user.getCurrentUser(),1);
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.flGameStory, fragment).commit();
                     }
                 }
             }

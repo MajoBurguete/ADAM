@@ -241,9 +241,9 @@ public class User {
 
     }
 
-    public void updateScore(int score, String user, int game){
+    public void updateScore(int score, String user, int game) {
         String stringScore = String.valueOf(score);
-        if (game == 0){
+        if (game == 0) {
             if (score > getCurrentUserScoreR()) {
                 profiles.setProperty("currentUserScoreR", stringScore);
                 profiles.setProperty(user+"scoreR",stringScore);
@@ -274,10 +274,6 @@ public class User {
 
     public int getCurrentUserMini(){
         return getImage("currentUserMini");
-    }
-
-    public String getCurrentUserNumber(){
-        return getUsername("currentUserNumber");
     }
 
     public int getCurrentUserScoreR(){

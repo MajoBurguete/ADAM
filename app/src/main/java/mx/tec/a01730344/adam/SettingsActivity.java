@@ -83,7 +83,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String username = etUsernameSett.getText().toString();
-                String currUserNumber = user.getCurrentUserNumber();
+                String currUserNumber = user.getCurrentUser();
                 user.setCurrentUser(username, image, mini, currUserNumber,user.getCurrentUserScoreR(),user.getCurrentUserScoreC(),user.getCurrentUserScoreF());
                 user.modifyUser(currUserNumber,username, image, mini);
                 toPreviousScreen(previousScreen);
@@ -110,7 +110,7 @@ public class SettingsActivity extends AppCompatActivity {
         btnDeleteSett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.deleteUser(user.getCurrentUserNumber());
+                user.deleteUser(user.getCurrentUser());
                 user.minusCount();
                 Intent toMain = new Intent(SettingsActivity.this, MainActivity.class);
                 startActivity(toMain);

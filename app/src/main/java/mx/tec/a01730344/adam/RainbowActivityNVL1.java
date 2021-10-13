@@ -1,6 +1,7 @@
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,16 +25,19 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
     ImageButton ibOption1;
     ImageButton ibOption2;
     ImageButton ibOption3;
+    ImageButton ibPause;
     ImageView ivLife1;
     ImageView ivLife2;
     ImageView ivLife3;
     String scoreString;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rainbow_nvl1);
 
+        user.loadProfiles();
         tvInstruction = findViewById(R.id.tvInstruction);
         tvColor = findViewById(R.id.tvColor);
         tvScoreR = findViewById(R.id.tvScoreR);
@@ -44,6 +48,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
         ivLife2 = findViewById(R.id.ivLife2);
         ivLife3 = findViewById(R.id.ivLife3);
         model = new RainbowModelNVL1();
+        ibPause = findViewById(R.id.ibPauseR1);
 
         ibOption1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +83,14 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
             }
         });
 
+        ibPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flGameArcoiris, new PauseFragment()).commit();
+            }
+        });
+
         startGame();
     }
 
@@ -90,8 +103,20 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
             }
             public void onTick(long millisUntilFinished) {
                 if (model.globalLives == 0) {
-                    Intent toHome = new Intent(RainbowActivityNVL1.this, HomeActivity.class);
-                    startActivity(toHome);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("game", 0);
+                    bundle.putInt("score", model.score);
+                    if (user.getCurrentUserScoreR() < model.score) {
+                        bundle.putBoolean("high", true);
+                    } else {
+                        bundle.putBoolean("high", false);
+                    }
+                    GameOverFragment fragment = new GameOverFragment();
+                    fragment.setArguments(bundle);
+                    user.updateScore(model.score,"currentUserScoreR",0);
+                    user.updateScore(model.score,user.getCurrentUser(),0);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.flGameArcoiris, fragment).commit();
                     model.globalLives --;
                     cancel();
                 }
