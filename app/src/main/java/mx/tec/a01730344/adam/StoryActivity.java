@@ -137,7 +137,7 @@ public class StoryActivity extends AppCompatActivity {
                         Bundle bundle = new Bundle();
                         bundle.putInt("game", 1);
                         bundle.putInt("score", score);
-                        if (user.getCurrentUserScoreR() < score) {
+                        if (user.getCurrentUserScoreC() < score) {
                             bundle.putBoolean("high", true);
                         } else {
                             bundle.putBoolean("high", false);
@@ -169,7 +169,7 @@ public class StoryActivity extends AppCompatActivity {
                         Bundle bundle = new Bundle();
                         bundle.putInt("game", 1);
                         bundle.putInt("score", score);
-                        if (user.getCurrentUserScoreR() < score) {
+                        if (user.getCurrentUserScoreC() < score) {
                             bundle.putBoolean("high", true);
                         } else {
                             bundle.putBoolean("high", false);

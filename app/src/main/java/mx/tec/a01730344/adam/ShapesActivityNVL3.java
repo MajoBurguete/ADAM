@@ -98,7 +98,7 @@ public class ShapesActivityNVL3 extends AppCompatActivity {
                     Bundle bundle = new Bundle();
                     bundle.putInt("game", 2);
                     bundle.putInt("score", score);
-                    if (user.getCurrentUserScoreR() < score) {
+                    if (user.getCurrentUserScoreF() < score) {
                         bundle.putBoolean("high", true);
                     } else {
                         bundle.putBoolean("high", false);
