@@ -86,7 +86,11 @@ public class ShapesActivityNVL2 extends AppCompatActivity {
         btnContinueNVL2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (model.state) {
+                if (lives == 0) {
+                    Intent toGameOver = new Intent(ShapesActivityNVL2.this, HomeActivity.class);
+                    startActivity(toGameOver);
+                }
+                else if (model.state) {
                     hideSequence();
                 }
                 else {
@@ -212,12 +216,37 @@ public class ShapesActivityNVL2 extends AppCompatActivity {
                     if (lives == 1) {
                         ivLife2SH2.setImageResource(R.drawable.ic_adam_dead);
                     }
+                    strText = "¡Intenta de nuevo!";
                     if (lives == 0) {
                         ivLife1SH2.setImageResource(R.drawable.ic_adam_dead);
-                        Intent toGameOver = new Intent(ShapesActivityNVL2.this, HomeActivity.class);
-                        startActivity(toGameOver);
+                        strText = "¡Juego terminado!";
+                        ivNVL2Figure1.setEnabled(false);
+                        ivNVL2Figure2.setEnabled(false);
+                        ivNVL2Figure3.setEnabled(false);
+                        ivNVL2Figure4.setEnabled(false);
+                        ivNVL2Figure1.setAlpha(0f);
+                        ivNVL2Figure2.setAlpha(0f);
+                        ivNVL2Figure3.setAlpha(0f);
+                        ivNVL2Figure4.setAlpha(0f);
+                        ivNVL2Figure1.setImageResource(model.figures.get(0));
+                        ivNVL2Figure2.setImageResource(model.figures.get(1));
+                        ivNVL2Figure3.setImageResource(model.figures.get(2));
+                        ivNVL2Figure4.setImageResource(model.figures.get(3));
+                        ivNVL2Figure1.animate().alpha(1f).setDuration(2000);
+                        ivNVL2Figure2.animate().alpha(1f).setDuration(2000);
+                        ivNVL2Figure3.animate().alpha(1f).setDuration(2000);
+                        ivNVL2Figure4.animate().alpha(1f).setDuration(2000);
+                        ivNVL2Drag1.setVisibility(View.INVISIBLE);
+                        ivNVL2Drag2.setVisibility(View.INVISIBLE);
+                        ivNVL2Drag3.setVisibility(View.INVISIBLE);
+                        ivNVL2Drag4.setVisibility(View.INVISIBLE);
+                        ivNVL2Drag1.setEnabled(false);
+                        ivNVL2Drag2.setEnabled(false);
+                        ivNVL2Drag3.setEnabled(false);
+                        ivNVL2Drag4.setEnabled(false);
+                        btnRestartNVL2.setEnabled(false);
+                        btnContinueNVL2.setEnabled(true);
                     }
-                    strText = "¡Intenta de nuevo!";
                 }
                 btnCheckNVL2.setEnabled(false);
                 tvShapesNVL2.setText(strText);

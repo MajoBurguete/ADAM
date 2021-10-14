@@ -85,7 +85,11 @@ public class ShapesActivity extends AppCompatActivity {
         btnContinueNVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (model.state) {
+                if (lives == 0) {
+                    Intent toGameOver = new Intent(ShapesActivity.this, HomeActivity.class);
+                    startActivity(toGameOver);
+                }
+                else if (model.state) {
                     hideSequence();
                 }
                 else {
@@ -175,12 +179,31 @@ public class ShapesActivity extends AppCompatActivity {
                     if (lives == 1) {
                         ivLife2SH.setImageResource(R.drawable.ic_adam_dead);
                     }
+                    strText = "¡Intenta de nuevo!";
                     if (lives == 0) {
                         ivLife1SH.setImageResource(R.drawable.ic_adam_dead);
-                        Intent toGameOver = new Intent(ShapesActivity.this, HomeActivity.class);
-                        startActivity(toGameOver);
+                        strText = "¡Juego terminado!";
+                        ivNVL1Figure1.setEnabled(false);
+                        ivNVL1Figure2.setEnabled(false);
+                        ivNVL1Figure3.setEnabled(false);
+                        ivNVL1Figure1.setAlpha(0f);
+                        ivNVL1Figure2.setAlpha(0f);
+                        ivNVL1Figure3.setAlpha(0f);
+                        ivNVL1Figure1.setImageResource(model.figures.get(0));
+                        ivNVL1Figure2.setImageResource(model.figures.get(1));
+                        ivNVL1Figure3.setImageResource(model.figures.get(2));
+                        ivNVL1Figure1.animate().alpha(1f).setDuration(2000);
+                        ivNVL1Figure2.animate().alpha(1f).setDuration(2000);
+                        ivNVL1Figure3.animate().alpha(1f).setDuration(2000);
+                        ivNVL1Drag1.setVisibility(View.INVISIBLE);
+                        ivNVL1Drag2.setVisibility(View.INVISIBLE);
+                        ivNVL1Drag3.setVisibility(View.INVISIBLE);
+                        ivNVL1Drag1.setEnabled(false);
+                        ivNVL1Drag2.setEnabled(false);
+                        ivNVL1Drag3.setEnabled(false);
+                        btnRestartNVL1.setEnabled(false);
+                        btnContinueNVL1.setEnabled(true);
                     }
-                    strText = "¡Intenta de nuevo!";
                 }
                 btnCheckNVL1.setEnabled(false);
                 tvShapesNVL1.setText(strText);
