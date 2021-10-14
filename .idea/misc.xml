@@ -3,132 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic__score_azul.xml" value="0.12314814814814815" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_en_formitas_card.xml" value="0.2703125" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_score_naranja.xml" value="0.12407407407407407" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_score_verde.xml" value="0.12314814814814815" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_home.xml" value="0.20153985507246377" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_instructions.xml" value="0.20153985507246377" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_select_difficulty.xml" value="0.16304347826086957" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_story.xml" value="0.18478260869565216" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_formitas.xml" value="0.264" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_game_over.xml" value="0.264" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.20153985507246377" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/border.xml" value="0.1890625" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic__.xml" value="0.20052083333333334" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic__formitas.xml" value="0.1984375" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_add_main.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_arcoiris_card.xml" value="0.12736486486486487" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_arcoiris_forma.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_back.xml" value="0.12533783783783783" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_block_1.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_block_2.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_block_3.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_amarillo.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_amarillo_claro.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_amarillo_fuerte.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_azul.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_azul_osc.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_beige.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_cafe.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_fucsia.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_menta.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_morado.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_naranja.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_rojo.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_rosa.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_boton_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_circulito_amarillo.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_circulito_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_circulito_naranja.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_circulito_rosa.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_circulito_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_circulo_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_config.xml" value="0.12533783783783783" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_config_transp.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuadrado_amarillo.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuadrado_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuadrado_naranja.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuadrado_rosa.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuadrado_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_cuentos_perfil.xml" value="0.12533783783783783" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_en_formitas_card.xml" value="0.12736486486486487" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_escalon.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_estrella_amarilla.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_estrella_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_estrella_naranja.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_estrella_rosa.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_estrella_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_estrellla_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_flecha.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_fondo_arcoiris.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_formitas_perfil.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_forward.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_amarillo.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_azul.xml" value="0.1287162162162162" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_naranja.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_rosa.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hex_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_hola.xml" value="0.10371621621621621" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_instructions_arcoiris.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_instructions_cuento.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_instructions_cuento_2.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_logo_adam_tool.xml" value="0.10371621621621621" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_onditas_azules.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pausa.xml" value="0.176" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pause_azul.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp__estrellita.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_circulito.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_circulito_medium.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_cuadradito.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_cuadradito_medium.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_estrellita.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_estrellita_medium.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_hex_medium.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_onditas.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_onditas_medium.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_triangulito.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_pp_triangulito_medium.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_solecito.xml" value="0.12533783783783783" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_te_cuento_card.xml" value="0.12736486486486487" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_amarillo.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_celeste.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_cuentos_b.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_cuentos_r.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_naranja.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_rosa.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_triangulo_verde.xml" value="0.1885135135135135" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic_tu_puedes.xml" value="0.12567567567567567" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_home.xml" value="0.176" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_instructions.xml" value="0.136" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_login.xml" value="0.176" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.176" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_rainbow_nvl2.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_settings.xml" value="0.2" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_2.xml" value="0.1287568306010929" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.2" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_story.xml" value="0.136" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/activity_user_profile.xml" value="0.176" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_arcoiris.xml" value="0.152" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_formitas.xml" value="0.25" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_pause.xml" value="0.11790540540540541" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.1152027027027027" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_main.xml" value="0.17804054054054055" />
-        <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_profile.xml" value="0.17804054054054055" />
         <entry key="app/src/main/res/drawable/ic_flecha.xml" value="0.14791666666666667" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.13489583333333333" />
         <entry key="app/src/main/res/layout/activity_instructions.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.101171875" />
         <entry key="app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl2.xml" value="0.1557377049180328" />
         <entry key="app/src/main/res/layout/activity_select_difficulty.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.20878623188405798" />
+        <entry key="app/src/main/res/layout/activity_shapes_layout_nvl_2.xml" value="0.1523224043715847" />
+        <entry key="app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.1523224043715847" />
+        <entry key="app/src/main/res/layout/activity_story.xml" value="0.1557377049180328" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.20878623188405798" />
+        <entry key="app/src/main/res/layout/fragment_arcoiris.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/fragment_game_over.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/fragment_icons.xml" value="0.1523224043715847" />
+        <entry key="app/src/main/res/layout/fragment_pause.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_te_cuento.xml" value="0.116796875" />
       </map>
     </option>
   </component>
