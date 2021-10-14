@@ -90,6 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:backgroundTint="@android:color/transparent"
+        android:tag="1"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL2Drag3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -104,6 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="@android:color/transparent"
+        android:tag="0"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL2Drag2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -118,6 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:backgroundTint="@android:color/transparent"
+        android:tag="2"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL2Drag4"
         app:layout_constraintEnd_toStartOf="@+id/ivNVL2Drag4"
         app:layout_constraintHorizontal_bias="1.0"
@@ -133,6 +136,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
         android:backgroundTint="@android:color/transparent"
+        android:tag="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -145,7 +149,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/silka_bold_webfont"
         android:text="¡Ve las posiciones!"
@@ -313,5 +317,18 @@
         app:layout_constraintTop_toTopOf="@+id/ivLife2SH2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_adam_alive" />
+
+    <FrameLayout
+        android:id="@+id/flPauseShapes2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
