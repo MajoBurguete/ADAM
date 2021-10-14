@@ -3,49 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic__score_azul.xml" value="0.12314814814814815" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_circulito_amarillo.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_circulito_celeste.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_circulito_naranja.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_circulito_rosa.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_circulito_verde.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_circulo_verde.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_cuadrado_amarillo.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_cuadrado_celeste.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_cuadrado_naranja.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_cuadrado_rosa.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_cuadrado_verde.xml" value="0.1259259259259259" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_en_formitas_card.xml" value="0.2703125" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_escalon.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_estrella_amarilla.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_estrella_celeste.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_estrella_naranja.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_estrella_rosa.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_estrella_verde.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_flecha.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_hex_amarillo.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_hex_celeste.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_hex_naranja.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_hex_rosa.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_hex_verde.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_score_naranja.xml" value="0.12407407407407407" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_score_verde.xml" value="0.12314814814814815" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_triangulo_amarillo.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_triangulo_celeste.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_triangulo_naranja.xml" value="0.12685185185185185" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_triangulo_rosa.xml" value="0.1259259259259259" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_triangulo_verde.xml" value="0.1259259259259259" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_home.xml" value="0.20153985507246377" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_instructions.xml" value="0.20153985507246377" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.18885869565217392" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_select_difficulty.xml" value="0.16304347826086957" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.264" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_2.xml" value="0.264" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.264" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_story.xml" value="0.18478260869565216" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_formitas.xml" value="0.264" />
-        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_game_over.xml" value="0.264" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/danyh/OneDrive/Documentos/Progra/Apps/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.125" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/border.xml" value="0.1890625" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic__.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic__formitas.xml" value="0.1984375" />
@@ -152,21 +117,6 @@
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.1152027027027027" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_main.xml" value="0.17804054054054055" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_profile.xml" value="0.17804054054054055" />
-        <entry key="app/src/main/res/drawable/ic_flecha.xml" value="0.14791666666666667" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.13489583333333333" />
-        <entry key="app/src/main/res/layout/activity_instructions.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.101171875" />
-        <entry key="app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.13489583333333333" />
-        <entry key="app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.148224043715847" />
-        <entry key="app/src/main/res/layout/activity_rainbow_nvl2.xml" value="0.1557377049180328" />
-        <entry key="app/src/main/res/layout/activity_select_difficulty.xml" value="0.13177083333333334" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.20878623188405798" />
-        <entry key="app/src/main/res/layout/activity_story.xml" value="0.1557377049180328" />
-        <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.20878623188405798" />
-        <entry key="app/src/main/res/layout/fragment_arcoiris.xml" value="0.148224043715847" />
-        <entry key="app/src/main/res/layout/fragment_game_over.xml" value="0.148224043715847" />
-        <entry key="app/src/main/res/layout/fragment_pause.xml" value="0.148224043715847" />
       </map>
     </option>
   </component>
