@@ -43,12 +43,14 @@ public class ShapesActivity extends AppCompatActivity {
     String strScore;
     int score = 0;
     int lives = 3;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shapes_layout);
 
+        user.loadProfiles();
         model = new ShapesModelNVL1();
         ibPauseShapes1 = findViewById(R.id.ibPauseShapes1);
         ivNVL1Figure1 = findViewById(R.id.ivNVL1Figure1);
@@ -86,8 +88,19 @@ public class ShapesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (lives == 0) {
-                    Intent toGameOver = new Intent(ShapesActivity.this, HomeActivity.class);
-                    startActivity(toGameOver);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("game", 2);
+                    bundle.putInt("score", score);
+                    if (user.getCurrentUserScoreR() < score) {
+                        bundle.putBoolean("high", true);
+                    } else {
+                        bundle.putBoolean("high", false);
+                    }
+                    GameOverFragment fragment = new GameOverFragment();
+                    fragment.setArguments(bundle);
+                    user.updateScore(score,user.getCurrentUserNumber(),2);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.flPauseShapes1, fragment).commit();
                 }
                 else if (model.state) {
                     hideSequence();
