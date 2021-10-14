@@ -34,9 +34,20 @@ public class IconsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        Bundle bundle = this.getArguments();
+        int achievement = bundle.getInt("achievement");
         clIcon = view.findViewById(R.id.clIcon);
         tvIconDescription = view.findViewById(R.id.tvIconDescription);
-        tvIconDescription.setText("¡Consigue 2700 puntos en 'Te cuento un cuento' Para obtener este Ícono!");
+        if (achievement == 1){
+            tvIconDescription.setText("¡Consigue 2,700 puntos en 'Te cuento un cuento' para obtener este Ícono!");
+        }
+        else if (achievement == 2){
+            tvIconDescription.setText("¡Consigue 10,000 puntos en 'arcoiris' para obtener este Ícono!");
+        }
+        else {
+            tvIconDescription.setText("¡Consigue 2,500 puntos en todos los juegos para obtener este Ícono!");
+        }
 
         clIcon.setOnClickListener(new View.OnClickListener() {
             @Override

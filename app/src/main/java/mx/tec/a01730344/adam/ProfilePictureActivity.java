@@ -17,7 +17,9 @@ public class ProfilePictureActivity extends AppCompatActivity {
     ImageButton ibIcon4;
     ImageButton ibIcon5;
     ImageButton ibIcon6;
-    String value;
+    boolean achievement1 = true;
+    boolean achievement2 = true;
+    boolean achievement3 = true;
     int image = R.drawable.ic_pp_hex;
     int medium = R.drawable.ic_pp_hex_medium;
     int mini = R.drawable.ic_pp_hex_min;
@@ -38,6 +40,19 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon6 = findViewById(R.id.ibIcon6);
 
         int value = getIntent().getExtras().getInt("screen");
+
+        if (user.getCurrentUserScoreC() > 2700 && value != 0){
+            ibIcon4.setImageResource(R.drawable.ic_pp_circulito_medium);
+            achievement1 = false;
+        }
+        if (user.getCurrentUserScoreR() > 10000 && value != 0){
+            ibIcon5.setImageResource(R.drawable.ic_pp_onditas_medium);
+            achievement2 = false;
+        }
+        if (user.getCurrentUserScoreF() > 2500 && user.getCurrentUserScoreR() > 2500 && user.getCurrentUserScoreC() > 2500 && value != 0){
+            ibIcon6.setImageResource(R.drawable.ic_pp_estrellita_medium);
+            achievement3 = false;
+        }
 
         ibBackProfPic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,34 +91,60 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (user.getCurrentUserScoreC() >= 2700){
+                if (achievement1){
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("achievement", 1);
+                    IconsFragment fragment = new IconsFragment();
+                    fragment.setArguments(bundle);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.flProfilePicture, fragment).commit();
+                }
+                else {
                     image = R.drawable.ic_pp_circulito;
                     medium = R.drawable.ic_pp_circulito_medium;
                     mini = R.drawable.ic_pp_circulito_mini;
                     toPreviousScreen(value);
                 }
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.flProfilePicture, new IconsFragment()).commit();
             }
         });
 
         ibIcon5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                image = R.drawable.ic_pp_onditas;
-                medium = R.drawable.ic_pp_onditas_medium;
-                mini = R.drawable.ic_pp_onditas_mini;
-                toPreviousScreen(value);
+                if (achievement2){
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("achievement", 2);
+                    IconsFragment fragment = new IconsFragment();
+                    fragment.setArguments(bundle);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.flProfilePicture, fragment).commit();
+                }
+                else {
+                    image = R.drawable.ic_pp_onditas;
+                    medium = R.drawable.ic_pp_onditas_medium;
+                    mini = R.drawable.ic_pp_onditas_mini;
+                    toPreviousScreen(value);
+                }
             }
         });
 
         ibIcon6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                image = R.drawable.ic_pp_estrellita;
-                medium = R.drawable.ic_pp_estrellita_medium;
-                mini = R.drawable.ic_pp_estrellita_mini;
-                toPreviousScreen(value);
+                if (achievement3){
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("achievement", 3);
+                    IconsFragment fragment = new IconsFragment();
+                    fragment.setArguments(bundle);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.flProfilePicture, fragment).commit();
+                }
+                else {
+                    image = R.drawable.ic_pp_estrellita;
+                    medium = R.drawable.ic_pp_estrellita_medium;
+                    mini = R.drawable.ic_pp_estrellita_mini;
+                    toPreviousScreen(value);
+                }
             }
         });
     }
