@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class SelectDifficultyActivity extends AppCompatActivity {
 
     ConstraintLayout clArcoirisDifficulty, clFormitasDifficulty, clTeCuentoUnCuentoDifficulty;
     Button easy, medium, hard;
+    ImageButton ibBack;
     int game;
 
     @Override
@@ -23,9 +26,28 @@ public class SelectDifficultyActivity extends AppCompatActivity {
         clFormitasDifficulty = findViewById(R.id.clFormitasDifficulty);
         clTeCuentoUnCuentoDifficulty = findViewById(R.id.clTeCuentoUnCuentoDifficulty);
         game = getIntent().getExtras().getInt("game");
+        if (game== 0){
+            ibBack = findViewById(R.id.ibBackArcoiris);
+        }
+        else if (game== 1){
+            ibBack = findViewById(R.id.ibBackFormitas);
+        }
+        else {
+            ibBack = findViewById(R.id.ibBackCuento);
+        }
 
         chooseGame(game);
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toHome = new Intent(SelectDifficultyActivity.this, HomeActivity.class);
+                startActivity(toHome);
+            }
+        });
     }
+
+
 
     private void chooseGame(int game) {
         Intent toGame = new Intent(SelectDifficultyActivity.this, RainbowActivityNVL1.class);

@@ -2,10 +2,13 @@ package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +27,8 @@ public class StoryActivity extends AppCompatActivity {
     Button btnFirstOption;
     Button btnSecondOption;
     Button btnThirdOption;
+    ImageButton ibPauseS;
+
     ImageView ivLife1S;
     ImageView ivLife2S;
     ImageView ivLife3S;
@@ -31,12 +36,14 @@ public class StoryActivity extends AppCompatActivity {
     int difficulty = 1;
     String strScore;
     int score = 0;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
 
+        user.loadProfiles();
         model1 = new StoryModelNVL1(this);
         model2And3 = new StoryModelNVL2AndNVL3(this);
         clStory = findViewById(R.id.clStory);
@@ -53,7 +60,16 @@ public class StoryActivity extends AppCompatActivity {
         ivLife1S = findViewById(R.id.ivLife1S);
         ivLife2S = findViewById(R.id.ivLife2S);
         ivLife3S = findViewById(R.id.ivLife3S);
+        ibPauseS = findViewById(R.id.ibPauseS);
         difficulty = getIntent().getExtras().getInt("difficulty");
+
+        ibPauseS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flGameStory, new PauseFragment()).commit();
+            }
+        });
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,8 +134,19 @@ public class StoryActivity extends AppCompatActivity {
                         btnThirdOption.setBackgroundColor(getResources().getColor(R.color.azul_oceano));
                     }
                     else {
-                        Intent toHome = new Intent(StoryActivity.this, HomeActivity.class);
-                        startActivity(toHome);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("game", 1);
+                        bundle.putInt("score", score);
+                        if (user.getCurrentUserScoreR() < score) {
+                            bundle.putBoolean("high", true);
+                        } else {
+                            bundle.putBoolean("high", false);
+                        }
+                        GameOverFragment fragment = new GameOverFragment();
+                        fragment.setArguments(bundle);
+                        user.updateScore(score,user.getCurrentUserNumber(),1);
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.flGameStory, fragment).commit();
                     }
                 }
                 else {
@@ -139,8 +166,19 @@ public class StoryActivity extends AppCompatActivity {
                         btnThirdOption.setBackgroundColor(getResources().getColor(R.color.azul_oceano));
                     }
                     else {
-                        Intent toHome = new Intent(StoryActivity.this, HomeActivity.class);
-                        startActivity(toHome);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("game", 1);
+                        bundle.putInt("score", score);
+                        if (user.getCurrentUserScoreR() < score) {
+                            bundle.putBoolean("high", true);
+                        } else {
+                            bundle.putBoolean("high", false);
+                        }
+                        GameOverFragment fragment = new GameOverFragment();
+                        fragment.setArguments(bundle);
+                        user.updateScore(score,user.getCurrentUserNumber(),1);
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.flGameStory, fragment).commit();
                     }
                 }
             }
