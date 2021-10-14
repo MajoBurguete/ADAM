@@ -117,6 +117,26 @@
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.1152027027027027" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_main.xml" value="0.17804054054054055" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_profile.xml" value="0.17804054054054055" />
+        <entry key="app/src/main/res/drawable/ic_flecha.xml" value="0.14791666666666667" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/activity_instructions.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.101171875" />
+        <entry key="app/src/main/res/layout/activity_profile_picture_layout.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl1.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/activity_rainbow_nvl2.xml" value="0.1557377049180328" />
+        <entry key="app/src/main/res/layout/activity_select_difficulty.xml" value="0.13177083333333334" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.20878623188405798" />
+        <entry key="app/src/main/res/layout/activity_shapes_layout_nvl_2.xml" value="0.1523224043715847" />
+        <entry key="app/src/main/res/layout/activity_shapes_layout_nvl_3.xml" value="0.1523224043715847" />
+        <entry key="app/src/main/res/layout/activity_story.xml" value="0.1557377049180328" />
+        <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.20878623188405798" />
+        <entry key="app/src/main/res/layout/fragment_arcoiris.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/fragment_game_over.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/fragment_icons.xml" value="0.1523224043715847" />
+        <entry key="app/src/main/res/layout/fragment_pause.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_te_cuento.xml" value="0.116796875" />
+        <entry key="app/src/main/res/layout/fragment_pause.xml" value="0.148224043715847" />
       </map>
     </option>
   </component>

@@ -1,6 +1,7 @@
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,11 +21,13 @@ public class ProfilePictureActivity extends AppCompatActivity {
     int image = R.drawable.ic_pp_hex;
     int medium = R.drawable.ic_pp_hex_medium;
     int mini = R.drawable.ic_pp_hex_min;
+    User user = new User(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_picture_layout);
+        user.loadProfiles();
 
         ibBackProfPic = findViewById(R.id.ibBackProfPic);
         ibIcon1 = findViewById(R.id.ibIcon1);
@@ -73,10 +76,14 @@ public class ProfilePictureActivity extends AppCompatActivity {
         ibIcon4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                image = R.drawable.ic_pp_circulito;
-                medium = R.drawable.ic_pp_circulito_medium;
-                mini = R.drawable.ic_pp_circulito_mini;
-                toPreviousScreen(value);
+                if (user.getCurrentUserScoreC() >= 2700){
+                    image = R.drawable.ic_pp_circulito;
+                    medium = R.drawable.ic_pp_circulito_medium;
+                    mini = R.drawable.ic_pp_circulito_mini;
+                    toPreviousScreen(value);
+                }
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flProfilePicture, new IconsFragment()).commit();
             }
         });
 
