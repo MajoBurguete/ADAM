@@ -56,7 +56,7 @@
         android:id="@+id/ivShelf3Shapes3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,6 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
+        android:tag="1"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL3Drag3"
         app:layout_constraintEnd_toStartOf="@+id/ivNVL3Drag3"
         app:layout_constraintStart_toEndOf="@+id/ivNVL3Drag1"
@@ -101,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@android:color/transparent"
+        android:tag="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -114,6 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
+        android:tag="3"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL3Drag3"
         app:layout_constraintEnd_toStartOf="@+id/ivNVL3Drag5"
         app:layout_constraintStart_toEndOf="@+id/ivNVL3Drag3"
@@ -141,6 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
+        android:tag="0"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL3Drag2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -152,6 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
+        android:tag="4"
         app:layout_constraintBottom_toBottomOf="@+id/ivNVL3Drag4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -345,5 +350,18 @@
         app:layout_constraintTop_toTopOf="@+id/ivLife2SH3"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_adam_alive" />
+
+    <FrameLayout
+        android:id="@+id/flPauseShapes3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
