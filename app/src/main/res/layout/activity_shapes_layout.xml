@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_pausa"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibPauseShapes1"
-        app:layout_constraintVertical_bias="0.078"
+        app:layout_constraintVertical_bias="0.120000005"
         app:srcCompat="@drawable/ic_escalon"
         tools:ignore="ImageContrastCheck" />
 
@@ -40,6 +40,7 @@
         android:id="@+id/ivShelf2Shapes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf3Shapes1"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_escalon"
         tools:ignore="ImageContrastCheck" />
 
@@ -55,6 +56,7 @@
         android:id="@+id/ivShelf1Shapes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,63 +64,224 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf2Shapes1"
-        app:layout_constraintVertical_bias="0.168"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_escalon"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/ivForm2Shapes1"
+        android:id="@+id/ivNVL1Drag2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:backgroundTint="@android:color/transparent"
+        android:tag="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/ic_cuadrado_amarillo" />
+        app:srcCompat="@drawable/ic_cuadrado_amarillo" />
 
     <ImageView
-        android:id="@+id/ivForm1Shapes1"
+        android:id="@+id/ivNVL1Drag1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:tag="0"
+        app:layout_constraintBottom_toBottomOf="@+id/ivNVL1Drag2"
+        app:layout_constraintEnd_toStartOf="@+id/ivNVL1Drag2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@drawable/ic_estrella_celeste" />
+        app:layout_constraintTop_toTopOf="@+id/ivNVL1Drag2"
+        app:srcCompat="@drawable/ic_estrella_celeste"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/ivForm3Shapes1"
+        android:id="@+id/ivNVL1Drag3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:tag="2"
+        app:layout_constraintBottom_toBottomOf="@+id/ivNVL1Drag2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@drawable/ic_hex_rosa" />
+        app:layout_constraintStart_toEndOf="@+id/ivNVL1Drag2"
+        app:layout_constraintTop_toTopOf="@+id/ivNVL1Drag2"
+        app:srcCompat="@drawable/ic_hex_rosa"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvShapesNVL1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="@string/ponlas_en_su_lugar"
+        android:text="¡Ve las posiciones!"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf1Shapes1"
-        app:layout_constraintVertical_bias="0.27"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnContinueNVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/r_rosa2"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Seguir"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivNVL1Drag2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreShapesNVL1" />
+
+    <Button
+        android:id="@+id/btnRestartNVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/r_azul"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Limpiar"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnContinueNVL1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnContinueNVL1"
+        app:layout_constraintTop_toTopOf="@+id/btnContinueNVL1" />
+
+    <Button
+        android:id="@+id/btnCheckNVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/r_naranja"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Checar"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnContinueNVL1"
+        app:layout_constraintEnd_toStartOf="@+id/btnContinueNVL1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnContinueNVL1" />
+
+    <ImageView
+        android:id="@+id/ivNVL1Figure1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivShelf3Shapes1"
+        app:layout_constraintEnd_toEndOf="@+id/ivShelf3Shapes1"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_estrella_celeste" />
+
+    <ImageView
+        android:id="@+id/ivNVL1Figure2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivShelf2Shapes1"
+        app:layout_constraintEnd_toEndOf="@+id/ivShelf2Shapes1"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf2Shapes1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_cuadrado_amarillo" />
+
+    <ImageView
+        android:id="@+id/ivNVL1Figure3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivShelf1Shapes1"
+        app:layout_constraintEnd_toEndOf="@+id/ivShelf1Shapes1"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf1Shapes1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_hex_rosa" />
+
+    <ImageView
+        android:id="@+id/ivLife1SH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibPauseShapes1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ibPauseShapes1"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_adam_alive" />
+
+    <ImageView
+        android:id="@+id/ivLife2SH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLife1SH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivLife1SH"
+        app:layout_constraintTop_toTopOf="@+id/ivLife1SH"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_adam_alive" />
+
+    <ImageView
+        android:id="@+id/ivLife3SH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLife2SH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivLife2SH"
+        app:layout_constraintTop_toTopOf="@+id/ivLife2SH"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_adam_alive" />
+
+    <TextView
+        android:id="@+id/tvScoreShapesNVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Puntaje: 0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShapesNVL1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/flPauseShapes1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:translationZ="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

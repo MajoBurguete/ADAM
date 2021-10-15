@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="300dp"
-            android:backgroundTint="@color/verde"
+            android:backgroundTint="@color/r_amarillo"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingStart="15dp"
             android:paddingTop="10dp"
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
-            android:backgroundTint="@color/naranja"
+            android:backgroundTint="@color/naranja_crayola"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingStart="15dp"
             android:paddingTop="10dp"
@@ -50,9 +50,23 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="25sp"
             app:cornerRadius="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="@+id/btnSeguirJugando"
             app:layout_constraintHorizontal_bias="0.222"
             app:layout_constraintStart_toStartOf="@+id/btnSeguirJugando"
-            app:layout_constraintTop_toBottomOf="@+id/btnSeguirJugando" />
+            app:layout_constraintTop_toBottomOf="@+id/btnSeguirJugando"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_estrella_pausa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

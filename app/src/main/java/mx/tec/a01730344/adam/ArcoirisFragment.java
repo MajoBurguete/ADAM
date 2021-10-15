@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import android.content.Intent;
@@ -12,31 +21,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+/*Fragmento creado para el carrusel de juegos en la pantalla de HomeActivity
+para que el usuario pueda escoger el juego de arcoíris.*/
+
 public class ArcoirisFragment extends Fragment {
 
     Button btnJugarArcoiris;
 
-    public ArcoirisFragment() {
-        // Required empty public constructor
-    }
+    //Funciones necesarias para que el fragmento se ejecute de manera correcta.
+    public ArcoirisFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_arcoiris, container, false);
     }
 
+    //Función añadida para realizar acciones al crear el fragmento.
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        //Declaración de botón y el elemento en el layout al que corresponde.
         btnJugarArcoiris = view.findViewById(R.id.btnJugarArcoiris);
 
+        //Función para detectar la interacción del usuario con el botón y poder mandarlo al juego.
         btnJugarArcoiris.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent toSelectDifficulty = new Intent(getActivity(), InstructionsActivity.class);
+                //Elemento que se manda a la siguiente pantalla para poder identificar a qué juego se fue y desplegar las instrucciones apropiadas
                 toSelectDifficulty.putExtra("game", 0);
                 startActivity(toSelectDifficulty);
             }

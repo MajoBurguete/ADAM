@@ -49,9 +49,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingStart="30dp"
+            android:paddingLeft="20dp"
             android:paddingTop="15dp"
-            android:paddingEnd="30dp"
+            android:paddingRight="20dp"
             android:paddingBottom="15dp">
 
             <ImageButton
@@ -61,7 +61,7 @@
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.695"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/ibOption1"
                 app:layout_constraintTop_toTopOf="@+id/ibOption1"
                 app:layout_constraintVertical_bias="0.0"
@@ -104,7 +104,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_bias="0.006"
                 app:srcCompat="@drawable/ic_boton_azul_osc"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -200,12 +200,25 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/silka_bold_webfont"
-        android:text="Puntuación: 0"
+        android:text="Puntaje: 0"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <FrameLayout
+        android:id="@+id/flGameArcoiris2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="2dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

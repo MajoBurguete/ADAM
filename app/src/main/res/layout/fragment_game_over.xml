@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/game_over_rosa"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <Button
             android:id="@+id/btnPlayAgainArcoiris"
@@ -54,7 +54,6 @@
             android:id="@+id/ivGameOverArcoiris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_en_formitas_card"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -78,7 +77,6 @@
                 android:id="@+id/ivScoreArcoiris"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_score_naranja"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,7 +175,6 @@
             android:id="@+id/ivGameOverFormitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_en_formitas_card"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -201,12 +198,12 @@
                 android:id="@+id/ivScoreFormitas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_score_naranja"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_score_naranja" />
 
             <TextView
                 android:id="@+id/tvScoreGameOverFormitas"
@@ -256,7 +253,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/game_over_azul"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <Button
             android:id="@+id/btnPlayAgainTeCuento"
@@ -299,7 +296,6 @@
             android:id="@+id/ivGameOverTeCuento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_en_formitas_card"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -323,7 +319,6 @@
                 android:id="@+id/ivScoreTeCuento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_score_naranja"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -364,7 +359,7 @@
                 android:id="@+id/tvNewHighscoreTeCuento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/silka_bold_webfont"
+                android:fontFamily="@font/silka_medium_webfont"
                 android:text="Puntuación más alta"
                 android:textAlignment="center"
                 android:textColor="@color/r_amarillo"

@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import android.content.Context;
@@ -8,8 +17,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+// Manejo del archivo de Properties donde se registran y almacenan los usuarios, incluyendo su número,
+// nombre de usuario, imagen de perfil y puntuaciones más altas para cada juego.
+
 public class User {
-    private static final String FILENAME = "prueba5.xml";
+
+    //Se declara el archivo donde se almacenarán los datos
+    private static final String FILENAME = "prueba8.xml";
     private Properties profiles = new Properties();
     Context context;
 
@@ -17,12 +31,14 @@ public class User {
         this.context = context;
     }
 
+    //Función para registrar un usuario nuevo
     public void saveUser(String username, int image, int mini){
         loadProfiles();
         int users = Integer.parseInt(profiles.getProperty("userCount"));
         users = users + 1;
         String numUser = "user" + String.valueOf(users);
         profiles.setProperty("userCount", String.valueOf(users));
+        profiles.setProperty(numUser+"num", numUser);
         profiles.setProperty(numUser, username);
         profiles.setProperty(numUser+"image", String.valueOf(image));
         profiles.setProperty(numUser+"mini", String.valueOf(mini));
@@ -33,6 +49,7 @@ public class User {
         saveProfiles();
     }
 
+    //Función para modificar un usuario existente
     public void modifyUser(String userNumber, String username, int image, int mini) {
         loadProfiles();
         profiles.setProperty(userNumber, username);
@@ -41,6 +58,7 @@ public class User {
         saveProfiles();
     }
 
+    //Función para guardar el archivo de properties en el sistema
     private void saveProfiles() {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
@@ -52,7 +70,7 @@ public class User {
         }
     }
 
-
+    //Función para cargar la información de los usuarios
     public void loadProfiles() {
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
@@ -62,14 +80,13 @@ public class User {
         catch (FileNotFoundException fnfe){
             profiles.setProperty("userCount","0");
             profiles.setProperty("currentUser", "");
+            profiles.setProperty("currentUserNum", "user1");
             profiles.setProperty("currentUserImage", "");
             profiles.setProperty("currentUserMini", "");
             profiles.setProperty("currentUserNumber", "");
             profiles.setProperty("currentUserScoreR", "0");
             profiles.setProperty("currentUserScoreC", "0");
             profiles.setProperty("currentUserScoreF", "0");
-
-
             saveProfiles();
         }
         catch (IOException ioe){
@@ -77,6 +94,7 @@ public class User {
         }
     }
 
+    //Función para disminuir la cuenta de los usuarios existentes cuando uno se elimina
     public void minusCount(){
         Log.d("USER", "username: " + profiles.getProperty("user1"));
         Log.d("USER", "minusCount: " + profiles.getProperty("userCount"));
@@ -93,29 +111,7 @@ public class User {
         }
     }
 
-    public String getUsername(String user){
-        return profiles.getProperty(user);
-    }
-
-    public int getImage(String image){
-        return Integer.parseInt(profiles.getProperty(image));
-    }
-
-    public int getScoreR(String scoreR){
-        return Integer.parseInt(profiles.getProperty(scoreR));
-    }
-
-    public int getScoreC(String scoreC){
-        return Integer.parseInt(profiles.getProperty(scoreC));
-    }
-    public int getScoreF(String scoreF){
-        return Integer.parseInt(profiles.getProperty(scoreF));
-    }
-
-    public int getCount(){
-        return Integer.parseInt(profiles.getProperty("userCount"));
-    }
-
+    //Función para borrar un perfil
     public void deleteUser(String user) {
         loadProfiles();
 
@@ -229,8 +225,9 @@ public class User {
         saveProfiles();
     }
 
+    //Función para establecer al usuario que tiene una sección activa por el momento
     public void setCurrentUser(String user, int image, int mini, String number, int scoreR, int scoreC, int scoreF){
-        profiles.setProperty("currentUserNumber", number);
+        profiles.setProperty("currentUserNum", number);
         profiles.setProperty("currentUser", user);
         profiles.setProperty("currentUserImage", String.valueOf(image));
         profiles.setProperty("currentUserMini", String.valueOf(mini));
@@ -241,9 +238,10 @@ public class User {
 
     }
 
-    public void updateScore(int score, String user, int game){
+    //Función para actualizar las puntuaciones más altas de cada juego
+    public void updateScore(int score, String user, int game) {
         String stringScore = String.valueOf(score);
-        if (game == 0){
+        if (game == 0) {
             if (score > getCurrentUserScoreR()) {
                 profiles.setProperty("currentUserScoreR", stringScore);
                 profiles.setProperty(user+"scoreR",stringScore);
@@ -264,9 +262,41 @@ public class User {
         saveProfiles();
     }
 
+    //Funciones para obtener la información de un usuario en específico
+    public String getUsername(String user){
+        return profiles.getProperty(user);
+    }
+
+    public String getUserNumber(String userNum){
+        return profiles.getProperty(userNum);
+    }
+
+    public int getImage(String image){
+        return Integer.parseInt(profiles.getProperty(image));
+    }
+
+    public int getScoreR(String scoreR){
+        return Integer.parseInt(profiles.getProperty(scoreR));
+    }
+
+    public int getScoreC(String scoreC){
+        return Integer.parseInt(profiles.getProperty(scoreC));
+    }
+
+    public int getScoreF(String scoreF){
+        return Integer.parseInt(profiles.getProperty(scoreF));
+    }
+
+    public int getCount(){
+        return Integer.parseInt(profiles.getProperty("userCount"));
+    }
+
+    //Funciones para obtener la información del usuario con una sesión activa.
     public String getCurrentUser(){
         return getUsername("currentUser");
     }
+
+    public String getCurrentUserNumber(){ return getUserNumber("currentUserNum"); }
 
     public int getCurrentUserImage(){
         return getImage("currentUserImage");
@@ -274,10 +304,6 @@ public class User {
 
     public int getCurrentUserMini(){
         return getImage("currentUserMini");
-    }
-
-    public String getCurrentUserNumber(){
-        return getUsername("currentUserNumber");
     }
 
     public int getCurrentUserScoreR(){
