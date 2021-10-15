@@ -21,8 +21,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/*Esta clase representa el Controlador para el primer nivel del juego "En Formitas"*/
+
 public class ShapesActivity extends AppCompatActivity {
 
+    //Se instancian todas las variables necesarias para el sistema del Controlador
     ShapesModelNVL1 model;
     ImageButton ibPauseShapes1;
     ImageView ivNVL1Figure1;
@@ -50,8 +53,11 @@ public class ShapesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shapes_layout);
 
+        //Se carga la información de los usuarios registrados en la Properties List
         user.loadProfiles();
+        /*Se hace la instancia del modelo relacionado"*/
         model = new ShapesModelNVL1();
+        //Se vinculan todos los elementos existentes del Layout para poder interactuar con ellos
         ibPauseShapes1 = findViewById(R.id.ibPauseShapes1);
         ivNVL1Figure1 = findViewById(R.id.ivNVL1Figure1);
         ivNVL1Figure2 = findViewById(R.id.ivNVL1Figure2);
@@ -68,6 +74,7 @@ public class ShapesActivity extends AppCompatActivity {
         btnCheckNVL1 = findViewById(R.id.btnCheckNVL1);
         btnRestartNVL1 = findViewById(R.id.btnRestartNVL1);
 
+        //Se aplican los DragListener y OnTouchListener adecuados para la lógica de los movimientos en pantalla
         ivNVL1Figure1.setOnDragListener(new myDragListener());
         ivNVL1Figure2.setOnDragListener(new myDragListener());
         ivNVL1Figure3.setOnDragListener(new myDragListener());
@@ -75,7 +82,8 @@ public class ShapesActivity extends AppCompatActivity {
         ivNVL1Drag2.setOnTouchListener(new myClickListener());
         ivNVL1Drag3.setOnTouchListener(new myClickListener());
 
-
+        /*Se crea la funcinalidad del botón de pausa, desplegando el Frame Layout con los elementos
+          correspondientes del Fragmento de Pausa*/
         ibPauseShapes1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,27 +92,35 @@ public class ShapesActivity extends AppCompatActivity {
             }
         });
 
+        //Se crea la funcionalidad del botón "Continuar"
         btnContinueNVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*En caso de haberse agotado las vidas, se obtienen los parámetros necesarios para poder hacer
+                  la evaluación de la Puntuación*/
                 if (lives == 0) {
                     Bundle bundle = new Bundle();
                     bundle.putInt("game", 2);
                     bundle.putInt("score", score);
+                    /*Si la puntuación obtenida es más alta que la guardada actualmente en el perfil, la llave "high"
+                      recibe el valor verdadero, indicando que debe haber una actualización*/
                     if (user.getCurrentUserScoreF() < score) {
                         bundle.putBoolean("high", true);
                     } else {
                         bundle.putBoolean("high", false);
                     }
+                    //Se redirige al Fragmento del Game Over con los argumentos importantes del Bundle
                     GameOverFragment fragment = new GameOverFragment();
                     fragment.setArguments(bundle);
                     user.updateScore(score,user.getCurrentUserNumber(),2);
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.flPauseShapes1, fragment).commit();
                 }
+                //Si no, si el estado del modelo es verdadero, se llama al método "hideSequence"
                 else if (model.state) {
                     hideSequence();
                 }
+                //Si no, se crea una nueva ronda y se cambian los atributos del Layout
                 else {
                     model.startNewRound();
                     setLayoutAttributes();
@@ -112,16 +128,23 @@ public class ShapesActivity extends AppCompatActivity {
             }
         });
 
+        //El botón "Chechar" evalúa si el input de respuesta es correcto o no y hace los cambios oportunos
         btnCheckNVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //El número de respuestas correctas se inicializa en cero
                 int correctAnswers = 0;
+                //Se obtienen todos los tags de las figuras, haciendo el cambio a enteros
                 int figure1Tag = Integer.parseInt(ivNVL1Figure1.getTag().toString());
                 int figure2Tag = Integer.parseInt(ivNVL1Figure2.getTag().toString());
                 int figure3Tag = Integer.parseInt(ivNVL1Figure3.getTag().toString());
+                /*Cada recurso presente en el arreglo "figures" del modelo es comparado con el recurso que referencía
+                  el tag de cada figura. De este modo, se puede identificar si la respuesta es correcta o incorrecta*/
+                //Si los recursos coinciden, aumenta el contador de respuestas correctas
                 if (model.figures.get(0).equals(model.drags.get(figure1Tag))) {
                     correctAnswers ++;
                 }
+                /*Si los recursos no coinciden, se quita la imagen actual para dar la oportunidad de recolocarla*/
                 else {
                     ivNVL1Figure1.animate().alpha(0f).setDuration(500);
                     ivNVL1Figure1.setEnabled(true);
@@ -138,6 +161,7 @@ public class ShapesActivity extends AppCompatActivity {
                         ivNVL1Drag3.setEnabled(true);
                     }
                 }
+                //Este proceso se realiza para cada una de las figuras del juego
                 if (model.figures.get(1).equals(model.drags.get(figure2Tag))) {
                     correctAnswers ++;
                 }
@@ -176,16 +200,23 @@ public class ShapesActivity extends AppCompatActivity {
                         ivNVL1Drag3.setEnabled(true);
                     }
                 }
+                /*Si después de hacer la evaluación en todas las figuras el contador de respuestas correctas es 3,
+                  significa que todas fueron colocadas adecuadamente y se aumenta la puntuación*/
                 if (correctAnswers == 3) {
                     strText = "¡Muy bien!";
                     btnContinueNVL1.setEnabled(true);
                     btnRestartNVL1.setEnabled(false);
+                    //La puntuación es actualizada
                     score += lives * 10;
                     strScore = "Puntuación: " + String.valueOf(score);
+                    //El texto del TextView refleja la nueva puntuación
                     tvScoreShapesNVL1.setText(strScore);
                 }
+                /*Si la respuesta total fue incorrecta, se hace la modificación correspondiente de las vidas*/
                 else {
+                    //El valor de las vidas se disminuye en una unidad
                     lives --;
+                    //Se checa el valor específico para cambiar el recurso de las las ImageViews
                     if (lives == 2) {
                         ivLife3SH.setImageResource(R.drawable.ic_adam_dead);
                     }
@@ -193,7 +224,11 @@ public class ShapesActivity extends AppCompatActivity {
                         ivLife2SH.setImageResource(R.drawable.ic_adam_dead);
                     }
                     strText = "¡Intenta de nuevo!";
+                    /*Si el valor de las vidas llega a cero, además de cambiar el recurso, se hace la evaluación
+                      para mostrar la respuesta correcta*/
                     if (lives == 0) {
+                        /*Se modifican los recursos de las figuras para cambiarlos a las respuestas correctas.
+                          Solo se deja habilitado el botón de "Continuar" para permitir la finalización de la partida*/
                         ivLife1SH.setImageResource(R.drawable.ic_adam_dead);
                         strText = "¡Juego terminado!";
                         ivNVL1Figure1.setEnabled(false);
@@ -218,11 +253,15 @@ public class ShapesActivity extends AppCompatActivity {
                         btnContinueNVL1.setEnabled(true);
                     }
                 }
+                //Se vuelve a desabilitar el botón de "Checar"
                 btnCheckNVL1.setEnabled(false);
+                //El texto del TextView es actualizado
                 tvShapesNVL1.setText(strText);
             }
         });
 
+        /*El botón "Reiniciar" permite regresar las figuras a sus valores originales para hacer un reacomodo
+          sin la necesidad de tener que "checar" la respuesta y perder una vida*/
         btnRestartNVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -242,11 +281,13 @@ public class ShapesActivity extends AppCompatActivity {
             }
         });
 
+        /*Justo al iniciar la Actividad se llama al método startNewRound del modelo y se actualizan los valores del Layout*/
         model.startNewRound();
         setLayoutAttributes();
 
     }
 
+    //El método setLayoutAttributes revisa los atributos actuales del modelo para actualizar los valores en el Layout
     private void setLayoutAttributes() {
         ivNVL1Figure1.setAlpha(0f);
         ivNVL1Figure2.setAlpha(0f);
@@ -256,6 +297,7 @@ public class ShapesActivity extends AppCompatActivity {
         ivNVL1Drag3.setVisibility(View.GONE);
         btnCheckNVL1.setEnabled(false);
         btnRestartNVL1.setEnabled(false);
+        //El string del TextView muestra el mensaje para indicar que el usuario observe las posiciones de las figuras
         strText = "¡Ve las posiciones!";
         tvShapesNVL1.setText(strText);
         ivNVL1Figure1.setImageResource(model.figure1Resource);
@@ -269,6 +311,8 @@ public class ShapesActivity extends AppCompatActivity {
         ivNVL1Drag3.setImageResource(model.drag3Resource);
     }
 
+    /*El método "hideSequence" procede a ocultar las figuras en los escalones y mostrarlas en la parte inferior de la pantalla.
+      Permitiendo que el usuario pueda arrastrarlas hacia las posiciones que recuerda*/
     private void hideSequence() {
         ivNVL1Figure1.setEnabled(true);
         ivNVL1Figure2.setEnabled(true);
@@ -281,6 +325,7 @@ public class ShapesActivity extends AppCompatActivity {
         ivNVL1Figure3.animate().alpha(0f).setDuration(500);
         btnRestartNVL1.setEnabled(true);
         btnContinueNVL1.setEnabled(false);
+        //El string del TextView muestra el mensaje para indicar que el usuario debe arrastrar las figuras a su lugar
         strText = "¡Ponlas en su lugar!";
         tvShapesNVL1.setText(strText);
         ivNVL1Drag1.setVisibility(View.VISIBLE);
@@ -292,19 +337,25 @@ public class ShapesActivity extends AppCompatActivity {
         ivNVL1Drag1.animate().alpha(1f).setDuration(1000);
         ivNVL1Drag2.animate().alpha(1f).setDuration(1000);
         ivNVL1Drag3.animate().alpha(1f).setDuration(1000);
+        //El estado del modelo es cambiado a false, con el fin de que el siguiente paso sea la creación de una nueva ronda
         model.state = false;
     }
 
+    /*El método "setCheckBtnEnablement" revisa si todas las posiciones han recibido un input de respuesta
+      y proceder a habilitar el botón "Checar"*/
     private void setCheckBtnEnablement() {
         if (ivNVL1Figure1.getAlpha() == 1f && ivNVL1Figure2.getAlpha() == 1f && ivNVL1Figure3.getAlpha() == 1f) {
             btnCheckNVL1.setEnabled(true);
         }
     }
 
+    //La clase "myClickListener" crea la lógica necesaria para detectar movimientos en pantalla
     private static class myClickListener implements View.OnTouchListener {
         @SuppressLint("ClickableViewAccessibility")
         @Override
         public boolean onTouch(View v, MotionEvent motionEvent) {
+            /*Si la acción de click se realiza en una figura con transparencia 1f, se crea el ClipData para
+              almacenar su tag y generar la sombra de arrastre*/
             if(v.getAlpha() == 1f) {
                 ClipData.Item item = new ClipData.Item((CharSequence) v.getTag());
                 ClipData dragData = new ClipData((CharSequence) v.getTag(), new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
@@ -318,17 +369,24 @@ public class ShapesActivity extends AppCompatActivity {
         }
     }
 
+    //La clase "myDragListener" crea la lógica necesaria para detectar el arrastre de elementos hacia ciertos elementos en pantalla
     private class myDragListener implements View.OnDragListener {
         @Override
         public boolean onDrag(View v, DragEvent dragEvent) {
+            //El elemento que detecta el arrastre se representa como la "receiverView"
             ImageView receiverView = (ImageView) v;
+            //La acción del evento se identifica en "action"
             final int action = dragEvent.getAction();
             switch(action) {
                 case DragEvent.ACTION_DRAG_STARTED:
                 case DragEvent.ACTION_DRAG_ENTERED:
                     return true;
+                    /*Si la acción reconocida es un "soltar", se cambia el recurso de la imagen en dicha posición*/
                 case DragEvent.ACTION_DROP:
+                    //Se guarda el tag de la imagen que está siendo arrastrada como entero
                     int dragIndex = Integer.parseInt(String.valueOf(dragEvent.getClipDescription().getLabel()));
+                    /*La imagen que detecta el "soltar" en ella cambia su recurso de acuerdo a la posición del tag en el
+                      arreglo "drags" del modelo y también actualiza su tag a ese mismo valor*/
                     receiverView.setImageResource(model.drags.get(dragIndex));
                     receiverView.setAlpha(1f);
                     receiverView.setEnabled(false);

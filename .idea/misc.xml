@@ -6,6 +6,7 @@
         <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_en_formitas_card.xml" value="0.2703125" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_home.xml" value="0.20153985507246377" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_instructions.xml" value="0.20153985507246377" />
+        <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_main.xml" value="0.18795289855072464" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_select_difficulty.xml" value="0.16304347826086957" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_story.xml" value="0.18478260869565216" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_formitas.xml" value="0.264" />
@@ -134,9 +135,8 @@
         <entry key="app/src/main/res/layout/fragment_arcoiris.xml" value="0.148224043715847" />
         <entry key="app/src/main/res/layout/fragment_game_over.xml" value="0.148224043715847" />
         <entry key="app/src/main/res/layout/fragment_icons.xml" value="0.1523224043715847" />
-        <entry key="app/src/main/res/layout/fragment_pause.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_te_cuento.xml" value="0.116796875" />
         <entry key="app/src/main/res/layout/fragment_pause.xml" value="0.148224043715847" />
+        <entry key="app/src/main/res/layout/fragment_te_cuento.xml" value="0.116796875" />
       </map>
     </option>
   </component>

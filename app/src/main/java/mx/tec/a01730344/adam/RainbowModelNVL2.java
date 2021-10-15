@@ -5,8 +5,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+/*Esta clase representa el Modelo para el nivel de dificultad "intermedio" del juego "Arcoiris"*/
+
 public class RainbowModelNVL2 {
 
+    //Se instancian todas las variables necesarias para el sistema del Modelo
     int score = 0;
     int globalAnswer = -1;
     int globalLives = 3;
@@ -16,14 +19,20 @@ public class RainbowModelNVL2 {
     int imageView2;
     int imageView3;
     int imageView4;
+    //"Colors" almacena los nombres de los posibles colores
     List<String> colors = Arrays.asList("Amarillo", "Azul", "Café", "Morado", "Naranja", "Rojo", "Rosa", "Verde", "Celeste", "Beige", "Fucsia", "Menta");
+    //"ColorValues" almacena todos los valores enteros existentes en el xml de colores
     List<Integer> colorValues = Arrays.asList(R.color.r_amarillo, R.color.r_azul_osc, R.color.r_cafe, R.color.r_morado, R.color.r_naranja, R.color.r_rojo, R.color.r_rosa, R.color.r_verde, R.color.r_celeste, R.color.r_beige, R.color.r_fucsia, R.color.r_menta);
+    //"Figures" almacena los recursos drawables
     List<Integer> figures = Arrays.asList(R.drawable.ic_boton_amarillo, R.drawable.ic_boton_azul_osc, R.drawable.ic_boton_cafe, R.drawable.ic_boton_morado, R.drawable.ic_boton_naranja, R.drawable.ic_boton_rojo, R.drawable.ic_boton_rosa, R.drawable.ic_boton_verde, R.drawable.ic_boton_celeste,R.drawable.ic_boton_beige, R.drawable.ic_boton_fucsia, R.drawable.ic_boton_menta);
 
+    //El método "randomIndex" recibe un entero y regresa un aleatorio desde cero hasta ese valor
     private int randomIndex() {
         return new Random().nextInt(12);
     }
 
+    /*El método "gameRound" toma valores aleatorios para asignarlos a las variables de los recursos drawables,
+      el nombre del color como la respuesta correcta y el color para la font*/
     public void gameRound() {
         List<Integer> options = Arrays.asList(0, 1, 2, 3);
         Collections.shuffle(options);
@@ -53,6 +62,7 @@ public class RainbowModelNVL2 {
         colorChange(randomAnswerD, randomOption2);
     }
 
+    /*El método "colorChange" asigna el valor entero del color a la variable "answer" pasada como parámetro*/
     private void colorChange(int answer, int color) {
         if (answer == 0) {
             imageView1 = figures.get(color);
@@ -68,10 +78,13 @@ public class RainbowModelNVL2 {
         }
     }
 
+    /*El método "checkAnswer" recibe un valor entero y lo compara con la respuesta global*/
     public void checkAnswer(int answer) {
+        //Si la respuesta coincide con la global, se aumenta el valor de la puntuación
         if (answer == globalAnswer) {
             score += 20 * globalLives;
         }
+        //En caso contrario, el número de vidas se reduce en una unidad
         else {
             globalLives --;
         }

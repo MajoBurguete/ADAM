@@ -1,11 +1,19 @@
 package mx.tec.a01730344.adam;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -20,11 +28,21 @@ public class MainActivity extends AppCompatActivity {
     ImageButton ibProfileIcon3;
     ImageButton ibAddProfile;
     User user = new User(this);
+    int devOptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        //Se checa si el dispositivo tiene las funciones de desarrollador activadas
+        devOptions = Settings.Secure.getInt(this.getContentResolver(), Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+
+        //En caso de que las funciones de desarrollador hayan sido encontradas habilitadas, se procede a cerrar la aplicación automáticamente
+        if (devOptions == 1) {
+            finishAndRemoveTask();
+        }
 
         user.loadProfiles();
 
