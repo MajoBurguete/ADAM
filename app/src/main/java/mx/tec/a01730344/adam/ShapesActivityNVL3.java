@@ -267,8 +267,8 @@ public class ShapesActivityNVL3 extends AppCompatActivity {
                     strText = "¡Muy bien!";
                     btnContinueNVL3.setEnabled(true);
                     btnRestartNVL3.setEnabled(false);
-                    score += lives * 10 * 3;
-                    strScore = "Puntuación: " + score;
+                    score += lives * 20 * 3;
+                    strScore = "Puntaje: " + score;
                     tvScoreShapesNVL3.setText(strScore);
                 }
                 else {

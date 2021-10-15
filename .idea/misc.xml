@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_add_main.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_arcoiris_card.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_arcoiris_forma.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_block_1.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_block_2.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_block_3.xml" value="0.12890625" />
@@ -41,6 +42,7 @@
         <entry key="app/src/main/res/drawable/ic_pp_triangulito_medium.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_tecuento_gameover.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_triangulo_cuentos_b.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.12890625" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.13489583333333333" />
         <entry key="app/src/main/res/layout/activity_instructions.xml" value="0.18129773642357436" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />

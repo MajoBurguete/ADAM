@@ -217,8 +217,8 @@ public class ShapesActivityNVL2 extends AppCompatActivity {
                     strText = "¡Muy bien!";
                     btnContinueNVL2.setEnabled(true);
                     btnRestartNVL2.setEnabled(false);
-                    score += lives * 10 * 2;
-                    strScore = "Puntuación: " + score;
+                    score += lives * 20 * 2;
+                    strScore = "Puntaje: " + score;
                     tvScoreShapesNVL2.setText(strScore);
                 }
                 else {

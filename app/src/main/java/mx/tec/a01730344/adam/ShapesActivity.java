@@ -180,8 +180,8 @@ public class ShapesActivity extends AppCompatActivity {
                     strText = "¡Muy bien!";
                     btnContinueNVL1.setEnabled(true);
                     btnRestartNVL1.setEnabled(false);
-                    score += lives * 10;
-                    strScore = "Puntuación: " + String.valueOf(score);
+                    score += lives * 20;
+                    strScore = "Puntaje: " + String.valueOf(score);
                     tvScoreShapesNVL1.setText(strScore);
                 }
                 else {

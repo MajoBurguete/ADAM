@@ -275,7 +275,7 @@ public class StoryActivity extends AppCompatActivity {
         tvTrueFalse.setText(trueOrFalse);
         if (trueOrFalse.equals("¡Muy bien!")) {
             score += lives * difficulty * 100;
-            strScore = "Puntuación: " + score;
+            strScore = "Puntaje: " + score;
             tvScoreS.setText(strScore);
             btnOption1.setBackgroundColor(getResources().getColor(R.color.verde));
             btnOption2.setBackgroundColor(getResources().getColor(R.color.r_rojo));
@@ -297,7 +297,7 @@ public class StoryActivity extends AppCompatActivity {
             }
             if (lives == 0) {
                 ivLife1S.setImageResource(R.drawable.ic_adam_dead);
-                String gameOver = "¡Juego Terminado!";
+                String gameOver = "¡Juego terminado!";
                 tvTrueFalse.setText(gameOver);
                 btnOption1.setEnabled(false);
                 btnOption2.setEnabled(false);

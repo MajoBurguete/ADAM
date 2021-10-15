@@ -77,6 +77,10 @@ public class UserProfileActivity extends AppCompatActivity {
             toSettings.putExtra("screen",value);
             startActivity(toSettings);
         }
+        else if(item.getItemId() == R.id.btnBackProfile){
+            Intent toMain = new Intent(UserProfileActivity.this, MainActivity.class);
+            startActivity(toMain);
+        }
         return super.onOptionsItemSelected(item);
     }
 

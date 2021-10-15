@@ -196,8 +196,14 @@ public class HomeActivity extends AppCompatActivity {
             toSettings.putExtra("screen",value);
             startActivity(toSettings);
         }
+        if(item.getItemId() == R.id.btnBackProfile){
+            Intent toMain = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(toMain);
+        }
         return super.onOptionsItemSelected(item);
     }
+
+
     @Override
     public void onBackPressed() {
     }

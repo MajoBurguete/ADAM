@@ -54,7 +54,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(0);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
                 tvScoreR.setText(scoreString);
                 checkLives();
                 setLayoutAttributes();
@@ -65,7 +65,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(1);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
                 tvScoreR.setText(scoreString);
                 checkLives();
                 setLayoutAttributes();
@@ -76,7 +76,7 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(2);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
                 tvScoreR.setText(scoreString);
                 checkLives();
                 setLayoutAttributes();
