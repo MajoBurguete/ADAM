@@ -354,4 +354,8 @@ public class ShapesActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+    }
+
 }

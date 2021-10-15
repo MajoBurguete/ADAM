@@ -348,4 +348,8 @@ public class StoryActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    public void onBackPressed() {
+    }
 }

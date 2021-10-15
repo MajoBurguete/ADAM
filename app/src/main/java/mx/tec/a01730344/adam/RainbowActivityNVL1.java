@@ -90,8 +90,14 @@ public class RainbowActivityNVL1 extends AppCompatActivity {
                 ft.replace(R.id.flGameArcoiris, new PauseFragment()).commit();
             }
         });
+        onBackPressed();
+
 
         startGame();
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     private void startGame() {

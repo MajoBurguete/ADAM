@@ -32,7 +32,7 @@
                 android:id="@+id/tvIconDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/silka_bold_webfont"
+                android:fontFamily="@font/silka_regular_webfont"
                 android:paddingTop="30dp"
                 android:paddingBottom="30dp"
                 android:textAlignment="center"

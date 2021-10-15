@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class User {
-    private static final String FILENAME = "prueba6.xml";
+    private static final String FILENAME = "prueba8.xml";
     private Properties profiles = new Properties();
     Context context;
 

@@ -42,6 +42,7 @@ public class InstructionsActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     toGame.putExtra("game", 0);
                     startActivity(toGame);
+
                 }
             });
         }

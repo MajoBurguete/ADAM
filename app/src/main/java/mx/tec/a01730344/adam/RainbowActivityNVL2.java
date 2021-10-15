@@ -163,4 +163,8 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+    }
+
 }

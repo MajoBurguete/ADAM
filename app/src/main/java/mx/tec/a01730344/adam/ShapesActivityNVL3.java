@@ -491,4 +491,8 @@ public class ShapesActivityNVL3 extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+    }
+
 }

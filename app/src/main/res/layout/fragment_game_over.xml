@@ -359,7 +359,7 @@
                 android:id="@+id/tvNewHighscoreTeCuento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/silka_bold_webfont"
+                android:fontFamily="@font/silka_medium_webfont"
                 android:text="Puntuación más alta"
                 android:textAlignment="center"
                 android:textColor="@color/r_amarillo"

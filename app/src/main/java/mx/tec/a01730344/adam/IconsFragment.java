@@ -40,13 +40,13 @@ public class IconsFragment extends Fragment {
         clIcon = view.findViewById(R.id.clIcon);
         tvIconDescription = view.findViewById(R.id.tvIconDescription);
         if (achievement == 1){
-            tvIconDescription.setText("¡Consigue 2,700 puntos en 'Te cuento un cuento' para obtener este Ícono!");
+            tvIconDescription.setText("¡Consigue 2,700 puntos en 'Te cuento un cuento' para obtener este ícono!");
         }
         else if (achievement == 2){
-            tvIconDescription.setText("¡Consigue 10,000 puntos en 'arcoiris' para obtener este Ícono!");
+            tvIconDescription.setText("¡Consigue 10,000 puntos en 'Arcoiris' para obtener este ícono!");
         }
         else {
-            tvIconDescription.setText("¡Consigue 2,500 puntos en todos los juegos para obtener este Ícono!");
+            tvIconDescription.setText("¡Consigue 2,500 puntos en todos los juegos para obtener este ícono!");
         }
 
         clIcon.setOnClickListener(new View.OnClickListener() {

@@ -228,6 +228,7 @@
                 android:fontFamily="@font/silka_bold_webfont"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvArcoirisProf"
                 app:layout_constraintStart_toStartOf="@+id/tvArcoirisProf"
                 app:layout_constraintTop_toBottomOf="@+id/tvArcoirisProf"
                 tools:ignore="TextContrastCheck"

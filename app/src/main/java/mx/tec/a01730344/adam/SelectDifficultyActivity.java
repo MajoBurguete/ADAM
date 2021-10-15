@@ -43,6 +43,7 @@ public class SelectDifficultyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent toHome = new Intent(SelectDifficultyActivity.this, HomeActivity.class);
                 startActivity(toHome);
+                finish();
             }
         });
     }
