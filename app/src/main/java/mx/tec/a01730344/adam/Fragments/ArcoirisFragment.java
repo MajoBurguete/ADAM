@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import mx.tec.a01730344.adam.Activities.InstructionsActivity;
+import mx.tec.a01730344.adam.R;
 
 /*Fragmento creado para el carrusel de juegos en la pantalla de HomeActivity
 para que el usuario pueda escoger el juego de arcoíris.*/

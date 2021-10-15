@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +23,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import mx.tec.a01730344.adam.R;
+import mx.tec.a01730344.adam.Models.User;
 
 //ACtividad para editar la información del usuario (foto de perfil y nombre de usuario)
 

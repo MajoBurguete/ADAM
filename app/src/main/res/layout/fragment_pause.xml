@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#97000000"
     android:clickable="true"
-    tools:context=".PauseFragment">
+    tools:context=".Fragments.PauseFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

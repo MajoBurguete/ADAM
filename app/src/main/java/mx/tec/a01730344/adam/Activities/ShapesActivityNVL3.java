@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,7 +15,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipDescription;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.MotionEvent;
@@ -24,6 +23,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import mx.tec.a01730344.adam.Fragments.GameOverFragment;
+import mx.tec.a01730344.adam.Fragments.PauseFragment;
+import mx.tec.a01730344.adam.R;
+import mx.tec.a01730344.adam.Models.ShapesModelNVL3;
+import mx.tec.a01730344.adam.Models.User;
 
 /*Esta clase representa el Controlador para el nivel de dificultad "difícil" del juego "En Formitas"*/
 

@@ -7,17 +7,18 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
-import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import mx.tec.a01730344.adam.R;
 
 /*Esta clase maneja la Actividad de la Selección de Dificultad*/
 

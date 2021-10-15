@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -20,25 +20,25 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import mx.tec.a01730344.adam.Fragments.GameOverFragment;
+import mx.tec.a01730344.adam.Fragments.PauseFragment;
+import mx.tec.a01730344.adam.R;
+import mx.tec.a01730344.adam.Models.RainbowModelNVL1;
+import mx.tec.a01730344.adam.Models.User;
 
-/*Esta clase representa el Controlador para el primer nivel "intermedio" del juego "Arcoiris"*/
+/*Esta clase representa el Controlador para el primer nivel del juego "Arcoiris"*/
 
-public class RainbowActivityNVL2 extends AppCompatActivity {
+public class RainbowActivityNVL1 extends AppCompatActivity {
 
     //Se instancian todas las variables necesarias para el sistema del Controlador
-    RainbowModelNVL2 model;
+    RainbowModelNVL1 model;
     TextView tvInstruction;
     TextView tvColor;
     TextView tvScoreR;
     ImageButton ibOption1;
     ImageButton ibOption2;
     ImageButton ibOption3;
-    ImageButton ibOption4;
-    ImageButton btnPause;
+    ImageButton ibPause;
     ImageView ivLife1;
     ImageView ivLife2;
     ImageView ivLife3;
@@ -48,12 +48,12 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rainbow_nvl2);
+        setContentView(R.layout.activity_rainbow_nvl1);
 
         //Se carga la información de los usuarios registrados en la Properties List
         user.loadProfiles();
         /*Se hace la instancia del modelo relacionado"*/
-        model = new RainbowModelNVL2();
+        model = new RainbowModelNVL1();
         //Se vinculan todos los elementos existentes del Layout para poder interactuar con ellos
         tvInstruction = findViewById(R.id.tvInstruction);
         tvColor = findViewById(R.id.tvColor);
@@ -61,11 +61,10 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
         ibOption1 = findViewById(R.id.ibOption1);
         ibOption2 = findViewById(R.id.ibOption2);
         ibOption3 = findViewById(R.id.ibOption3);
-        ibOption4 = findViewById(R.id.ibOption4);
-        btnPause = findViewById(R.id.btnPause);
         ivLife1 = findViewById(R.id.ivLife1);
         ivLife2 = findViewById(R.id.ivLife2);
         ivLife3 = findViewById(R.id.ivLife3);
+        ibPause = findViewById(R.id.ibPauseR1);
 
         /*Cada ImageButton que representa una opción de respuesta llama al método "checkAnswer" del modelo,
           pasando como parámetro el entero correspondiente*/
@@ -74,7 +73,6 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             public void onClick(View view) {
                 model.checkAnswer(0);
                 scoreString = "Puntaje: " + model.score;
-
                 //Se actualiza el texto del TextView de la puntuación reflejada por el modelo
                 tvScoreR.setText(scoreString);
                 //Se llama al método "checkLives" para evaluar si la partida debe continuar
@@ -107,31 +105,25 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             }
         });
 
-        ibOption4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                model.checkAnswer(3);
-                scoreString = "Puntaje: " + model.score;
-                tvScoreR.setText(scoreString);
-                checkLives();
-                setLayoutAttributes();
-            }
-        });
-
         /*Se crea la funcinalidad del botón de pausa, desplegando el Frame Layout con los elementos
           correspondientes del Fragmento de Pausa*/
-        btnPause.setOnClickListener(new View.OnClickListener() {
+        ibPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.flGameArcoiris2, new PauseFragment()).commit();
+                ft.replace(R.id.flGameArcoiris, new PauseFragment()).commit();
             }
         });
+        onBackPressed();
+
 
         /*Justo al iniciar la Actividad se llama al método "startGame"*/
         startGame();
     }
 
+    @Override
+    public void onBackPressed() { }
+  
     /*El método "startGame" sirve para actualizar los valores del Layout tomando los atributos del modelo
       como referencia y evaluar con el número de vidas si la partida se debe finalizar*/
     private void startGame() {
@@ -141,7 +133,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
         new CountDownTimer(900000000, 500) {
             //Si el tiempo máximo de los 900000000 milisegundos es sobrepasado sin repuesta de input, se hace un Intent hacia Home
             public void onFinish() {
-                Intent toHome = new Intent(RainbowActivityNVL2.this, HomeActivity.class);
+                Intent toHome = new Intent(RainbowActivityNVL1.this, HomeActivity.class);
                 startActivity(toHome);
             }
             //Si el tiempo del medio segundo es sobrepasado, se procede a evaluar el número actual de vidas
@@ -164,7 +156,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
                     fragment.setArguments(bundle);
                     user.updateScore(model.score,user.getCurrentUserNumber(),0);
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.flGameArcoiris2, fragment).commit();
+                    ft.replace(R.id.flGameArcoiris, fragment).commit();
                     model.globalLives --;
                     //El CountDownTimer es finalizado
                     cancel();
@@ -182,7 +174,6 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
         ibOption1.setImageResource(model.imageView1);
         ibOption2.setImageResource(model.imageView2);
         ibOption3.setImageResource(model.imageView3);
-        ibOption4.setImageResource(model.imageView4);
     }
 
     /*El método "checkLives" revisa el valor de las vidas en el modelo para hacer los cambios oportunos*/
@@ -201,13 +192,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             ibOption1.setEnabled(false);
             ibOption2.setEnabled(false);
             ibOption3.setEnabled(false);
-            ibOption4.setEnabled(false);
-
         }
-    }
-
-    @Override
-    public void onBackPressed() {
     }
 
 }

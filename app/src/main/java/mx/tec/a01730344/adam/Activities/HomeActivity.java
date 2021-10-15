@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,7 +18,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -26,6 +25,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageButton;
+
+import mx.tec.a01730344.adam.Fragments.ArcoirisFragment;
+import mx.tec.a01730344.adam.Fragments.FormitasFragment;
+import mx.tec.a01730344.adam.R;
+import mx.tec.a01730344.adam.Fragments.TeCuentoFragment;
+import mx.tec.a01730344.adam.Models.User;
 
 //Actividad creada para desplegar el carrusel de juegos a elegir, el perfil con su nombre e icono,
 //y la barra con botones para configuracion y regresar a selección de perfiles.

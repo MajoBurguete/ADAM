@@ -7,12 +7,14 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Models;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+
+import mx.tec.a01730344.adam.R;
 
 /*Esta clase representa el Modelo para el nivel de dificultad "intermedio" del juego "Arcoiris"*/
 

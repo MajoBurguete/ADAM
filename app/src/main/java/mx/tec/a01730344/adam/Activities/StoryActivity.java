@@ -7,19 +7,25 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import mx.tec.a01730344.adam.Fragments.GameOverFragment;
+import mx.tec.a01730344.adam.Fragments.PauseFragment;
+import mx.tec.a01730344.adam.Models.StoryModelNVL1;
+import mx.tec.a01730344.adam.Models.StoryModelNVL2AndNVL3;
+import mx.tec.a01730344.adam.Models.User;
+import mx.tec.a01730344.adam.R;
 
 /*Esta clase representa el Controlador para los 3 diferentes niveles del juego "Te Cuento un Cuento"*/
 

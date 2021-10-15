@@ -7,24 +7,19 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import mx.tec.a01730344.adam.R;
+import mx.tec.a01730344.adam.Models.User;
 
 //Actividad creada para desplegar los perfiles creados para que el usuario escoja, así como la opción de crear uno nuevo.
 public class MainActivity extends AppCompatActivity {

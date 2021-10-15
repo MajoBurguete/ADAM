@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:clickable="true"
-    tools:context=".IconsFragment">
+    tools:context=".Fragments.IconsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

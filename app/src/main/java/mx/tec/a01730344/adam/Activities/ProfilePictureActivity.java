@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,6 +16,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import mx.tec.a01730344.adam.Fragments.IconsFragment;
+import mx.tec.a01730344.adam.R;
+import mx.tec.a01730344.adam.Models.User;
 
 //Actividad que despliega las opciones de imagen de perfil disponibles y permite que el usuario elija una.
 

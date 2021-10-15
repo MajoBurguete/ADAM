@@ -7,12 +7,14 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Models;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import mx.tec.a01730344.adam.R;
 
 /*Esta clase representa el Modelo para el nivel de dificultad "fácil" del juego "En Formitas"*/
 

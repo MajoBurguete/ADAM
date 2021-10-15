@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,13 +15,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+
+import mx.tec.a01730344.adam.Activities.HomeActivity;
+import mx.tec.a01730344.adam.R;
 
 //Fragmento creado para pausar el juego y desplegar los botones de salir del juego o continuar con la partida
 public class PauseFragment extends Fragment {

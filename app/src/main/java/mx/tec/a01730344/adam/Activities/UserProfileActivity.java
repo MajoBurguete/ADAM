@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,6 +20,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import mx.tec.a01730344.adam.Models.User;
+import mx.tec.a01730344.adam.R;
 
 //Actividad creada para desplegar los puntajes mas altos del usuario en cada juego, el perfil con
 //su nombre e ícono, y la barra con botones para configuración y regresar a selección de perfiles.

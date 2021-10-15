@@ -6,7 +6,8 @@
                Marco Flamenco Andrade
                Daniela Hernández y Hernández
 */
-package mx.tec.a01730344.adam;
+
+package mx.tec.a01730344.adam.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,20 +21,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/*Fragmento creado para el carrusel de juegos en la pantalla de HomeActivity
-para que el usuario pueda escoger el juego En Formitas.*/
+import mx.tec.a01730344.adam.Activities.InstructionsActivity;
+import mx.tec.a01730344.adam.R;
 
-public class FormitasFragment extends Fragment {
+//Fragmento creado para el carrusel de juegos en la pantalla de HomeActivity para que el usuario pueda escoger el juego de arcoíris.
+public class TeCuentoFragment extends Fragment {
 
-    Button btnJugarFormitas;
+    Button btnJugarTeCuento;
 
     //Funciones necesarias para que el fragmento se ejecute de manera correcta.
-    public FormitasFragment() { }
+    public TeCuentoFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_formitas, container, false);
+        return inflater.inflate(R.layout.fragment_te_cuento, container, false);
     }
 
     //Función añadida para realizar acciones al crear el fragmento.
@@ -42,15 +44,15 @@ public class FormitasFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //Declaración de botón y el elemento en el layout al que corresponde.
-        btnJugarFormitas = view.findViewById(R.id.btnJugarFormitas);
+        btnJugarTeCuento = view.findViewById(R.id.btnJugarTeCuento);
 
-        //Función para detectar la interacción del usuario con el botón y poder mandarlo al juego.
-        btnJugarFormitas.setOnClickListener(new View.OnClickListener() {
+        //Función para detectar la interacción del usuario con el botón y asi poder mandarlo al juego.
+        btnJugarTeCuento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent toSelectDifficulty = new Intent(getActivity(), InstructionsActivity.class);
-                //Elemento que se manda a la siguiente pantalla para poder identificar a que juego se fue y desplegar las instrucciones apropiadas
-                toSelectDifficulty.putExtra("game", 1);
+                //Elemento que se manda a la siguiente pantalla para poder identificar a qué juego se fue y desplegar las instrucciones apropiadas
+                toSelectDifficulty.putExtra("game", 2);
                 startActivity(toSelectDifficulty);
             }
         });

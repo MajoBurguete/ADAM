@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Models;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
@@ -15,6 +15,8 @@ import android.os.CountDownTimer;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
+import mx.tec.a01730344.adam.R;
 
 /*Esta clase representa el Modelo para el nivel de dificultad "fácil" del juego "Arcoiris"*/
 

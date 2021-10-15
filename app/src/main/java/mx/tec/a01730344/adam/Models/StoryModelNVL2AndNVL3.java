@@ -7,7 +7,7 @@
                Daniela Hernández y Hernández
 */
 
-package mx.tec.a01730344.adam;
+package mx.tec.a01730344.adam.Models;
 
 import android.content.Context;
 import android.text.Spannable;
@@ -19,18 +19,23 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-/*Esta clase representa el Modelo para el nivel de dificultad "fácil" del juego "Te Cuento un Cuento"*/
+import mx.tec.a01730344.adam.R;
 
-public class StoryModelNVL1 {
+/*Esta clase representa el Modelo para el nivel de dificultad "intermedio" y "difícil" del juego "Te Cuento un Cuento"*/
+
+public class StoryModelNVL2AndNVL3 {
 
     //Se instancian todas las variables necesarias para el sistema del Modelo
     Context context;
-    int randomStory;
-    boolean paragraphGenerated = false;
+    int randomStory = -1;
+    int actualParagraph = 0;
     int actualQuestion = 0;
-    String firstAns;
-    String secondAns;
-    String thirdAns;
+    int firstQuestion;
+    int secondQuestion;
+    int thirdQuestion;
+    String firstParagraphAns;
+    String secondParagraphAns;
+    String thirdParagraphAns;
     String question;
     String firstAnswerOption;
     String secondAnswerOption;
@@ -61,17 +66,19 @@ public class StoryModelNVL1 {
                     Arrays.asList(Arrays.asList("El cuervo estaba en un…", "El cuervo tenía un pedazo de…", "¿Cómo era el pico del cuervo?"), Arrays.asList("¿Cómo miró el cuervo al zorro?", "El zorro le dijo al cuervo que sus plumas eran…", "El zorro le dijo al cuervo que tenía una figura..."), Arrays.asList("Luego de los halagos, el cuervo abrió su pico para…", "¿A dónde se fue corriendo el zorro?", "¿Cómo se sentía el zorro por haber logrado su meta?")));
 
     //Este constructor recibe como argumento un contexto
-    public StoryModelNVL1(Context context) {
+    public StoryModelNVL2AndNVL3(Context context) {
         this.context = context;
     }
 
-    /*El método "generateParagraph" se encarga de construir el párrafo, seleccionando una historia y variantes
+    /*El método "generateParagraph" se encarga de construir nuevos párrafos, de acuerdo a una historia y variantes
       de forma aleatoria. Regresa el texto como un SpannableStringBuilder*/
-    public SpannableStringBuilder generateParagraph() {
-        //Se instancia el valor aleatorio para seleccionar la historia del arreglo "stories"
-        randomStory = new Random().nextInt(5);
-        //Se toma el primer párrafo de la historia seleccionada
-        StringBuffer parrafo = new StringBuffer(stories.get(randomStory).get(0));
+    public SpannableStringBuilder generateNewParagraph(int difficulty) {
+        //Si aún no se ha seleccionado la historia a trabajar, se elige de forma aleatoria
+        if (randomStory == -1) {
+            randomStory = new Random().nextInt(5);
+        }
+        //Se toma el párrafo de la historia seleccionada, de acuerdo al valor de la variable "actualParagraph"
+        StringBuffer parrafo = new StringBuffer(stories.get(randomStory).get(actualParagraph));
         //Se inicializa un índice con valor cero para empezar a recorrer el string
         int index = 0;
         char character = parrafo.charAt(index);
@@ -86,7 +93,7 @@ public class StoryModelNVL1 {
         parrafo.deleteCharAt(index);
         int randomVariant1 = new Random().nextInt(3);
         //La variante se obtiene con el valor aleatorio creado
-        String firstVariant = variants.get(randomStory).get(0).get(0).get(randomVariant1);
+        String firstVariant = variants.get(randomStory).get(actualParagraph).get(0).get(randomVariant1);
         //El substring es insertado
         parrafo.insert(index, firstVariant);
         //El final uno se registra para poder resaltar la palabra más adelante
@@ -101,7 +108,7 @@ public class StoryModelNVL1 {
         int origin2 = index;
         parrafo.deleteCharAt(index);
         int randomVariant2 = new Random().nextInt(3);
-        String secondVariant = variants.get(randomStory).get(0).get(1).get(randomVariant2);
+        String secondVariant = variants.get(randomStory).get(actualParagraph).get(1).get(randomVariant2);
         parrafo.insert(index, secondVariant);
         //El final dos se registra para poder resaltar la palabra más adelante
         int end2 = index + secondVariant.length();
@@ -114,29 +121,47 @@ public class StoryModelNVL1 {
         int origin3 = index;
         parrafo.deleteCharAt(index);
         int randomVariant3 = new Random().nextInt(3);
-        String thirdVariant = variants.get(randomStory).get(0).get(2).get(randomVariant3);
+        String thirdVariant = variants.get(randomStory).get(actualParagraph).get(2).get(randomVariant3);
         parrafo.insert(index, thirdVariant);
         //El final tres se registra para poder resaltar la palabra más adelante
         int end3 = index + thirdVariant.length();
         //Se crea el SpannableStringBuilder, así como sus tres modificadores de formato correspondientes
         final SpannableStringBuilder ssb = new SpannableStringBuilder(parrafo);
-        final ForegroundColorSpan fcs1 = new ForegroundColorSpan(ContextCompat.getColor(context, R.color.verde_pasto));
-        final ForegroundColorSpan fcs2 = new ForegroundColorSpan(ContextCompat.getColor(context, R.color.naranja_claro));
-        final ForegroundColorSpan fcs3 = new ForegroundColorSpan(ContextCompat.getColor(context, R.color.azul_oceano));
-        /*Los modificadores de span son aplicados, tomando como referencia los orígenes y finales registrados anteriormente
-          permitiendo que se resalten en colores diferentes*/
-        ssb.setSpan(fcs1, origin1, end1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        ssb.setSpan(fcs2, origin2, end2, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        ssb.setSpan(fcs3, origin3, end3, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        /*Las variantes son guardadas, para poder hacer referencia a las respuestas correctas de las preguntas. También se almacenan
-          las 3 opciones disponibles para la pregunta*/
-        firstAns = firstVariant;
-        firstOptionsPool = Arrays.asList(variants.get(randomStory).get(0).get(0).get(0), variants.get(randomStory).get(0).get(0).get(1), variants.get(randomStory).get(0).get(0).get(2));
-        secondAns = secondVariant;
-        secondOptionsPool = Arrays.asList(variants.get(randomStory).get(0).get(1).get(0), variants.get(randomStory).get(0).get(1).get(1), variants.get(randomStory).get(0).get(1).get(2));
-        thirdAns = thirdVariant;
-        thirdOptionsPool = Arrays.asList(variants.get(randomStory).get(0).get(2).get(0), variants.get(randomStory).get(0).get(2).get(1), variants.get(randomStory).get(0).get(2).get(2));
-        paragraphGenerated = true;
+        /*Si la dificultad es "intermedio", se crea el SpannableStringBuilder, así como sus tres modificadores
+          de formato correspondientes*/
+        if (difficulty == 2) {
+            final ForegroundColorSpan fcs1 = new ForegroundColorSpan(ContextCompat.getColor(context, R.color.verde_pasto));
+            final ForegroundColorSpan fcs2 = new ForegroundColorSpan(ContextCompat.getColor(context, R.color.naranja_claro));
+            final ForegroundColorSpan fcs3 = new ForegroundColorSpan(ContextCompat.getColor(context, R.color.azul_oceano));
+            /*Los modificadores de span son aplicados, tomando como referencia los orígenes y finales registrados anteriormente
+              permitiendo que se resalten en colores diferentes*/
+            ssb.setSpan(fcs1, origin1, end1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            ssb.setSpan(fcs2, origin2, end2, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            ssb.setSpan(fcs3, origin3, end3, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+        //La lista "answers" se encarga de almacenar las 3 variantes elegidas
+        List<String> answers = Arrays.asList(firstVariant, secondVariant, thirdVariant);
+        //Se selecciona un entero aleatorio para hacer referencia a la pregunta
+        int randomQuestion = new Random().nextInt(3);
+        /*Dependiendo del número de pregunta actual, se cambian los atributos de la pregunta como tal, la respuesta correcta y
+          las opciones disponibles*/
+        if (actualParagraph == 0) {
+            firstQuestion = randomQuestion;
+            firstParagraphAns = answers.get(randomQuestion);
+            firstOptionsPool = Arrays.asList(variants.get(randomStory).get(0).get(randomQuestion).get(0), variants.get(randomStory).get(0).get(randomQuestion).get(1), variants.get(randomStory).get(0).get(randomQuestion).get(2));
+        }
+        if (actualParagraph == 1) {
+            secondQuestion = randomQuestion;
+            secondParagraphAns = answers.get(randomQuestion);
+            secondOptionsPool = Arrays.asList(variants.get(randomStory).get(1).get(randomQuestion).get(0), variants.get(randomStory).get(1).get(randomQuestion).get(1), variants.get(randomStory).get(1).get(randomQuestion).get(2));
+        }
+        if (actualParagraph == 2) {
+            thirdQuestion = randomQuestion;
+            thirdParagraphAns = answers.get(randomQuestion);
+            thirdOptionsPool = Arrays.asList(variants.get(randomStory).get(2).get(randomQuestion).get(0), variants.get(randomStory).get(2).get(randomQuestion).get(1), variants.get(randomStory).get(2).get(randomQuestion).get(2));
+        }
+        //El párrafo actual se aumenta en una unidad
+        actualParagraph ++;
         //Se retorna el SpannableStringBuilder
         return ssb;
     }
@@ -145,21 +170,21 @@ public class StoryModelNVL1 {
       y las opciones de respuesta múltiple. Se aplica un shuffle a cada pool para presentarlas en un orden aleatorio*/
     public void generateQuestionAndAnswers() {
         if (actualQuestion == 0) {
-            question = questions.get(randomStory).get(0).get(0);
+            question = questions.get(randomStory).get(0).get(firstQuestion);
             Collections.shuffle(firstOptionsPool);
             firstAnswerOption = firstOptionsPool.get(0);
             secondAnswerOption = firstOptionsPool.get(1);
             thirdAnswerOption = firstOptionsPool.get(2);
         }
         if (actualQuestion == 1) {
-            question = questions.get(randomStory).get(0).get(1);
+            question = questions.get(randomStory).get(1).get(secondQuestion);
             Collections.shuffle(secondOptionsPool);
             firstAnswerOption = secondOptionsPool.get(0);
             secondAnswerOption = secondOptionsPool.get(1);
             thirdAnswerOption = secondOptionsPool.get(2);
         }
         if (actualQuestion == 2) {
-            question = questions.get(randomStory).get(0).get(2);
+            question = questions.get(randomStory).get(2).get(thirdQuestion);
             Collections.shuffle(thirdOptionsPool);
             firstAnswerOption = thirdOptionsPool.get(0);
             secondAnswerOption = thirdOptionsPool.get(1);
