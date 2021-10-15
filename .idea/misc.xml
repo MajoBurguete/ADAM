@@ -3,39 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/background_splash.xml" value="0.1265625" />
-        <entry key="app/src/main/res/drawable/borde.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic__score_azul.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_adam_alive.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_adam_dead.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_adam_logo.xml" value="0.23678333011455507" />
-        <entry key="app/src/main/res/drawable/ic_add_main.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_arcoiris_card.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_arcoiris_forma.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_block_1.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_block_2.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_block_3.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_amarillo.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_amarillo_claro.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_amarillo_fuerte.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_azul.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_azul_osc.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_beige.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_cafe.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_celeste.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_fucsia.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_menta.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_morado.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_naranja.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_rojo.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_rosa.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_boton_verde.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_circulito_amarillo.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_estrella_pausa.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_flecha.xml" value="0.14791666666666667" />
-        <entry key="app/src/main/res/drawable/ic_formitas_gameover.xml" value="0.12890625" />
-        <entry key="app/src/main/res/drawable/ic_launch_test.xml" value="0.1" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/drawable/ic_en_formitas_card.xml" value="0.2703125" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_home.xml" value="0.20153985507246377" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_instructions.xml" value="0.20153985507246377" />
@@ -44,6 +11,7 @@
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/activity_story.xml" value="0.18478260869565216" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_formitas.xml" value="0.264" />
         <entry key="..\:/ADAM/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/danyh/OneDrive/Documentos/Progra/Apps/ADAM/app/src/main/res/drawable/ic_solecito.xml" value="0.1" />
         <entry key="..\:/Users/danyh/OneDrive/Documentos/Progra/Apps/ADAM/app/src/main/res/layout/activity_shapes_layout.xml" value="0.125" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/border.xml" value="0.1890625" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/drawable/ic__.xml" value="0.20052083333333334" />
@@ -151,9 +119,39 @@
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/layout/fragment_te_cuento.xml" value="0.1152027027027027" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_main.xml" value="0.17804054054054055" />
         <entry key="..\:/Users/majom/AndroidStudioProjects/ADAM/app/src/main/res/menu/menu_profile.xml" value="0.17804054054054055" />
+        <entry key="app/src/main/res/drawable/background_splash.xml" value="0.1265625" />
+        <entry key="app/src/main/res/drawable/borde.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic__score_azul.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_adam_alive.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_adam_dead.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_adam_logo.xml" value="0.23678333011455507" />
+        <entry key="app/src/main/res/drawable/ic_add_main.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_arcoiris_card.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_arcoiris_forma.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_block_1.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_block_2.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_block_3.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_amarillo.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_amarillo_claro.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_amarillo_fuerte.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_azul.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_azul_osc.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_beige.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_cafe.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_celeste.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_fucsia.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_menta.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_morado.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_naranja.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_rojo.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_rosa.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_boton_verde.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_circulito_amarillo.xml" value="0.12890625" />
+        <entry key="app/src/main/res/drawable/ic_estrella_pausa.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_flecha.xml" value="0.14791666666666667" />
         <entry key="app/src/main/res/drawable/ic_formitas_gameover.xml" value="0.12890625" />
-
+        <entry key="app/src/main/res/drawable/ic_launch_test.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_pp_circulito.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_pp_circulito_medium.xml" value="0.12890625" />
         <entry key="app/src/main/res/drawable/ic_pp_circulito_mini.xml" value="0.12890625" />
