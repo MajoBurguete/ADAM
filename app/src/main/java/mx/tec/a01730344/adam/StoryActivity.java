@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -334,7 +343,7 @@ public class StoryActivity extends AppCompatActivity {
           del número actual de vidas y el nivel de dificultad*/
         if (trueOrFalse.equals("¡Muy bien!")) {
             score += lives * difficulty * 100;
-            strScore = "Puntuación: " + score;
+            strScore = "Puntaje: " + score;
             tvScoreS.setText(strScore);
             /*Los colores de los botones de opciones se modifican, mostrando las incorrectas en rojo y la correcta en verde*/
             btnOption1.setBackgroundColor(getResources().getColor(R.color.verde));
@@ -364,7 +373,7 @@ public class StoryActivity extends AppCompatActivity {
               para mostrar la respuesta correcta*/
             if (lives == 0) {
                 ivLife1S.setImageResource(R.drawable.ic_adam_dead);
-                String gameOver = "¡Juego Terminado!";
+                String gameOver = "¡Juego terminado!";
                 tvTrueFalse.setText(gameOver);
                 btnOption1.setEnabled(false);
                 btnOption2.setEnabled(false);
@@ -418,5 +427,9 @@ public class StoryActivity extends AppCompatActivity {
                 btnOption1.setEnabled(false);
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,7 +73,8 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(0);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
+
                 //Se actualiza el texto del TextView de la puntuación reflejada por el modelo
                 tvScoreR.setText(scoreString);
                 //Se llama al método "checkLives" para evaluar si la partida debe continuar
@@ -79,7 +89,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(1);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
                 tvScoreR.setText(scoreString);
                 checkLives();
                 setLayoutAttributes();
@@ -90,7 +100,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(2);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
                 tvScoreR.setText(scoreString);
                 checkLives();
                 setLayoutAttributes();
@@ -101,7 +111,7 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 model.checkAnswer(3);
-                scoreString = "Puntuación: " + model.score;
+                scoreString = "Puntaje: " + model.score;
                 tvScoreR.setText(scoreString);
                 checkLives();
                 setLayoutAttributes();
@@ -194,6 +204,10 @@ public class RainbowActivityNVL2 extends AppCompatActivity {
             ibOption4.setEnabled(false);
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
 }

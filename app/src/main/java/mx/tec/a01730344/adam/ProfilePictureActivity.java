@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,8 +17,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+//Actividad que despliega las opciones de imagen de perfil disponibles y permite que el usuario elija una.
+
 public class ProfilePictureActivity extends AppCompatActivity {
 
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     ImageButton ibBackProfPic;
     ImageButton ibIcon1;
     ImageButton ibIcon2;
@@ -29,8 +41,11 @@ public class ProfilePictureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_picture_layout);
+
+        //Instancia de clase User para poder acceder a los datos guardados en Properties
         user.loadProfiles();
 
+        //Enlace entre las variables declaradas y los componentes del layout
         ibBackProfPic = findViewById(R.id.ibBackProfPic);
         ibIcon1 = findViewById(R.id.ibIcon1);
         ibIcon2 = findViewById(R.id.ibIcon2);
@@ -41,6 +56,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
 
         int value = getIntent().getExtras().getInt("screen");
 
+        //Proceso de validación para desplegar imágenes de perfil bloqueadas
         if (user.getCurrentUserScoreC() > 2700 && value != 0){
             ibIcon4.setImageResource(R.drawable.ic_pp_circulito_medium);
             achievement1 = false;
@@ -54,6 +70,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
             achievement3 = false;
         }
 
+        //Funcionalidad de los botones de navegación
         ibBackProfPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +78,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
             }
         });
 
+        //Funcionalidad de selección de la imagen de perfil, junto con las variantes de tamaño
         ibIcon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,6 +169,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
 
 
 
+    //Función para regresar a la pantalla desde donde vino el usuario.
     private void toPreviousScreen(int screen) {
         // screen = 1 is settings, else is login
         if (screen == 1){
@@ -161,8 +180,7 @@ public class ProfilePictureActivity extends AppCompatActivity {
             toSettings.putExtra("medium", medium);
             toSettings.putExtra("mini", mini);
             startActivity(toSettings);
-        }
-        else {
+        } else {
             Intent toLogin = new Intent(ProfilePictureActivity.this, LoginActivity.class);
             toLogin.putExtra("image",image);
             toLogin.putExtra("medium", medium);

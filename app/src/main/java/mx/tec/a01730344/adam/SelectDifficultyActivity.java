@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,6 +60,7 @@ public class SelectDifficultyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent toHome = new Intent(SelectDifficultyActivity.this, HomeActivity.class);
                 startActivity(toHome);
+                finish();
             }
         });
     }

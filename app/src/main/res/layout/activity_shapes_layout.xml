@@ -136,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/r_rosa2"
-        android:fontFamily="@font/silka_bold_webfont"
+        android:fontFamily="@font/silka_medium_webfont"
         android:text="Seguir"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -152,8 +152,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/r_azul"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:text="Reiniciar"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Limpiar"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
@@ -161,6 +161,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnContinueNVL1"
+        app:layout_constraintTop_toTopOf="@+id/btnContinueNVL1" />
+
+    <Button
+        android:id="@+id/btnCheckNVL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/r_naranja"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Checar"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnContinueNVL1"
+        app:layout_constraintEnd_toStartOf="@+id/btnContinueNVL1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnContinueNVL1" />
 
     <ImageView
@@ -225,23 +242,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_adam_alive" />
 
-    <Button
-        android:id="@+id/btnCheckNVL1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="@color/r_naranja"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:text="Checar"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnContinueNVL1"
-        app:layout_constraintEnd_toStartOf="@+id/btnContinueNVL1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnContinueNVL1" />
-
     <ImageView
         android:id="@+id/ivLife3SH"
         android:layout_width="wrap_content"
@@ -260,8 +260,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/silka_bold_webfont"
-        android:text="Puntuación: 0"
+        android:fontFamily="@font/silka_medium_webfont"
+        android:text="Puntaje: 0"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp"

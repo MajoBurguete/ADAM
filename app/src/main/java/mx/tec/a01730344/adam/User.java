@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import android.content.Context;
@@ -8,8 +17,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+// Manejo del archivo de Properties donde se registran y almacenan los usuarios, incluyendo su número,
+// nombre de usuario, imagen de perfil y puntuaciones más altas para cada juego.
+
 public class User {
-    private static final String FILENAME = "prueba6.xml";
+
+    //Se declara el archivo donde se almacenarán los datos
+    private static final String FILENAME = "prueba8.xml";
     private Properties profiles = new Properties();
     Context context;
 
@@ -17,6 +31,7 @@ public class User {
         this.context = context;
     }
 
+    //Función para registrar un usuario nuevo
     public void saveUser(String username, int image, int mini){
         loadProfiles();
         int users = Integer.parseInt(profiles.getProperty("userCount"));
@@ -34,6 +49,7 @@ public class User {
         saveProfiles();
     }
 
+    //Función para modificar un usuario existente
     public void modifyUser(String userNumber, String username, int image, int mini) {
         loadProfiles();
         profiles.setProperty(userNumber, username);
@@ -42,6 +58,7 @@ public class User {
         saveProfiles();
     }
 
+    //Función para guardar el archivo de properties en el sistema
     private void saveProfiles() {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
@@ -53,7 +70,7 @@ public class User {
         }
     }
 
-
+    //Función para cargar la información de los usuarios
     public void loadProfiles() {
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
@@ -77,6 +94,7 @@ public class User {
         }
     }
 
+    //Función para disminuir la cuenta de los usuarios existentes cuando uno se elimina
     public void minusCount(){
         Log.d("USER", "username: " + profiles.getProperty("user1"));
         Log.d("USER", "minusCount: " + profiles.getProperty("userCount"));
@@ -93,6 +111,7 @@ public class User {
         }
     }
 
+    //Función para borrar un perfil
     public void deleteUser(String user) {
         loadProfiles();
 
@@ -206,6 +225,7 @@ public class User {
         saveProfiles();
     }
 
+    //Función para establecer al usuario que tiene una sección activa por el momento
     public void setCurrentUser(String user, int image, int mini, String number, int scoreR, int scoreC, int scoreF){
         profiles.setProperty("currentUserNum", number);
         profiles.setProperty("currentUser", user);
@@ -218,6 +238,7 @@ public class User {
 
     }
 
+    //Función para actualizar las puntuaciones más altas de cada juego
     public void updateScore(int score, String user, int game) {
         String stringScore = String.valueOf(score);
         if (game == 0) {
@@ -241,6 +262,7 @@ public class User {
         saveProfiles();
     }
 
+    //Funciones para obtener la información de un usuario en específico
     public String getUsername(String user){
         return profiles.getProperty(user);
     }
@@ -269,7 +291,7 @@ public class User {
         return Integer.parseInt(profiles.getProperty("userCount"));
     }
 
-
+    //Funciones para obtener la información del usuario con una sesión activa.
     public String getCurrentUser(){
         return getUsername("currentUser");
     }

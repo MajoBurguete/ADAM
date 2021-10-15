@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +24,11 @@ import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+//ACtividad para editar la información del usuario (foto de perfil y nombre de usuario)
+
 public class SettingsActivity extends AppCompatActivity {
 
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     FloatingActionButton fabEditPictSett;
     Button btnDeleteSett;
     ImageView ivProfilePictsett;
@@ -28,13 +40,15 @@ public class SettingsActivity extends AppCompatActivity {
     int mini;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        //Instancia de clase User para poder acceder a los datos guardados en Properties
         user.loadProfiles();
+
+        //Enlace entre las variables declaradas y los componentes del layout
         image = user.getCurrentUserImage();mini = user.getCurrentUserMini();
         fabEditPictSett = findViewById(R.id.fabEditPictSett);
         btnDeleteSett = findViewById(R.id.btnDeleteSett);
@@ -45,10 +59,7 @@ public class SettingsActivity extends AppCompatActivity {
         ivProfilePictsett.setImageResource(user.getCurrentUserImage());
         etUsernameSett.setText(user.getCurrentUser());
 
-
-
-
-
+        //Funcionalidad para desplegar la información modificada en la pantalla anterior
         int previousScreen = getIntent().getExtras().getInt("screen");
         if (previousScreen == 0){
             int normalIm = getIntent().getExtras().getInt("image");
@@ -57,12 +68,10 @@ public class SettingsActivity extends AppCompatActivity {
             ivProfilePictsett.setImageResource(normalIm);
         }
 
-
+        //Funciones para validar la longitud del nombre de usuario y activar el botón de Guardar.
         etUsernameSett.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -75,11 +84,10 @@ public class SettingsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
+            public void afterTextChanged(Editable editable) { }
         });
 
+        //Funcionalidad del botón para guardar los cambios
         btnSaveSett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,6 +100,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        //Botón para regresar
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,6 +108,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        //Funcionalidad del botón para editar la foto de perfil
         fabEditPictSett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,6 +119,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        //Funcionlidad del botón para eliminar a un usuario
         btnDeleteSett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,8 +129,9 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(toMain);
             }
         });
-
     }
+
+    //Función para volver a la pantalla de donde vino
     private void toPreviousScreen(int screen) {
         // screen = 1 is settings, 0 is login, 2 is UserProfile
          if (screen == 2){
