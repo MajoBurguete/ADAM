@@ -43,5 +43,6 @@
     <color name="game_over_amarillo">#FFE29E</color>
     <color name="game_over_rosa">#FFC7CE</color>
     <color name="game_over_azul">#C1E5FF</color>
+    <color name="launch_color">#369D6B</color>
     
 </resources>
