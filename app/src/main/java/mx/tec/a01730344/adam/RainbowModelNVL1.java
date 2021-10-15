@@ -16,8 +16,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+/*Esta clase representa el Modelo para el nivel de dificultad "fácil" del juego "Arcoiris"*/
+
 public class RainbowModelNVL1 {
 
+    //Se instancian todas las variables necesarias para el sistema del Modelo
     int score = 0;
     int globalAnswer = -1;
     int globalLives = 3;
@@ -26,14 +29,20 @@ public class RainbowModelNVL1 {
     int imageView1;
     int imageView2;
     int imageView3;
+    //"Colors" almacena los nombres de los posibles colores
     List<String> colors = Arrays.asList("Amarillo", "Azul", "Café", "Morado", "Naranja", "Rojo", "Rosa", "Verde");
+    //"ColorValues" almacena todos los valores enteros existentes en el xml de colores
     List<Integer> colorValues = Arrays.asList(R.color.r_amarillo, R.color.r_azul_osc, R.color.r_cafe, R.color.r_morado, R.color.r_naranja, R.color.r_rojo, R.color.r_rosa, R.color.r_verde);
+    //"Figures" almacena los recursos drawables
     List<Integer> figures = Arrays.asList(R.drawable.ic_boton_amarillo, R.drawable.ic_boton_azul_osc, R.drawable.ic_boton_cafe, R.drawable.ic_boton_morado, R.drawable.ic_boton_naranja, R.drawable.ic_boton_rojo, R.drawable.ic_boton_rosa, R.drawable.ic_boton_verde);
 
+    //El método "randomIndex" recibe un entero y regresa un aleatorio desde cero hasta ese valor
     private int randomIndex(int size) {
         return new Random().nextInt(size);
     }
 
+    /*El método "gameRound" toma valores aleatorios para asignarlos a las variables de los recursos drawables,
+      el nombre del color como la respuesta correcta y el color para la font*/
     public void gameRound() {
         int randomColor = randomIndex(8);
         colorText = colors.get(randomColor);
@@ -82,10 +91,13 @@ public class RainbowModelNVL1 {
         }
     }
 
+    /*El método "checkAnswer" recibe un valor entero y lo compara con la respuesta global*/
     public void checkAnswer(int answer) {
+        //Si la respuesta coincide con la global, se aumenta el valor de la puntuación
         if (answer == globalAnswer) {
             score += 10 * globalLives;
         }
+        //En caso contrario, el número de vidas se reduce en una unidad
         else {
             globalLives --;
         }

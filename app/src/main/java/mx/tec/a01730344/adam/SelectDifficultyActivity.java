@@ -19,8 +19,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+/*Esta clase maneja la Actividad de la Selección de Dificultad*/
+
 public class SelectDifficultyActivity extends AppCompatActivity {
 
+    //Se instancian todas las variables necesarias
     ConstraintLayout clArcoirisDifficulty, clFormitasDifficulty, clTeCuentoUnCuentoDifficulty;
     Button easy, medium, hard;
     ImageButton ibBack;
@@ -31,9 +34,12 @@ public class SelectDifficultyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_difficulty);
 
+        //Se vinculan todos los elementos existentes del Layout para poder interactuar con ellos
         clArcoirisDifficulty = findViewById(R.id.clArcoirisDifficulty);
         clFormitasDifficulty = findViewById(R.id.clFormitasDifficulty);
         clTeCuentoUnCuentoDifficulty = findViewById(R.id.clTeCuentoUnCuentoDifficulty);
+        /*El valor del juego se determina gracias al valor del parámetro "game" recibido en el
+          Intent para inicializar la Actividad. 0 - Arcoiris, 1 - En Formitas, 2 - Te Cuento un Cuento*/
         game = getIntent().getExtras().getInt("game");
         if (game== 0){
             ibBack = findViewById(R.id.ibBackArcoiris);
@@ -45,8 +51,10 @@ public class SelectDifficultyActivity extends AppCompatActivity {
             ibBack = findViewById(R.id.ibBackCuento);
         }
 
+        //Se llama al método "chooseGame" con el valor del juego previamente obtenido
         chooseGame(game);
 
+        /*Se crea la funcinalidad del botón para regresar, realizando el Intent hacia Home*/
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,17 +65,19 @@ public class SelectDifficultyActivity extends AppCompatActivity {
         });
     }
 
-
-
+    /*El método "chooseGame" recibe un entero como argumento con el fin de mostrar el Constraint Layout correcto*/
     private void chooseGame(int game) {
         Intent toGame = new Intent(SelectDifficultyActivity.this, RainbowActivityNVL1.class);
+        //Si el valor del juego es cero, se muestra el ConstraintLayout correspondiente al juego "Arcoiris" y se ocultan los otros dos
         if (game == 0) {
             clArcoirisDifficulty.setVisibility(View.VISIBLE);
             clFormitasDifficulty.setVisibility(View.GONE);
             clTeCuentoUnCuentoDifficulty.setVisibility(View.GONE);
+            //Se referencían los botones para la dificultad "fácil" e "intermedio"
             easy = findViewById(R.id.btnEasyArcoiris);
             medium = findViewById(R.id.btnMediumArcoiris);
 
+            //Se asigna la funcionalidad del botón "easy", ejecutando el Intent adecuado
             easy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -76,6 +86,7 @@ public class SelectDifficultyActivity extends AppCompatActivity {
                 }
             });
 
+            //Se asigna la funcionalidad del botón "medium", cambiando la clase correspondiente y ejecutando el Intent adecuado
             medium.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -86,6 +97,8 @@ public class SelectDifficultyActivity extends AppCompatActivity {
             });
 
         }
+        /*Este proceso se repite para cada uno de los juegos, únicmamente variando los ConstraintLayout y las clases hacia las que
+          redirigirá el Intent*/
         if (game == 1) {
             clFormitasDifficulty.setVisibility(View.VISIBLE);
             clArcoirisDifficulty.setVisibility(View.GONE);
