@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,10 +18,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-//Actividad creada para desplegar los perfiles creados para que el usuario escoga, asi como la opcion de crear uno nuevo.
+//Actividad creada para desplegar los perfiles creados para que el usuario escoja, así como la opción de crear uno nuevo.
 public class MainActivity extends AppCompatActivity {
 
-    //declaracion de todos los componentes necesarios para el funcionamiento del fragmento.
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     ImageButton ibProfileIcon1;
     TextView tvprofileName1;
     TextView tvprofileName2;
@@ -23,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
     //Instancia de clase User para poder acceder a los datos guardados en Properties
     User user = new User(this);
 
-    //funcion que realiza acciones al crear la actividad.
+    //Función que realiza acciones al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //se carga la informacion de los usuarios
+        //Se carga la información de los usuarios
         user.loadProfiles();
         //Condicional que checa si no hay usuarios, para mandarlos de manera directa a la actividad de LoginActivity paras crear un perfil
         if (user.getCount() == 0){
@@ -38,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             toLogin.putExtra("image", 0);
             startActivity(toLogin);
         }
-        //enlace entre las variables declaradas y los componentes del layout
+        //Enlace entre las variables declaradas y los componentes del layout
         ibProfileIcon1 = findViewById(R.id.ibProfileIcon1);
         tvprofileName1 = findViewById(R.id.tvprofileName1);
         ibProfileIcon2 = findViewById(R.id.ibProfileIcon2);
@@ -47,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
         tvprofileName3 = findViewById(R.id.tvprofileName3);
         ibAddProfile = findViewById(R.id.ibAddProfile);
 
-        //se obtiene el numero de usuarios actuales
+        //Se obtiene el numero de usuarios actuales
         int count = user.getCount();
 
-        //condicionales que despliegan componentes dependiendo de la cantidad de usuarios y la informacion que se tiene sobre ellos
+        //Condicionales que despliegan componentes dependiendo de la cantidad de usuarios y la información que se tiene sobre ellos
         switch (count){
             case 1:
                 ibProfileIcon1.setImageResource(user.getImage("user1image"));
@@ -90,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        //Funcion para detectar la interaccion del usuario con el boton para crear un usuario, mandandolo a la pantalla de LoginActivity
+        //Función para detectar la interacción del usuario con el botón para crear un usuario, mandándolo a la pantalla de LoginActivity
         ibAddProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,39 +109,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(toLogin);
             }
         });
-        //Funcion para detectar la interaccion del usuario con el boton para escoger su perfil y mandarlo a la pantalla de homeActivity
+        //Función para detectar la interacción del usuario con el botón para escoger su perfil y mandarlo a la pantalla de homeActivity
         ibProfileIcon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //se guarda en Properties el usuario en sesion con toda su informacion necesaria.
+                //Se guarda en Properties el usuario en sesión con toda su información necesaria.
                 user.setCurrentUser(user.getUsername("user3"), user.getImage("user3image"), user.getImage("user3mini"), "user3",user.getScoreR("user3scoreR"),user.getScoreC("user3scoreC"),user.getScoreF("user3scoreF"));
                 ToHome();
             }
         });
-        //Funcion para detectar la interaccion del usuario con el boton para escoger su perfil y mandarlo a la pantalla de homeActivity
+        //Función para detectar la interacción del usuario con el botón para escoger su perfil y mandarlo a la pantalla de homeActivity
         ibProfileIcon2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //se guarda en Properties el usuario en sesion con toda su informacion necesaria.
+                //Se guarda en Properties el usuario en sesión con toda su información necesaria.
                 user.setCurrentUser(user.getUsername("user2"), user.getImage("user2image"), user.getImage("user2mini"), "user2",user.getScoreR("user2scoreR"),user.getScoreC("user2scoreC"),user.getScoreF("user2scoreF"));
                 ToHome();
             }
         });
-        //Funcion para detectar la interaccion del usuario con el boton para escoger su perfil y mandarlo a la pantalla de homeActivity
+        //Función para detectar la interacción del usuario con el botón para escoger su perfil y mandarlo a la pantalla de homeActivity
         ibProfileIcon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //se guarda en Properties el usuario en sesion con toda su informacion necesaria.
+                //Se guarda en Properties el usuario en sesión con toda su información necesaria.
                 user.setCurrentUser(user.getUsername("user1"), user.getImage("user1image"), user.getImage("user1mini"), "user1",user.getScoreR("user1scoreR"),user.getScoreC("user1scoreC"),user.getScoreF("user1scoreF"));
                 ToHome();
             }
         });
     }
-    //funcion para mandar al usuario a la pantalla de HomeActvity
+    //Función para mandar al usuario a la pantalla de HomeActvity
     private void ToHome(){
         Intent toHome = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(toHome);
     }
-
-
 }

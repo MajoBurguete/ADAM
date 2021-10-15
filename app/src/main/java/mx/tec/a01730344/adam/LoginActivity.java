@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +24,11 @@ import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+//Actividad que se muestra para crear un perfil al establecer un nombre de usuario y una foto de perfil
+
 public class LoginActivity extends AppCompatActivity {
 
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     FloatingActionButton fabPickPict;
     ImageView ivProfileImageLogin;
     Button btnEnter;
@@ -26,17 +38,20 @@ public class LoginActivity extends AppCompatActivity {
     int image = R.drawable.ic_pp_hex_medium;
     int mini = R.drawable.ic_pp_hex_min;
 
+    //Función que realiza acciones al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Enlace entre las variables declaradas y los componentes del layout
         fabPickPict = findViewById(R.id.fabEditImageLogin);
         btnEnter = findViewById(R.id.btnLogin);
         ibBack = findViewById(R.id.ibBackFromLogin);
         etUsername = findViewById(R.id.etUsername);
         ivProfileImageLogin = findViewById(R.id.ivProfileImageLogin);
 
+        //Proceso para obtener la imagen de perfil el distintos tamaños y desplegarla
         int normalIm = getIntent().getExtras().getInt("image");
 
         if (normalIm > 0){
@@ -51,11 +66,10 @@ public class LoginActivity extends AppCompatActivity {
             ibBack.setVisibility(View.GONE);
         }
 
+        //Funciones para validar la longitud del nombre de usuario y activar el botón de Guardar.
         etUsername.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -68,11 +82,10 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
+            public void afterTextChanged(Editable editable) { }
         });
 
+        //Funcionalidad del botón de editar foto de perfil
         fabPickPict.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //Funcionalidad del botón de entrar
         btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +109,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //Funcionalidad del botón de regresar
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

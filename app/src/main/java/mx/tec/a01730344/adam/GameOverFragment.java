@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import android.content.Intent;
@@ -14,10 +23,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-//fragmento creado para Desplegar al terminar las sesiones de cada juego.
+//Fragmento creado para desplegar al terminar las sesiones de cada juego.
+
 public class GameOverFragment extends Fragment {
 
-    //declaracion de todos los componentes necesarios para el funcionamiento del fragmento.
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     Button btnExit;
     Button btnPlayAgain;
     TextView tvScore;
@@ -26,22 +36,20 @@ public class GameOverFragment extends Fragment {
     ConstraintLayout clStory;
     ConstraintLayout clShapes;
 
-    //funcion necesarias para que el fragmento se ejecute de manera correcta.
-    public GameOverFragment() {
-    }
+    //Funciones necesarias para que el fragmento se ejecute de manera correcta.
+    public GameOverFragment() { }
 
-    //funcion necesarias para que el fragmento se ejecute de manera correcta.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_game_over, container, false);
     }
 
-    //funcion añadida para realizar acciones al crear el fragmento.
+    //Función añadida para realizar acciones al crear el fragmento.
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //declaracion del Bundle para poder recibir informacion de la pantalla de donde viene
+        //DEclaración del Bundle para poder recibir informacion de la pantalla de donde viene
         Bundle bundle = this.getArguments();
         int game = bundle.getInt("game");
         int score = bundle.getInt("score");
@@ -51,7 +59,7 @@ public class GameOverFragment extends Fragment {
         clStory = view.findViewById(R.id.clGameOverTeCuento);
         clShapes = view.findViewById(R.id.clGameOverFormitas);
 
-        //condicionales que determinan los componentes a desplegar dependiendo del juego del que se proviene
+        //Condicionales que determinan los componentes a desplegar dependiendo del juego del que se proviene
         // 0: Arcoiris, 1: Te cuento Un Cuento, 2: En Formitas
         if (game == 0) {
             clRainbow.setVisibility(View.VISIBLE);
@@ -62,8 +70,7 @@ public class GameOverFragment extends Fragment {
             tvScore = view.findViewById(R.id.tvIntScoreGameOverArcoiris);
             tvNewHigh = view.findViewById(R.id.tvNewHighscoreArcoiris);
 
-        }
-        else if (game == 1){
+        } else if (game == 1) {
             clRainbow.setVisibility(View.GONE);
             clStory.setVisibility(View.VISIBLE);
             clShapes.setVisibility(View.GONE);
@@ -72,8 +79,7 @@ public class GameOverFragment extends Fragment {
             tvScore = view.findViewById(R.id.tvIntScoreGameOverTeCuento);
             tvNewHigh = view.findViewById(R.id.tvNewHighscoreTeCuento);
 
-        }
-        else {
+        } else {
             clRainbow.setVisibility(View.GONE);
             clStory.setVisibility(View.GONE);
             clShapes.setVisibility(View.VISIBLE);
@@ -83,17 +89,18 @@ public class GameOverFragment extends Fragment {
             tvNewHigh = view.findViewById(R.id.tvNewHighscoreFormitas);
 
         }
-        //se cambia el texto del TextView para desplegar el puntaje alcanzado
+
+        //Se cambia el texto del TextView para desplegar el puntaje alcanzado
         tvScore.setText(String.valueOf(score));
-        //con las variables recibidas, se checa si es un nuevo record o no y se despliega el mensaje nitificando esto de acuerdo a ella.
+
+        //Con las variables recibidas, se checa si es un nuevo record o no y se despliega el mensaje notificando esto de acuerdo a ella.
         if (high){
             tvNewHigh.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
             tvNewHigh.setVisibility(View.GONE);
         }
 
-        //Funcion para detectar la interaccion del usuario con el boton de salida y asi poder regresarlo a la pantalla de HomeActivity.
+        //Función para detectar la interacción del usuario con el botón de salida y asi poder regresarlo a la pantalla de HomeActivity.
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,21 +109,19 @@ public class GameOverFragment extends Fragment {
             }
         });
 
-        //Funcion para detectar la interaccion del usuario con el boton de salida y asi poder regresarlo a la pantalla de instrucciones del juego del que provino.
+        //Función para detectar la interacción del usuario con el botón de salida y asi poder regresarlo a la pantalla de instrucciones del juego del que provino.
         btnPlayAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (game == 0){
+                if (game == 0) {
                     Intent toIntructionsR = new Intent(getActivity(), InstructionsActivity.class);
                     toIntructionsR.putExtra("game",0);
                     startActivity(toIntructionsR);
-                }
-                else if (game == 1){
+                } else if (game == 1) {
                     Intent toIntructionsC = new Intent(getActivity(), InstructionsActivity.class);
                     toIntructionsC.putExtra("game",2);
                     startActivity(toIntructionsC);
-                }
-                else {
+                } else {
                     Intent toIntructionsF = new Intent(getActivity(), InstructionsActivity.class);
                     toIntructionsF.putExtra("game",1);
                     startActivity(toIntructionsF);

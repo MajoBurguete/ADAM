@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,10 +27,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageButton;
 
-//Actividad creada para Desplegar el carrusel de juegos a elegir, el perfil con su nombre e icono, y la barra con botones para configuracion y regresar a seleccion de perfiles.
+//Actividad creada para desplegar el carrusel de juegos a elegir, el perfil con su nombre e icono,
+//y la barra con botones para configuracion y regresar a selección de perfiles.
+
 public class HomeActivity extends AppCompatActivity {
 
-    //declaracion de todos los componentes necesarios para el funcionamiento del fragmento.
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     ConstraintLayout clToProfile;
     Toolbar toolbar;
     ImageView ivProfPictHome;
@@ -37,17 +48,19 @@ public class HomeActivity extends AppCompatActivity {
     float y1;
     float y2;
     final FragmentManager fragmentManager = getSupportFragmentManager();
+
     //Instancia de clase User para poder acceder a los datos guardados en Properties
     User user = new User(this);
 
-    //funcion que realiza acciones al crear la actividad.
+    //Función que realiza acciones al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //se carga la informacion de los usuarios
+        //Se carga la informacion de los usuarios
         user.loadProfiles();
-        //enlace entre las variables declaradas y los componentes del layout
+
+        //Enlace entre las variables declaradas y los componentes del layout
         setContentView(R.layout.activity_home);
         clToProfile = findViewById(R.id.clToProfile);
         toolbar = findViewById(R.id.toolbar);
@@ -57,20 +70,21 @@ public class HomeActivity extends AppCompatActivity {
         tvUsernameHome.setText(user.getCurrentUser());
         ibForwardFragment = findViewById(R.id.ibForwardFragment);
         ibBackFragment = findViewById(R.id.ibBackFragment);
-        //se crean los fragmentos que se desplegaran en el carrusel
+
+        //Se crean los fragmentos que se desplegaran en el carrusel
         arcoirisFragment = new ArcoirisFragment();
         formitasFragment = new FormitasFragment();
         teCuentoFragment = new TeCuentoFragment();
 
-        //se despliega el fragmento del juego arcoiris de manera inicial
+        //Se despliega el fragmento del juego arcoiris de manera inicial
         FragmentTransaction fts = fragmentManager.beginTransaction();
         fts.replace(R.id.flGames, arcoirisFragment).commit();
 
-        //se despliega el toolbar con el menu creado.
+        //Se despliega el toolbar con el menu creado.
         setSupportActionBar(toolbar);
         toolbarActions();
 
-        //Funcion para detectar la interaccion del usuario con el boton para regresar a la pantalla de el perfil del usuario
+        //Función para detectar la interacción del usuario con el botón para regresar a la pantalla de el perfil del usuario
         clToProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,8 +95,9 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(toProfile);
             }
         });
-        //Funcion para detectar la interaccion del usuario con los botones flecha para cambiar el fragmento del juego actual al siguiente
-        // index: 1 = En Formitas, 2 = Te Cuento Un Cuento, 0 = Arcoiris
+
+        //Función para detectar la interaccion del usuario con los botones flecha para cambiar el fragmento del juego actual al siguiente
+        //index: 0 = Arcoiris, 1 = En Formitas, 2 = Te Cuento Un Cuento
         ibForwardFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,8 +121,9 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+
         //Funcion para detectar la interaccion del usuario con los botones flecha para cambiar el fragmento del juego actual al anterior
-        // index: 1 = En Formitas, 2 = Te Cuento Un Cuento, 0 = Arcoiris
+        //index: 0 = Arcoiris, 1 = En Formitas, 2 = Te Cuento Un Cuento
         ibBackFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,8 +148,9 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-    //Funcion que detecta si el usuario realizo gestos tactiles (deslizar a la derecha/izquierda) para cambiar el fragmento del juego actual al siguiente o anterior
-    // index: 1 = En Formitas, 2 = Te Cuento Un Cuento, 0 = Arcoiris
+
+    //Función que detecta si el usuario realizo gestos táctiles (deslizar a la derecha/izquierda) para cambiar el fragmento del juego actual al siguiente o anterior
+    //index: 0 = Arcoiris, 1 = En Formitas, 2 = Te Cuento Un Cuento
     public boolean onTouchEvent(MotionEvent touchEvent){
         switch(touchEvent.getAction()){
             case MotionEvent.ACTION_DOWN:
@@ -143,41 +160,38 @@ public class HomeActivity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 x2 = touchEvent.getX();
                 y2 = touchEvent.getY();
-                //condicional para moverse adelante
+
+                //Condicional para moverse adelante
                 if(x1 > x2){
                     if (index == 0) {
                         index = 1;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
                         fts.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
                         fts.replace(R.id.flGames, formitasFragment).commit();
-                    }
-                    else if (index == 1) {
+                    } else if (index == 1) {
                         index = 2;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
                         fts.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
                         fts.replace(R.id.flGames, teCuentoFragment).commit();
-                    }
-                    else {
+                    } else {
                         index = 0;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
                         fts.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
                         fts.replace(R.id.flGames, arcoirisFragment).commit();
                     }
-                //condicional para moverse atras
-                }else if(x1 < x2){
+                //Condicional para moverse atras
+                } else if(x1 < x2) {
                     if (index == 2) {
                         index = 1;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
                         fts.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
                         fts.replace(R.id.flGames, formitasFragment).commit();
-                    }
-                    else if (index == 0) {
+                    } else if (index == 0) {
                         index = 2;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
                         fts.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
                         fts.replace(R.id.flGames, teCuentoFragment).commit();
-                    }
-                    else {
+                    } else {
                         index = 0;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
                         fts.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
@@ -193,15 +207,15 @@ public class HomeActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
-    //funcion necesaria para el uso del toolbar
+    //Función necesaria para el uso del toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
-    //funcion para detectar la interaccion del usuario con los botones incorporados en el toolbar para enviarlo a las pantallas de settings o de seleccion de perfil
+    //Función para detectar la interacción del usuario con los botones incorporados en el toolbar
+    //para enviarlo a las pantallas de settings o de seleccion de perfil
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.btnSettings){
@@ -218,8 +232,7 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Funcion que deshabilita el boton de regreso integrado en los celulares android
+    //Función que deshabilita el boton de regreso integrado en los celulares android
     @Override
-    public void onBackPressed() {
-    }
+    public void onBackPressed() { }
 }

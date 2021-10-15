@@ -1,3 +1,12 @@
+/* Integración de seguridad informática en redes y sistemas de software (TC2007B.1)
+   ADAM: Aplicación para el Desarrollo de Atención y Memoria
+   Fecha: 17/10/2021
+   Creado por: María José Burguete Euán
+               Aarón Cortés García
+               Marco Flamenco Andrade
+               Daniela Hernández y Hernández
+*/
+
 package mx.tec.a01730344.adam;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +21,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-//Actividad creada para Desplegar los puntajes mas altos del usuario en cada juego, el perfil con su nombre e icono, y la barra con botones para configuracion y regresar a seleccion de perfiles.
+//Actividad creada para desplegar los puntajes mas altos del usuario en cada juego, el perfil con
+//su nombre e ícono, y la barra con botones para configuración y regresar a selección de perfiles.
 
 public class UserProfileActivity extends AppCompatActivity {
 
-    //declaracion de todos los componentes necesarios para el funcionamiento del fragmento.
+    //Declaración de todos los componentes necesarios para el funcionamiento del fragmento.
     Toolbar toolbar;
     ImageButton ibBack;
     ImageView ivUsernameProf;
@@ -28,15 +38,15 @@ public class UserProfileActivity extends AppCompatActivity {
     //Instancia de clase User para poder acceder a los datos guardados en Properties
     User user = new User(this);
 
-    //funcion que realiza acciones al crear la actividad.
+    //Función que realiza acciones al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //se carga la informacion de los usuarios
+        //Se carga la información de los usuarios
         user.loadProfiles();
 
-        //enlace entre las variables declaradas y los componentes del layout
+        //Snlace entre las variables declaradas y los componentes del layout
         setContentView(R.layout.activity_user_profile);
         toolbar = findViewById(R.id.toolbar2);
         ibBack = findViewById(R.id.ibBackFromProf);
@@ -51,11 +61,11 @@ public class UserProfileActivity extends AppCompatActivity {
         tvScoreC.setText(String.valueOf(user.getCurrentUserScoreC()));
         tvScoreF.setText(String.valueOf(user.getCurrentUserScoreF()));
 
-        //se despliega el toolbar con el menu creado.
+        //Se despliega el toolbar con el menu creado.
         setSupportActionBar(toolbar);
         toolbarActions();
 
-        //Funcion para detectar la interaccion del usuario con el boton de regreso y mandarlo a la pantalla de HomeActivity
+        //Función para detectar la interacción del usuario con el botón de regreso y mandarlo a la pantalla de HomeActivity
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,15 +80,14 @@ public class UserProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
-    //funcion para detectar la interaccion del usuario con los botones incorporados en el toolbar para enviarlo a las pantallas de settings o de seleccion de perfil
+    //Función para detectar la interacción del usuario con los botones incorporados en el toolbar para enviarlo a las pantallas de settings o de selección de perfil
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
-    //funcion para detectar la interaccion del usuario con los botones incorporados en el toolbar para enviarlo a las pantallas de settings o de seleccion de perfil
+    //Función para detectar la interacción del usuario con los botones incorporados en el toolbar para enviarlo a las pantallas de settings o de selección de perfil
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.btnSettings){
