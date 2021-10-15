@@ -14,8 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+//fragmento creado para Desplegar al terminar las sesiones de cada juego.
 public class GameOverFragment extends Fragment {
 
+    //declaracion de todos los componentes necesarios para el funcionamiento del fragmento.
     Button btnExit;
     Button btnPlayAgain;
     TextView tvScore;
@@ -24,26 +26,33 @@ public class GameOverFragment extends Fragment {
     ConstraintLayout clStory;
     ConstraintLayout clShapes;
 
+    //funcion necesarias para que el fragmento se ejecute de manera correcta.
     public GameOverFragment() {
     }
 
+    //funcion necesarias para que el fragmento se ejecute de manera correcta.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_game_over, container, false);
     }
 
+    //funcion añadida para realizar acciones al crear el fragmento.
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //declaracion del Bundle para poder recibir informacion de la pantalla de donde viene
         Bundle bundle = this.getArguments();
         int game = bundle.getInt("game");
         int score = bundle.getInt("score");
         boolean high = bundle.getBoolean("high");
+        //enlace entre las variables declaradas y los componentes del layout
         clRainbow = view.findViewById(R.id.clGameOverArcoiris);
         clStory = view.findViewById(R.id.clGameOverTeCuento);
         clShapes = view.findViewById(R.id.clGameOverFormitas);
 
+        //condicionales que determinan los componentes a desplegar dependiendo del juego del que se proviene
+        // 0: Arcoiris, 1: Te cuento Un Cuento, 2: En Formitas
         if (game == 0) {
             clRainbow.setVisibility(View.VISIBLE);
             clStory.setVisibility(View.GONE);
@@ -74,7 +83,9 @@ public class GameOverFragment extends Fragment {
             tvNewHigh = view.findViewById(R.id.tvNewHighscoreFormitas);
 
         }
+        //se cambia el texto del TextView para desplegar el puntaje alcanzado
         tvScore.setText(String.valueOf(score));
+        //con las variables recibidas, se checa si es un nuevo record o no y se despliega el mensaje nitificando esto de acuerdo a ella.
         if (high){
             tvNewHigh.setVisibility(View.VISIBLE);
         }
@@ -82,7 +93,7 @@ public class GameOverFragment extends Fragment {
             tvNewHigh.setVisibility(View.GONE);
         }
 
-
+        //Funcion para detectar la interaccion del usuario con el boton de salida y asi poder regresarlo a la pantalla de HomeActivity.
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +102,7 @@ public class GameOverFragment extends Fragment {
             }
         });
 
+        //Funcion para detectar la interaccion del usuario con el boton de salida y asi poder regresarlo a la pantalla de instrucciones del juego del que provino.
         btnPlayAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -18,9 +18,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageButton;
 
-
+//Actividad creada para Desplegar el carrusel de juegos a elegir, el perfil con su nombre e icono, y la barra con botones para configuracion y regresar a seleccion de perfiles.
 public class HomeActivity extends AppCompatActivity {
 
+    //declaracion de todos los componentes necesarios para el funcionamiento del fragmento.
     ConstraintLayout clToProfile;
     Toolbar toolbar;
     ImageView ivProfPictHome;
@@ -36,45 +37,52 @@ public class HomeActivity extends AppCompatActivity {
     float y1;
     float y2;
     final FragmentManager fragmentManager = getSupportFragmentManager();
+    //Instancia de clase User para poder acceder a los datos guardados en Properties
     User user = new User(this);
 
+    //funcion que realiza acciones al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
 
+        //se carga la informacion de los usuarios
+        user.loadProfiles();
+        //enlace entre las variables declaradas y los componentes del layout
+        setContentView(R.layout.activity_home);
         clToProfile = findViewById(R.id.clToProfile);
         toolbar = findViewById(R.id.toolbar);
         ivProfPictHome = findViewById(R.id.ivProfPictHome);
         tvUsernameHome = findViewById(R.id.tvUsernameHome);
-
-        user.loadProfiles();
-
         ivProfPictHome.setImageResource(user.getCurrentUserMini());
         tvUsernameHome.setText(user.getCurrentUser());
         ibForwardFragment = findViewById(R.id.ibForwardFragment);
         ibBackFragment = findViewById(R.id.ibBackFragment);
+        //se crean los fragmentos que se desplegaran en el carrusel
         arcoirisFragment = new ArcoirisFragment();
         formitasFragment = new FormitasFragment();
         teCuentoFragment = new TeCuentoFragment();
 
+        //se despliega el fragmento del juego arcoiris de manera inicial
         FragmentTransaction fts = fragmentManager.beginTransaction();
         fts.replace(R.id.flGames, arcoirisFragment).commit();
 
+        //se despliega el toolbar con el menu creado.
         setSupportActionBar(toolbar);
         toolbarActions();
 
-
+        //Funcion para detectar la interaccion del usuario con el boton para regresar a la pantalla de el perfil del usuario
         clToProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int value = 0;
                 Intent toProfile = new Intent(HomeActivity.this, UserProfileActivity.class);
+                //Elemento que se manda a la siguiente pantalla para poder identificar de que actividad viene para que sepa a donde regresar si es necesario
                 toProfile.putExtra("screen",value);
                 startActivity(toProfile);
             }
         });
-
+        //Funcion para detectar la interaccion del usuario con los botones flecha para cambiar el fragmento del juego actual al siguiente
+        // index: 1 = En Formitas, 2 = Te Cuento Un Cuento, 0 = Arcoiris
         ibForwardFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,7 +106,8 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //Funcion para detectar la interaccion del usuario con los botones flecha para cambiar el fragmento del juego actual al anterior
+        // index: 1 = En Formitas, 2 = Te Cuento Un Cuento, 0 = Arcoiris
         ibBackFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,7 +132,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
+    //Funcion que detecta si el usuario realizo gestos tactiles (deslizar a la derecha/izquierda) para cambiar el fragmento del juego actual al siguiente o anterior
+    // index: 1 = En Formitas, 2 = Te Cuento Un Cuento, 0 = Arcoiris
     public boolean onTouchEvent(MotionEvent touchEvent){
         switch(touchEvent.getAction()){
             case MotionEvent.ACTION_DOWN:
@@ -133,6 +143,7 @@ public class HomeActivity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 x2 = touchEvent.getX();
                 y2 = touchEvent.getY();
+                //condicional para moverse adelante
                 if(x1 > x2){
                     if (index == 0) {
                         index = 1;
@@ -152,7 +163,8 @@ public class HomeActivity extends AppCompatActivity {
                         fts.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left);
                         fts.replace(R.id.flGames, arcoirisFragment).commit();
                     }
-            }else if(x1 < x2){
+                //condicional para moverse atras
+                }else if(x1 < x2){
                     if (index == 2) {
                         index = 1;
                         FragmentTransaction fts = fragmentManager.beginTransaction();
@@ -176,11 +188,12 @@ public class HomeActivity extends AppCompatActivity {
         }
         return false;
     }
-
+    //Se deshabilita el titulo del toolbar
     private void toolbarActions(){
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
+    //funcion necesaria para el uso del toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -188,11 +201,13 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 
+    //funcion para detectar la interaccion del usuario con los botones incorporados en el toolbar para enviarlo a las pantallas de settings o de seleccion de perfil
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.btnSettings){
             int value = 1;
             Intent toSettings = new Intent(HomeActivity.this, SettingsActivity.class);
+            //Elemento que se manda a la siguiente pantalla para poder identificar de que actividad viene para que sepa a donde regresar si es necesario
             toSettings.putExtra("screen",value);
             startActivity(toSettings);
         }
@@ -203,7 +218,7 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    //Funcion que deshabilita el boton de regreso integrado en los celulares android
     @Override
     public void onBackPressed() {
     }
