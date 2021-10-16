@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.GameOverFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGameOverArcoiris"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/game_over_rosa"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnPlayAgainArcoiris"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/amarillo"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:text="Jugar de nuevo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="34sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnExitArcoiris"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnExitArcoiris"
+            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeArcoiris" />
+
+        <Button
+            android:id="@+id/btnExitArcoiris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/azul"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:paddingLeft="70dp"
+            android:paddingTop="15dp"
+            android:paddingRight="70dp"
+            android:paddingBottom="15dp"
+            android:text="Salir"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="34sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPlayAgainArcoiris"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ivGameOverArcoiris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnExitArcoiris"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_arcoiris_forma" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGameOverPuntajeArcoiris"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnPlayAgainArcoiris"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnPlayAgainArcoiris"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012">
+
+            <ImageView
+                android:id="@+id/ivScoreArcoiris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic__score_azul" />
+
+            <TextView
+                android:id="@+id/tvScoreGameOverArcoiris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="Puntaje"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivScoreArcoiris"
+                app:layout_constraintEnd_toEndOf="@+id/ivScoreArcoiris"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="@+id/ivScoreArcoiris"
+                app:layout_constraintTop_toTopOf="@+id/ivScoreArcoiris"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/tvIntScoreGameOverArcoiris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvScoreGameOverArcoiris"
+                app:layout_constraintStart_toStartOf="@+id/tvScoreGameOverArcoiris"
+                app:layout_constraintTop_toBottomOf="@+id/tvScoreGameOverArcoiris" />
+
+            <TextView
+                android:id="@+id/tvNewHighscoreArcoiris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="Puntuación más alta"
+                android:textAlignment="center"
+                android:textColor="@color/r_amarillo"
+                app:layout_constraintEnd_toEndOf="@+id/tvIntScoreGameOverArcoiris"
+                app:layout_constraintStart_toStartOf="@+id/tvIntScoreGameOverArcoiris"
+                app:layout_constraintTop_toBottomOf="@+id/tvIntScoreGameOverArcoiris" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGameOverFormitas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/game_over_amarillo"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnPlayAgainFormitas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/r_rosa2"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:text="Jugar de nuevo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="34sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnExitFormitas"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnExitFormitas"
+            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeFormitas" />
+
+        <Button
+            android:id="@+id/btnExitFormitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/naranja_crayola"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:paddingLeft="70dp"
+            android:paddingTop="15dp"
+            android:paddingRight="70dp"
+            android:paddingBottom="15dp"
+            android:text="Salir"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="34sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPlayAgainFormitas"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ivGameOverFormitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnExitFormitas"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_en_formitas_card" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGameOverPuntajeFormitas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnPlayAgainFormitas"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnPlayAgainFormitas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012">
+
+            <ImageView
+                android:id="@+id/ivScoreFormitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_score_naranja" />
+
+            <TextView
+                android:id="@+id/tvScoreGameOverFormitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="Puntaje"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivScoreFormitas"
+                app:layout_constraintEnd_toEndOf="@+id/ivScoreFormitas"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="@+id/ivScoreFormitas"
+                app:layout_constraintTop_toTopOf="@+id/ivScoreFormitas"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/tvIntScoreGameOverFormitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvScoreGameOverFormitas"
+                app:layout_constraintStart_toStartOf="@+id/tvScoreGameOverFormitas"
+                app:layout_constraintTop_toBottomOf="@+id/tvScoreGameOverFormitas" />
+
+            <TextView
+                android:id="@+id/tvNewHighscoreFormitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="Puntuación más alta"
+                android:textAlignment="center"
+                android:textColor="@color/r_amarillo"
+                app:layout_constraintEnd_toEndOf="@+id/tvIntScoreGameOverFormitas"
+                app:layout_constraintStart_toStartOf="@+id/tvIntScoreGameOverFormitas"
+                app:layout_constraintTop_toBottomOf="@+id/tvIntScoreGameOverFormitas" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGameOverTeCuento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/game_over_azul"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnPlayAgainTeCuento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/r_rosa2"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:text="Jugar de nuevo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="34sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnExitTeCuento"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnExitTeCuento"
+            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeTeCuento" />
+
+        <Button
+            android:id="@+id/btnExitTeCuento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/r_verde"
+            android:fontFamily="@font/silka_bold_webfont"
+            android:paddingLeft="70dp"
+            android:paddingTop="15dp"
+            android:paddingRight="70dp"
+            android:paddingBottom="15dp"
+            android:text="Salir"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="34sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPlayAgainTeCuento"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ivGameOverTeCuento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnExitTeCuento"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_te_cuento_card" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGameOverPuntajeTeCuento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnPlayAgainTeCuento"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnPlayAgainTeCuento"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012">
+
+            <ImageView
+                android:id="@+id/ivScoreTeCuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_score_verde" />
+
+            <TextView
+                android:id="@+id/tvScoreGameOverTeCuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="Puntaje"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivScoreTeCuento"
+                app:layout_constraintEnd_toEndOf="@+id/ivScoreTeCuento"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="@+id/ivScoreTeCuento"
+                app:layout_constraintTop_toTopOf="@+id/ivScoreTeCuento"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/tvIntScoreGameOverTeCuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvScoreGameOverTeCuento"
+                app:layout_constraintStart_toStartOf="@+id/tvScoreGameOverTeCuento"
+                app:layout_constraintTop_toBottomOf="@+id/tvScoreGameOverTeCuento" />
+
+            <TextView
+                android:id="@+id/tvNewHighscoreTeCuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silka_medium_webfont"
+                android:text="Puntuación más alta"
+                android:textAlignment="center"
+                android:textColor="@color/r_amarillo"
+                app:layout_constraintEnd_toEndOf="@+id/tvIntScoreGameOverTeCuento"
+                app:layout_constraintStart_toStartOf="@+id/tvIntScoreGameOverTeCuento"
+                app:layout_constraintTop_toBottomOf="@+id/tvIntScoreGameOverTeCuento" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

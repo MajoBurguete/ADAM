@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">ADAM</string>
+    <string name="de_qu_color_son_las_rosas_del_pr_ncipe">¿De qué color son las rosas del príncipe?</string>
+    <string name="naranja">Naranja</string>
+    <string name="bien">¡Bien!</string>
+    <string name="i_i">I I</string>
+    <string name="te_contar_un_cuento">Te contaré un cuento:</string>
+    <string name="example_cuento_1">Los halagos hicieron al cuervo abrir el pico para sonreír, pero su comida cayó justo en la boca del zorro, quien salió corriendo hacia su madriguera. Él iba complacido porque había logrado su meta.</string>
+    <string name="seguir">Seguir</string>
+    <string name="de_qu_color_eran_las_rosas_del_pr_ncipe">¿De qué color eran las rosas del príncipe?</string>
+    <string name="verde">Verde</string>
+    <string name="azul">Azul</string>
+    <string name="rojo">Rojo</string>
+    <string name="elige_tu_perfil">Elige tu perfil</string>
+    <string name="agrega_otro_perfil">Agrega otro perfil</string>
+    <string name="oprime_el_boton">OPRIME EL BOTÓN</string>
+    <string name="tu_puedes">¡Tú puedes!</string>
+    <string name="vamos">¡VAMOS!</string>
+    <string name="presta_atenci_n_y_elige_la_opci_n_correcta">Presta atención y elige la opción correcta</string>
+    <string name="observa_en_qu_lugar_se_pone_cada_formita">Observa en qué lugar se pone cada formita</string>
+    <string name="y_regr_salas_a_su_lugar">y regrésalas a su lugar</string>
+    <string name="lee_con_calma_cuando_termines_da_click_aqu">Lee con calma, cuando termines da click aquí:</string>
+    <string name="a_jugar">¡A jugar!</string>
+    <string name="ahora_contesta_la_pregunta">Ahora contesta la pregunta:</string>
+    <string name="tu_turno">¡Tu turno!</string>
+    <string name="entrar">¡Entrar!</string>
+    <string name="escribe_tu_nombre">Escribe tu nombre</string>
+    <string name="elige_tu_cono_favorito">Elige tu ícono favorito</string>
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="guardar">Guardar</string>
+    <string name="eliminar_perfil">Eliminar perfil</string>
+    <string name="ponlas_en_su_lugar">¡Ponlas en su lugar!</string>
+    <string name="te_cuento_un_cuento">Te cuento un cuento</string>
+    <string name="en_formitas">En formitas</string>
+    <string name="arcoiris">Arcoiris</string>
+    <string name="ayuda_a_las_formitas_a_estar_en_orden_recuerda_la_secuencia">Ayuda a las formitas a estar en orden, ¡recuerda la secuencia!</string>
+    <string name="jugar">Jugar</string>
+    <string name="puedes_recordar_cada_parte_de_la_historia">¿Puedes recordar cada parte de la historia?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
