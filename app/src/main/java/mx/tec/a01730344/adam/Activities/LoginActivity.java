@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -39,12 +40,21 @@ public class LoginActivity extends AppCompatActivity {
     User user = new User(this);
     int image = R.drawable.ic_pp_hex_medium;
     int mini = R.drawable.ic_pp_hex_min;
+    int devOptions;
 
     //Función que realiza acciones al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //Se checa si el dispositivo tiene las funciones de desarrollador activadas
+        devOptions = Settings.Secure.getInt(this.getContentResolver(), Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+
+        //En caso de que las funciones de desarrollador hayan sido encontradas habilitadas, se procede a cerrar la aplicación automáticamente
+        if (devOptions == 1) {
+            finishAndRemoveTask();
+        }
 
         //Enlace entre las variables declaradas y los componentes del layout
         fabPickPict = findViewById(R.id.fabEditImageLogin);
