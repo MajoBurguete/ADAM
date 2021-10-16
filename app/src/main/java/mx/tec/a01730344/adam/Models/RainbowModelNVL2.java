@@ -21,15 +21,15 @@ import mx.tec.a01730344.adam.R;
 public class RainbowModelNVL2 {
 
     //Se instancian todas las variables necesarias para el sistema del Modelo
-    int score = 0;
-    int globalAnswer = -1;
-    int globalLives = 3;
-    String colorText;
-    int colorValue;
-    int imageView1;
-    int imageView2;
-    int imageView3;
-    int imageView4;
+    public int score = 0;
+    public int globalAnswer = -1;
+    public int globalLives = 3;
+    public String colorText;
+    public int colorValue;
+    public int imageView1;
+    public int imageView2;
+    public int imageView3;
+    public int imageView4;
     //"Colors" almacena los nombres de los posibles colores
     List<String> colors = Arrays.asList("Amarillo", "Azul", "Café", "Morado", "Naranja", "Rojo", "Rosa", "Verde", "Celeste", "Beige", "Fucsia", "Menta");
     //"ColorValues" almacena todos los valores enteros existentes en el xml de colores

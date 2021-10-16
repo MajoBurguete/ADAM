@@ -21,18 +21,18 @@ import mx.tec.a01730344.adam.R;
 public class ShapesModelNVL1 {
 
     //Se instancian todas las variables necesarias para el sistema del Modelo
-    int figure1Resource;
-    int figure2Resource;
-    int figure3Resource;
-    int drag1Resource;
-    int drag2Resource;
-    int drag3Resource;
+    public int figure1Resource;
+    public int figure2Resource;
+    public int figure3Resource;
+    public int drag1Resource;
+    public int drag2Resource;
+    public int drag3Resource;
     //El estado del modelo es inicializado con un valor false
-    boolean state = false;
+    public boolean state = false;
     //"Figures" almacena los drawables disponibles para las figuras del juego
-    List<Integer> figures = Arrays.asList(R.drawable.ic_circulito_amarillo, R.drawable.ic_circulito_celeste, R.drawable.ic_circulito_naranja, R.drawable.ic_circulito_rosa, R.drawable.ic_circulito_verde, R.drawable.ic_cuadrado_amarillo, R.drawable.ic_cuadrado_celeste, R.drawable.ic_cuadrado_naranja, R.drawable.ic_cuadrado_rosa, R.drawable.ic_cuadrado_verde, R.drawable.ic_estrella_amarilla, R.drawable.ic_estrella_celeste, R.drawable.ic_estrella_naranja, R.drawable.ic_estrella_rosa, R.drawable.ic_estrella_verde, R.drawable.ic_hex_amarillo, R.drawable.ic_hex_celeste, R.drawable.ic_hex_naranja, R.drawable.ic_hex_rosa, R.drawable.ic_hex_verde, R.drawable.ic_triangulo_amarillo, R.drawable.ic_triangulo_celeste, R.drawable.ic_triangulo_naranja, R.drawable.ic_triangulo_rosa, R.drawable.ic_triangulo_verde);
+    public List<Integer> figures = Arrays.asList(R.drawable.ic_circulito_amarillo, R.drawable.ic_circulito_celeste, R.drawable.ic_circulito_naranja, R.drawable.ic_circulito_rosa, R.drawable.ic_circulito_verde, R.drawable.ic_cuadrado_amarillo, R.drawable.ic_cuadrado_celeste, R.drawable.ic_cuadrado_naranja, R.drawable.ic_cuadrado_rosa, R.drawable.ic_cuadrado_verde, R.drawable.ic_estrella_amarilla, R.drawable.ic_estrella_celeste, R.drawable.ic_estrella_naranja, R.drawable.ic_estrella_rosa, R.drawable.ic_estrella_verde, R.drawable.ic_hex_amarillo, R.drawable.ic_hex_celeste, R.drawable.ic_hex_naranja, R.drawable.ic_hex_rosa, R.drawable.ic_hex_verde, R.drawable.ic_triangulo_amarillo, R.drawable.ic_triangulo_celeste, R.drawable.ic_triangulo_naranja, R.drawable.ic_triangulo_rosa, R.drawable.ic_triangulo_verde);
     //"Drags" se inicializa como un arreglo vacío, que posteriormente recibirá elementos al crear una nueva ronda
-    List<Integer> drags = new ArrayList<>();
+    public List<Integer> drags = new ArrayList<>();
 
     //El método "startNewRound" asigna valores aleatorios a las figuras y a los elementos de arrastre
     public void startNewRound() {

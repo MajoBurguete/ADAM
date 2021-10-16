@@ -26,39 +26,39 @@ import mx.tec.a01730344.adam.R;
 public class StoryModelNVL2AndNVL3 {
 
     //Se instancian todas las variables necesarias para el sistema del Modelo
-    Context context;
-    int randomStory = -1;
-    int actualParagraph = 0;
-    int actualQuestion = 0;
-    int firstQuestion;
-    int secondQuestion;
-    int thirdQuestion;
-    String firstParagraphAns;
-    String secondParagraphAns;
-    String thirdParagraphAns;
-    String question;
-    String firstAnswerOption;
-    String secondAnswerOption;
-    String thirdAnswerOption;
-    List<String> firstOptionsPool;
-    List<String> secondOptionsPool;
-    List<String> thirdOptionsPool;
+    public Context context;
+    public int randomStory = -1;
+    public int actualParagraph = 0;
+    public int actualQuestion = 0;
+    public int firstQuestion;
+    public int secondQuestion;
+    public int thirdQuestion;
+    public String firstParagraphAns;
+    public String secondParagraphAns;
+    public String thirdParagraphAns;
+    public String question;
+    public String firstAnswerOption;
+    public String secondAnswerOption;
+    public String thirdAnswerOption;
+    public List<String> firstOptionsPool;
+    public List<String> secondOptionsPool;
+    public List<String> thirdOptionsPool;
     //"Stories" segmenta los 5 cuentos en 3 párrafos diferentes cada uno
-    List<List<String>> stories =
+    public List<List<String>> stories =
             Arrays.asList(Arrays.asList("Caperucita era una niña de # años que vivía cerca del bosque, en una casa #. Un día, # le pidió que le llevara comida a su abuelita.", "Caperucita llenó una cesta con # y salió # de su casa. Por el camino, se encontró con #.", "De repente, un lobo # apareció. Asustó a caperucita con sus #, haciéndola correr de regreso a su casa por el #."),
                     Arrays.asList("Había una vez un conejo # y una tortuga que participaron en una carrera de # vueltas por la #.", "El conejo se burlaba de la tortuga con su amiga #, diciendo: \"eres más lenta que un #, en cambio yo soy tan rápido como el #\".", "Al iniciar, el conejo rebasó a la tortuga y se sentó a #, confiado. La tortuga lo pasó, ganando #. Al llegar el conejo se enojó y #, derrotado."),
                     Arrays.asList("Había una vez una princesa con un vestido #, que tenía un perrito llamado #. Pero un día lo fue a ver # y había desaparecido.", "Fue a preguntarle # si lo había visto, pero no sabía dónde estaba. Corrió por el #, cuando encontró huellas que la guiaban al #.", "Encontró una cueva, donde estaba su perro y # más. Parecían atrapados por unas #. Al final, la princesa construyó # y los rescató."),
                     Arrays.asList("Había una vez un pastorcito llamado # que cuidaba a su rebaño en la #. Un día # estaba aburrido, cuando se le ocurrió gritar \"¡lobo!\" como broma.", "Al escucharlo, # corrieron de prisa para ayudarlo. Pero al llegar, no encontraron a ningún lobo. #, regresaron a sus #. Esto pasó varias veces.", "A la #, las personas decidieron no volver a creerle. Pero # llegó un lobo de verdad. El niño gritó de nuevo, pero nadie vino. El lobo se comió # ovejas."),
                     Arrays.asList("Había una vez un zorro que buscaba algo de comer, cuando vio a un cuervo en un # muy alto con un pedazo de # en su # pico que se le antojó.", "Decidió usar su astucia para conseguirlo, saludando al cuervo, el cual lo miró #. \"¡Gran rey cuervo!, qué # plumas y qué # figura tienes!\"", "Los halagos hicieron al cuervo abrir el pico para #, pero su comida cayó justo en la boca del zorro, quien salió corriendo hacia #. Él iba # porque había logrado su meta."));
     //"Variants" almacena las diferentes opciones existentes para construir los párrafos de las historias con pequeñas variantes.
-    List<List<List<List<String>>>> variants =
+    public List<List<List<List<String>>>> variants =
             Arrays.asList(Arrays.asList(Arrays.asList(Arrays.asList("5", "8", "10"), Arrays.asList("azul", "morada", "rosa"), Arrays.asList("su mamá", "su papá", "su hermana")), Arrays.asList(Arrays.asList("fresas", "manzanas", "peras"), Arrays.asList("corriendo", "caminando", "saltando"), Arrays.asList("una rosa", "una dalia", "una margarita")), Arrays.asList(Arrays.asList("feroz", "astuto", "mentiroso"), Arrays.asList("garras", "colmillos", "aullidos"), Arrays.asList("bosque", "prado", "valle"))),
                     Arrays.asList(Arrays.asList(Arrays.asList("blanco", "gris", "café"), Arrays.asList("2", "3", "5"), Arrays.asList("montaña", "isla", "selva")), Arrays.asList(Arrays.asList("la rana", "la cebra", "la serpiente"), Arrays.asList("caracol", "perezoso", "koala"), Arrays.asList("viento", "rayo", "río")), Arrays.asList(Arrays.asList("comer", "dormir", "jugar"), Arrays.asList("un listón", "un trofeo", "una medalla"), Arrays.asList("gritó", "lloró", "suspiró"))),
                     Arrays.asList(Arrays.asList(Arrays.asList("dorado", "rojo", "morado"), Arrays.asList("Max", "Rocky", "Toby"), Arrays.asList("al jardín", "al patio", "al gran salón")), Arrays.asList(Arrays.asList("a su padre", "a su madrastra", "a su guardia"), Arrays.asList("pasillo", "puente", "jardín"), Arrays.asList("pueblo", "sótano", "pozo")), Arrays.asList(Arrays.asList("2", "5", "8"), Arrays.asList("rocas", "cajas", "tablas"), Arrays.asList("una escalera", "una rampa", "una polea"))),
                     Arrays.asList(Arrays.asList(Arrays.asList("Pablo", "Juan", "Pedro"), Arrays.asList("montaña", "pradera", "colina"), Arrays.asList("en la mañana", "en la tarde", "en la noche")), Arrays.asList(Arrays.asList("sus amigos", "sus familiares", "sus vecinos"), Arrays.asList("Frustrados", "Enojados", "Confundidos"), Arrays.asList("casas", "granjas", "actividades")), Arrays.asList(Arrays.asList("tercera vez", "cuarta vez", "quinta vez"), Arrays.asList("una tarde", "una noche", "una mañana"), Arrays.asList("3", "6", "9"))),
                     Arrays.asList(Arrays.asList(Arrays.asList("árbol", "arbusto", "poste"), Arrays.asList("queso", "manzana", "sandía"), Arrays.asList("grande", "pequeño", "ancho")), Arrays.asList(Arrays.asList("desconfiado", "inseguro", "irritado"), Arrays.asList("magníficas", "brillantes", "coloridas"), Arrays.asList("hermosa", "espléndida", "increíble")), Arrays.asList(Arrays.asList("reír", "sonreír", "cantar"), Arrays.asList("su madriguera", "su cueva", "su escondite"), Arrays.asList("contento", "saciado", "complacido"))));
     //"Questions" almacena las posibles preguntas para cada párrafo de las historias
-    List<List<List<String>>> questions =
+    public List<List<List<String>>> questions =
             Arrays.asList(Arrays.asList(Arrays.asList("¿Cuántos años tenía Caperucita?", "¿De qué color era la casa de Caperucita?", "¿Quién le pidió a Caperucita que llevara comida a su abuelita?"), Arrays.asList("¿Qué llevaba la cesta?", "¿Cómo salió Caperucita de su casa?", "¿Qué flor se encontró Caperucita por el camino?"), Arrays.asList("¿Cómo era el lobo que apareció?", "El lobo asustó a Caperucita con sus...", "¿Por dónde regresó Caperucita a su casa?")),
                     Arrays.asList(Arrays.asList("¿De qué color era el conejo?", "¿De cuántas vueltas era la carrera?", "La carrera se hizo en la..."), Arrays.asList("¿Quién era amiga del conejo?", "El conejo decía que la tortuga era más lenta que un…", "El conejo decía que era tan rápido como el..."), Arrays.asList("El conejo confiado se sentó a…", "¿Qué ganó la tortuga?", "Cuando perdió, el conejo se enojó y...")),
                     Arrays.asList(Arrays.asList("¿De qué color era el vestido de la princesa?", "¿Cómo se llamaba el perrito de la princesa?", "¿A dónde fue la princesa para buscar a su perrito?"), Arrays.asList("¿A quién le preguntó la princesa si había visto a su perrito?", "La princesa corrió por el…", "La princesa encontró huellas que la guiaban al..."), Arrays.asList("Además del perrito de la princesa, ¿cuántos más había en la cueva?", "Los perritos estaban atrapados por unas…", "¿Qué construyó la princesa para rescatar a los perritos?")),

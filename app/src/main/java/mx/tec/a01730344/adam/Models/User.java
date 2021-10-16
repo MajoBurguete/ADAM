@@ -23,7 +23,7 @@ import java.util.Properties;
 public class User {
 
     //Se declara el archivo donde se almacenarán los datos
-    private static final String FILENAME = "prueba8.xml";
+    private static final String FILENAME = "userDataBase.xml";
     private Properties profiles = new Properties();
     Context context;
 
