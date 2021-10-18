@@ -61,15 +61,15 @@ public class ProfilePictureActivity extends AppCompatActivity {
         int value = getIntent().getExtras().getInt("screen");
 
         //Proceso de validación para desplegar imágenes de perfil bloqueadas
-        if (user.getCurrentUserScoreC() > 2700 && value != 0){
+        if (user.getCurrentUserScoreC() >= 2700 && value != 0){
             ibIcon4.setImageResource(R.drawable.ic_pp_circulito_medium);
             achievement1 = false;
         }
-        if (user.getCurrentUserScoreR() > 10000 && value != 0){
+        if (user.getCurrentUserScoreR() >= 10000 && value != 0){
             ibIcon5.setImageResource(R.drawable.ic_pp_onditas_medium);
             achievement2 = false;
         }
-        if (user.getCurrentUserScoreF() > 2500 && user.getCurrentUserScoreR() > 2500 && user.getCurrentUserScoreC() > 2500 && value != 0){
+        if (user.getCurrentUserScoreF() >= 2500 && user.getCurrentUserScoreR() >= 2500 && user.getCurrentUserScoreC() >= 2500 && value != 0){
             ibIcon6.setImageResource(R.drawable.ic_pp_estrellita_medium);
             achievement3 = false;
         }

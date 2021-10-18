@@ -78,7 +78,7 @@ public class RainbowModelNVL1 {
             imageView3 = figures.get(randomValue);
         }
         int randomAnswerC = randomAnswerA + randomAnswerB;
-        int randomOption = randomIndex(3);
+        int randomOption = randomIndex(8);
         while (randomOption == randomValue || randomOption == randomColor) {
             randomOption = randomIndex(8);
         }
