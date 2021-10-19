@@ -14,7 +14,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="30dp"
         android:paddingBottom="20sp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,36 +39,35 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivInstruccionesArcoiris"
-            app:layout_constraintVertical_bias="0.32"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="DuplicateClickableBoundsCheck" />
 
         <TextView
             android:id="@+id/tvInstruccionArcoiris"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/silka_bold_webfont"
             android:text="@string/presta_atenci_n_y_elige_la_opci_n_correcta"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivInstruccionesArcoiris"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="@+id/ivInstruccionesArcoiris"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.050000012"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="TextContrastCheck" />
 
         <ImageView
             android:id="@+id/ivInstruccionesArcoiris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvInstruccionArcoiris"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.06"
             app:srcCompat="@drawable/ic_instructions_arcoiris" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -142,9 +141,11 @@
             android:id="@+id/ivInstruccionesFormitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvObservaEnQueLugar"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_instructions_formitas" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -173,7 +174,7 @@
             android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivInstruccionesCuento"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/ivInstruccionesCuento"
             app:layout_constraintTop_toTopOf="parent"
@@ -200,10 +201,12 @@
             android:id="@+id/ivInstruccionesCuento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTeContareInstrucciones"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_instructions_cuento" />
 
         <Button
@@ -234,8 +237,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnSeguirCuento"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLeeConCalma"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_flecha" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -245,7 +252,7 @@
         android:layout_height="match_parent"
         android:background="@color/rosa_oscuro"
         android:paddingBottom="15dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -263,7 +270,7 @@
             android:paddingBottom="16dp"
             android:text="@string/a_jugar"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="25sp"
+            android:textSize="24sp"
             android:visibility="visible"
             app:cornerRadius="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -309,9 +316,11 @@
             android:id="@+id/ivInstruccionesCuento2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAhoraContesta"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_instructions_cuento_2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
