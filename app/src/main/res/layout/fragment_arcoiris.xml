@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="40dp">
+        android:paddingTop="10dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCardArcoiris"
@@ -37,7 +37,7 @@
                     android:fontFamily="@font/silka_bold_webfont"
                     android:text="Adam te dará un color, presta atención y oprime el botón!"
                     android:textColor="@color/white"
-                    android:textSize="23sp"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -17,63 +17,71 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnHardFormitas"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:backgroundTint="@color/amarillo"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Difícil"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnMediumFormitas"
-            app:layout_constraintStart_toStartOf="@+id/btnMediumFormitas"
-            app:layout_constraintTop_toBottomOf="@+id/btnMediumFormitas"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnMediumFormitas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:backgroundTint="@color/rosa_oscuro"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Intermedio"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ivFormitasDifficulty"
-            app:layout_constraintStart_toStartOf="@+id/ivFormitasDifficulty"
-            app:layout_constraintTop_toBottomOf="@+id/btnEasyFormitas"
-            app:layout_constraintVertical_bias="0.005" />
+            <Button
+                android:id="@+id/btnHardFormitas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/amarillo"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Difícil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnMediumFormitas"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btnMediumFormitas"
+                app:layout_constraintTop_toBottomOf="@+id/btnMediumFormitas"
+                app:layout_constraintVertical_bias="0.1" />
 
-        <Button
-            android:id="@+id/btnEasyFormitas"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:backgroundTint="@color/naranja_crayola"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Fácil"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnMediumFormitas"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/btnMediumFormitas"
-            app:layout_constraintTop_toBottomOf="@+id/ibBackFormitas"
-            app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/btnEasyFormitas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/naranja_crayola"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Fácil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnMediumFormitas"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btnMediumFormitas"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <Button
+                android:id="@+id/btnMediumFormitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/rosa_oscuro"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Intermedio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEasyFormitas"
+                app:layout_constraintVertical_bias="0.07" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
             android:id="@+id/ivFormitasDifficulty"
@@ -81,9 +89,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.50"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnHardFormitas"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_formitas_gameover" />
 
@@ -115,64 +123,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnEasyTeCuento"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:backgroundTint="@color/amarillo"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Fácil"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnMediumTeCuento"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnMediumTeCuento"
-            app:layout_constraintTop_toBottomOf="@+id/ibBackCuento"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnMediumTeCuento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:backgroundTint="@color/azul_oceano"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Intermedio"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ivCuentoDifficulty"
-            app:layout_constraintStart_toStartOf="@+id/ivCuentoDifficulty"
-            app:layout_constraintTop_toBottomOf="@+id/btnEasyTeCuento"
-            app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/btnEasyTeCuento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/amarillo"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Fácil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnMediumTeCuento"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/btnMediumTeCuento"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
 
-        <Button
-            android:id="@+id/btnHardTeCuento"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:backgroundTint="@color/verde"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Difícil"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnMediumTeCuento"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnMediumTeCuento"
-            app:layout_constraintTop_toBottomOf="@+id/btnMediumTeCuento"
-            app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/btnMediumTeCuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azul_oceano"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Intermedio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEasyTeCuento"
+                app:layout_constraintVertical_bias="0.07" />
+
+            <Button
+                android:id="@+id/btnHardTeCuento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Difícil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnMediumTeCuento"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btnMediumTeCuento"
+                app:layout_constraintTop_toBottomOf="@+id/btnMediumTeCuento"
+                app:layout_constraintVertical_bias="0.1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageButton
             android:id="@+id/ibBackCuento"
@@ -198,7 +212,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnHardTeCuento"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_tecuento_gameover" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -216,6 +230,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnEasyArcoiris"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/rosa_oscuro"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Fácil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnMediumArcoiris"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/btnMediumArcoiris"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.17" />
+
+            <Button
+                android:id="@+id/btnMediumArcoiris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/azul_oceano"
+                android:fontFamily="@font/silka_bold_webfont"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Intermedio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEasyArcoiris"
+                app:layout_constraintVertical_bias="0.18" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <ImageButton
             android:id="@+id/ibBackArcoiris"
             android:layout_width="wrap_content"
@@ -232,48 +293,6 @@
             app:srcCompat="@drawable/ic_back"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/btnMediumArcoiris"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="55dp"
-            android:layout_marginEnd="65dp"
-            android:backgroundTint="@color/azul_oceano"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Intermedio"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnEasyArcoiris"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:id="@+id/btnEasyArcoiris"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:backgroundTint="@color/rosa_oscuro"
-            android:fontFamily="@font/silka_bold_webfont"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Fácil"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnMediumArcoiris"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnMediumArcoiris"
-            app:layout_constraintTop_toBottomOf="@+id/ibBackArcoiris"
-            app:layout_constraintVertical_bias="0.0" />
-
         <ImageView
             android:id="@+id/ivArcoririsDifficulty"
             android:layout_width="wrap_content"
@@ -282,7 +301,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMediumArcoiris"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_arcoiris_forma" />
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,7 +45,7 @@
                     android:fontFamily="@font/silka_bold_webfont"
                     android:text="@string/ayuda_a_las_formitas_a_estar_en_orden_recuerda_la_secuencia"
                     android:textColor="@color/white"
-                    android:textSize="23sp"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

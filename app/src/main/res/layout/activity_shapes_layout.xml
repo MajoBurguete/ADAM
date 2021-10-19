@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.02"
         app:srcCompat="@drawable/ic_pausa"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
@@ -29,10 +29,10 @@
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibPauseShapes1"
-        app:layout_constraintVertical_bias="0.120000005"
+        app:layout_constraintVertical_bias="0.10"
         app:srcCompat="@drawable/ic_escalon"
         tools:ignore="ImageContrastCheck" />
 
@@ -40,7 +40,6 @@
         android:id="@+id/ivShelf2Shapes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +47,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf3Shapes1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/ic_escalon"
         tools:ignore="ImageContrastCheck" />
 
@@ -56,15 +55,14 @@
         android:id="@+id/ivShelf1Shapes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ivShelf3Shapes1"
+        app:layout_constraintStart_toStartOf="@+id/ivShelf2Shapes1"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf2Shapes1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/ic_escalon"
         tools:ignore="ImageContrastCheck" />
 
@@ -115,20 +113,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/silka_bold_webfont"
         android:text="¡Ve las posiciones!"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivShelf1Shapes1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.04"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -144,7 +141,8 @@
         app:layout_constraintBottom_toTopOf="@+id/ivNVL1Drag2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvScoreShapesNVL1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreShapesNVL1"
+        app:layout_constraintVertical_bias="0.05" />
 
     <Button
         android:id="@+id/btnRestartNVL1"
@@ -226,7 +224,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ibPauseShapes1"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_adam_alive" />
 
     <ImageView
@@ -259,17 +256,16 @@
         android:id="@+id/tvScoreShapesNVL1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/silka_medium_webfont"
         android:text="Puntaje: 0"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvShapesNVL1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <FrameLayout
         android:id="@+id/flPauseShapes1"
@@ -277,6 +273,7 @@
         android:layout_height="0dp"
         android:clickable="false"
         android:translationZ="3dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

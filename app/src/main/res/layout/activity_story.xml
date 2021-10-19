@@ -34,14 +34,14 @@
             android:paddingBottom="10dp"
             android:text="@string/seguir"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/cardView3"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView3"
-            app:layout_constraintVertical_bias="0.691" />
+            app:layout_constraintVertical_bias="0.2" />
 
         <TextView
             android:id="@+id/tvTeContareUnCuento"
@@ -51,14 +51,14 @@
             android:fontFamily="@font/silka_bold_webfont"
             android:text="@string/te_contar_un_cuento"
             android:textColor="#FFFFFF"
-            android:textSize="32sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.208"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.103"
+            app:layout_constraintVertical_bias="0.05"
             tools:ignore="TextContrastCheck" />
 
         <androidx.cardview.widget.CardView
@@ -76,9 +76,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="25dp"
+                android:paddingTop="20dp"
                 android:paddingEnd="15dp"
-                android:paddingBottom="25dp">
+                android:paddingBottom="20dp">
 
                 <ImageView
                     android:id="@+id/ivStoryIcon"
@@ -99,7 +99,7 @@
                     android:fontFamily="@font/silka_medium_webfont"
                     android:text="@string/example_cuento_1"
                     android:textAlignment="textEnd"
-                    android:textSize="19dp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -128,25 +128,26 @@
             android:id="@+id/btnOptionS2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:backgroundTint="@color/naranja_claro"
             android:fontFamily="@font/silka_medium_webfont"
             android:paddingStart="15dp"
             android:paddingTop="14dp"
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
-            android:textSize="14sp"
+            android:textSize="13sp"
             app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnOptionS1"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btnOptionS1"
             app:layout_constraintTop_toBottomOf="@+id/btnOptionS1"
+            app:layout_constraintVertical_bias="0.06"
             tools:text="en la mañana" />
 
         <Button
             android:id="@+id/btnOptionS3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:backgroundTint="@color/azul_oceano"
             android:fontFamily="@font/silka_medium_webfont"
             android:paddingStart="15dp"
@@ -154,30 +155,33 @@
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
             android:text="@string/azul"
-            android:textSize="14dp"
+            android:textSize="13dp"
             app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnOptionS2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btnOptionS2"
-            app:layout_constraintTop_toBottomOf="@+id/btnOptionS2" />
+            app:layout_constraintTop_toBottomOf="@+id/btnOptionS2"
+            app:layout_constraintVertical_bias="0.06" />
 
         <Button
             android:id="@+id/btnOptionS1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="16dp"
             android:backgroundTint="@color/verde_pasto"
             android:fontFamily="@font/silka_medium_webfont"
             android:paddingStart="15dp"
             android:paddingTop="14dp"
             android:paddingEnd="15dp"
             android:paddingBottom="17dp"
-            android:textSize="14sp"
+            android:textSize="13sp"
             app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/cardView4"
             app:layout_constraintStart_toEndOf="@+id/ivStoryIcon2"
             app:layout_constraintTop_toBottomOf="@+id/cardView4"
-            app:layout_constraintVertical_bias="0.07999998"
+            app:layout_constraintVertical_bias="0.07"
             tools:ignore="TextContrastCheck"
             tools:text="A su madrastra " />
 
@@ -190,7 +194,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView4"
-            app:layout_constraintVertical_bias="0.229"
+            app:layout_constraintVertical_bias="0.15"
             app:srcCompat="@drawable/ic_triangulo_cuentos_b"
             tools:srcCompat="@drawable/ic_triangulo_cuentos_b" />
 
@@ -222,7 +226,7 @@
                     android:fontFamily="@font/silka_bold_webfont"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -237,8 +241,6 @@
             android:id="@+id/btnNextQ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="48dp"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingStart="25dp"
@@ -248,10 +250,14 @@
             android:text="@string/seguir"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/cardView4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9" />
 
         <TextView
             android:id="@+id/tvResult"
@@ -260,7 +266,7 @@
             android:fontFamily="@font/silka_bold_webfont"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/btnNextQ"
             app:layout_constraintEnd_toStartOf="@+id/btnNextQ"
             app:layout_constraintHorizontal_bias="0.0"
@@ -271,16 +277,17 @@
             android:id="@+id/tvScoreS"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:fontFamily="@font/silka_medium_webfont"
             android:text="Puntaje: 0"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="26sp"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ivStoryIcon2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/ivStoryIcon2"
-            app:layout_constraintTop_toBottomOf="@+id/ivStoryIcon2" />
+            app:layout_constraintTop_toBottomOf="@+id/ivStoryIcon2"
+            app:layout_constraintVertical_bias="0.083" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -333,7 +340,6 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ibPauseS"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_adam_alive" />
 
     <FrameLayout
@@ -341,6 +347,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:translationZ="2dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

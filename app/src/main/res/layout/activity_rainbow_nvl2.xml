@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/ic_pause_azul"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -49,10 +49,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingLeft="20dp"
-            android:paddingTop="15dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="15dp">
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <ImageButton
                 android:id="@+id/ibOption2"
@@ -61,8 +59,8 @@
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/ibOption1"
+                app:layout_constraintHorizontal_bias="0.80"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/ibOption1"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_boton_fucsia"
@@ -87,10 +85,10 @@
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/ibOption2"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.15"
                 app:layout_constraintStart_toStartOf="@+id/ibOption2"
                 app:layout_constraintTop_toBottomOf="@+id/ibOption2"
-                app:layout_constraintVertical_bias="0.505"
+                app:layout_constraintVertical_bias="0"
                 app:srcCompat="@drawable/ic_boton_morado"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -101,12 +99,13 @@
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.20"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.006"
+                app:layout_constraintVertical_bias="0"
                 app:srcCompat="@drawable/ic_boton_azul_osc"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -140,7 +139,7 @@
                 android:text="@string/oprime_el_boton"
                 android:textAlignment="center"
                 android:textColor="#202020"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvColor"
@@ -150,7 +149,7 @@
                 android:text="@string/verde"
                 android:textAlignment="center"
                 android:textColor="#3F51B5"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -159,13 +158,12 @@
         android:id="@+id/ivLife1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnPause"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/btnPause"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ic_adam_alive" />
 
     <ImageView
@@ -198,11 +196,10 @@
         android:id="@+id/tvScoreR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:fontFamily="@font/silka_bold_webfont"
         android:text="Puntaje: 0"
         android:textColor="#FFFFFF"
-        android:textSize="28sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

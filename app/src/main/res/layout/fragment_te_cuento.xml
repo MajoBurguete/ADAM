@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="45dp">
+        android:paddingTop="20dp">
 
         <ImageView
             android:id="@+id/ivTeCuentoFragment"
@@ -46,7 +46,7 @@
                     android:fontFamily="@font/silka_bold_webfont"
                     android:text="@string/puedes_recordar_cada_parte_de_la_historia"
                     android:textColor="@color/white"
-                    android:textSize="23sp"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

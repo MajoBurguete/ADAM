@@ -11,29 +11,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/game_over_rosa"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <Button
             android:id="@+id/btnPlayAgainArcoiris"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
             android:backgroundTint="@color/amarillo"
             android:fontFamily="@font/silka_bold_webfont"
             android:text="Jugar de nuevo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnExitArcoiris"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@+id/btnExitArcoiris"
-            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeArcoiris" />
+            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeArcoiris"
+            app:layout_constraintVertical_bias="0.1" />
 
         <Button
             android:id="@+id/btnExitArcoiris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
             android:backgroundTint="@color/azul"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingLeft="70dp"
@@ -42,13 +42,13 @@
             android:paddingBottom="15dp"
             android:text="Salir"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnPlayAgainArcoiris"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <ImageView
             android:id="@+id/ivGameOverArcoiris"
@@ -92,7 +92,7 @@
                 android:text="Puntaje"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="@+id/ivScoreArcoiris"
                 app:layout_constraintEnd_toEndOf="@+id/ivScoreArcoiris"
                 app:layout_constraintHorizontal_bias="0.492"
@@ -108,7 +108,7 @@
                 android:text="100"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="26sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvScoreGameOverArcoiris"
                 app:layout_constraintStart_toStartOf="@+id/tvScoreGameOverArcoiris"
                 app:layout_constraintTop_toBottomOf="@+id/tvScoreGameOverArcoiris" />
@@ -121,6 +121,7 @@
                 android:text="Puntuación más alta"
                 android:textAlignment="center"
                 android:textColor="@color/r_amarillo"
+                android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvIntScoreGameOverArcoiris"
                 app:layout_constraintStart_toStartOf="@+id/tvIntScoreGameOverArcoiris"
                 app:layout_constraintTop_toBottomOf="@+id/tvIntScoreGameOverArcoiris" />
@@ -138,23 +139,23 @@
             android:id="@+id/btnPlayAgainFormitas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
             android:backgroundTint="@color/r_rosa2"
             android:fontFamily="@font/silka_bold_webfont"
             android:text="Jugar de nuevo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnExitFormitas"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btnExitFormitas"
-            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeFormitas" />
+            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeFormitas"
+            app:layout_constraintVertical_bias="0.1" />
 
         <Button
             android:id="@+id/btnExitFormitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
             android:backgroundTint="@color/naranja_crayola"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingLeft="70dp"
@@ -163,13 +164,13 @@
             android:paddingBottom="15dp"
             android:text="Salir"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnPlayAgainFormitas"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <ImageView
             android:id="@+id/ivGameOverFormitas"
@@ -213,7 +214,7 @@
                 android:text="Puntaje"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="@+id/ivScoreFormitas"
                 app:layout_constraintEnd_toEndOf="@+id/ivScoreFormitas"
                 app:layout_constraintHorizontal_bias="0.492"
@@ -229,7 +230,7 @@
                 android:text="100"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="26sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvScoreGameOverFormitas"
                 app:layout_constraintStart_toStartOf="@+id/tvScoreGameOverFormitas"
                 app:layout_constraintTop_toBottomOf="@+id/tvScoreGameOverFormitas" />
@@ -242,6 +243,7 @@
                 android:text="Puntuación más alta"
                 android:textAlignment="center"
                 android:textColor="@color/r_amarillo"
+                android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvIntScoreGameOverFormitas"
                 app:layout_constraintStart_toStartOf="@+id/tvIntScoreGameOverFormitas"
                 app:layout_constraintTop_toBottomOf="@+id/tvIntScoreGameOverFormitas" />
@@ -253,29 +255,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/game_over_azul"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <Button
             android:id="@+id/btnPlayAgainTeCuento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
             android:backgroundTint="@color/r_rosa2"
             android:fontFamily="@font/silka_bold_webfont"
             android:text="Jugar de nuevo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnExitTeCuento"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btnExitTeCuento"
-            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeTeCuento" />
+            app:layout_constraintTop_toBottomOf="@+id/clGameOverPuntajeTeCuento"
+            app:layout_constraintVertical_bias="0.1" />
 
         <Button
             android:id="@+id/btnExitTeCuento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
             android:backgroundTint="@color/r_verde"
             android:fontFamily="@font/silka_bold_webfont"
             android:paddingLeft="70dp"
@@ -284,13 +286,13 @@
             android:paddingBottom="15dp"
             android:text="Salir"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnPlayAgainTeCuento"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <ImageView
             android:id="@+id/ivGameOverTeCuento"
@@ -334,7 +336,7 @@
                 android:text="Puntaje"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="26sp"
                 app:layout_constraintBottom_toBottomOf="@+id/ivScoreTeCuento"
                 app:layout_constraintEnd_toEndOf="@+id/ivScoreTeCuento"
                 app:layout_constraintHorizontal_bias="0.492"
@@ -350,7 +352,7 @@
                 android:text="100"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="26sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvScoreGameOverTeCuento"
                 app:layout_constraintStart_toStartOf="@+id/tvScoreGameOverTeCuento"
                 app:layout_constraintTop_toBottomOf="@+id/tvScoreGameOverTeCuento" />
@@ -363,6 +365,7 @@
                 android:text="Puntuación más alta"
                 android:textAlignment="center"
                 android:textColor="@color/r_amarillo"
+                android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@+id/tvIntScoreGameOverTeCuento"
                 app:layout_constraintStart_toStartOf="@+id/tvIntScoreGameOverTeCuento"
                 app:layout_constraintTop_toBottomOf="@+id/tvIntScoreGameOverTeCuento" />
