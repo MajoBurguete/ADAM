@@ -26,8 +26,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageButton;
 
+import mx.tec.a01730344.adam.Fragments.AboutFragment;
 import mx.tec.a01730344.adam.Fragments.ArcoirisFragment;
 import mx.tec.a01730344.adam.Fragments.FormitasFragment;
+import mx.tec.a01730344.adam.Fragments.IconsFragment;
 import mx.tec.a01730344.adam.R;
 import mx.tec.a01730344.adam.Fragments.TeCuentoFragment;
 import mx.tec.a01730344.adam.Models.User;
@@ -233,6 +235,11 @@ public class HomeActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.btnBackProfile){
             Intent toMain = new Intent(HomeActivity.this, MainActivity.class);
             startActivity(toMain);
+        }
+        if(item.getItemId() == R.id.btnAbout){
+            AboutFragment fragment = new AboutFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flAboutHome, fragment).commit();
         }
         return super.onOptionsItemSelected(item);
     }

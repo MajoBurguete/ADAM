@@ -11,6 +11,7 @@ package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import mx.tec.a01730344.adam.Fragments.AboutFragment;
+import mx.tec.a01730344.adam.Fragments.IconsFragment;
 import mx.tec.a01730344.adam.Models.User;
 import mx.tec.a01730344.adam.R;
 
@@ -100,9 +103,14 @@ public class UserProfileActivity extends AppCompatActivity {
             toSettings.putExtra("screen",value);
             startActivity(toSettings);
         }
-        else if(item.getItemId() == R.id.btnBackProfile){
+        if(item.getItemId() == R.id.btnBackProfile){
             Intent toMain = new Intent(UserProfileActivity.this, MainActivity.class);
             startActivity(toMain);
+        }
+        if(item.getItemId() == R.id.btnAbout){
+            AboutFragment fragment = new AboutFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flAboutProfile, fragment).commit();
         }
         return super.onOptionsItemSelected(item);
     }
