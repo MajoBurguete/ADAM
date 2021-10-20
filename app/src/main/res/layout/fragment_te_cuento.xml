@@ -69,6 +69,7 @@
             android:paddingBottom="10dp"
             android:text="@string/jugar"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
             android:textSize="28sp"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"

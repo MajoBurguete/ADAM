@@ -50,6 +50,18 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_logo_adam_tool"
             tools:ignore="ImageContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/ibAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_info"
+            tools:ignore="SpeakableTextPresentCheck" />
     </RelativeLayout>
 
     <ImageView
@@ -179,6 +191,7 @@
         android:fontFamily="@font/silka_bold_webfont"
         android:text="@string/guardar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -197,6 +210,7 @@
         android:fontFamily="@font/silka_bold_webfont"
         android:text="@string/eliminar_perfil"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,5 +219,19 @@
         app:layout_constraintStart_toStartOf="@id/btnSaveSett"
         app:layout_constraintTop_toBottomOf="@id/btnSaveSett"
         app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/flAboutSettings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

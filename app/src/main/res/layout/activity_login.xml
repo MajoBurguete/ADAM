@@ -63,6 +63,7 @@
         android:fontFamily="@font/silka_bold_webfont"
         android:text="@string/entrar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
