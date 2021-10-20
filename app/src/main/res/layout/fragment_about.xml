@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/silka_medium_webfont"
-                    android:text="Daniela Hernández y Hernández \n Marco Flamenco Andrade \n Aarón Cortés García \n María José Burguete Euán"
+                    android:text="Aplicación desarrollada por: \nDaniela Hernández y Hernández \n Marco Flamenco Andrade \n Aarón Cortés García \n María José Burguete Euán"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="18sp"
