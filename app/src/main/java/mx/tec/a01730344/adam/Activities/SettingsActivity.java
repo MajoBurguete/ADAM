@@ -10,6 +10,7 @@
 package mx.tec.a01730344.adam.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import mx.tec.a01730344.adam.Fragments.AboutFragment;
 import mx.tec.a01730344.adam.R;
 import mx.tec.a01730344.adam.Models.User;
 
@@ -36,6 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
     Button btnDeleteSett;
     ImageView ivProfilePictsett;
     ImageButton ibBack;
+    ImageButton ibInfo;
     EditText etUsernameSett;
     Button btnSaveSett;
     User user = new User(this);
@@ -56,6 +59,7 @@ public class SettingsActivity extends AppCompatActivity {
         fabEditPictSett = findViewById(R.id.fabEditPictSett);
         btnDeleteSett = findViewById(R.id.btnDeleteSett);
         ibBack = findViewById(R.id.ibBackFromSett);
+        ibInfo = findViewById(R.id.ibInfo);
         ivProfilePictsett = findViewById(R.id.ivProfilePictSett);
         etUsernameSett = findViewById(R.id.etUsernameSett);
         btnSaveSett = findViewById(R.id.btnSaveSett);
@@ -108,6 +112,15 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toPreviousScreen(previousScreen);
+            }
+        });
+
+        ibInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AboutFragment fragment = new AboutFragment();
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flAboutSettings, fragment).commit();
             }
         });
 

@@ -107,11 +107,6 @@ public class UserProfileActivity extends AppCompatActivity {
             Intent toMain = new Intent(UserProfileActivity.this, MainActivity.class);
             startActivity(toMain);
         }
-        if(item.getItemId() == R.id.btnAbout){
-            AboutFragment fragment = new AboutFragment();
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flAboutProfile, fragment).commit();
-        }
         return super.onOptionsItemSelected(item);
     }
 

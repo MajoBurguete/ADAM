@@ -3,11 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btnAbout"
-        android:icon="@drawable/ic_info"
-        android:title="About"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/btnBackProfile"
         android:icon="@drawable/ic_user"
         android:title="BackProfile"

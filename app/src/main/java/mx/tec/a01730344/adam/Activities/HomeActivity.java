@@ -236,11 +236,6 @@ public class HomeActivity extends AppCompatActivity {
             Intent toMain = new Intent(HomeActivity.this, MainActivity.class);
             startActivity(toMain);
         }
-        if(item.getItemId() == R.id.btnAbout){
-            AboutFragment fragment = new AboutFragment();
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flAboutHome, fragment).commit();
-        }
         return super.onOptionsItemSelected(item);
     }
 
