@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(etUsername.getText().length() <= 10){
+                if(etUsername.getText().length() <= 10 && etUsername.getText().length() > 0){
                     btnEnter.setEnabled(true);
                 }
                 else{

@@ -82,7 +82,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(etUsernameSett.getText().length() <= 10){
+                if(etUsernameSett.getText().length() <= 10 && etUsernameSett.getText().length() > 0){
                     btnSaveSett.setEnabled(true);
                 }
                 else{
